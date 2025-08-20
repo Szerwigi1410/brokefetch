@@ -387,7 +387,7 @@ case "$DESKTOP_SESSION" in
     "i3") WINDOW_MANAGER="i3 (tiled like my bathroom)";;
     "Openbox"|"openbox") WINDOW_MANAGER="Openbox (because closed boxes cost money)";;
     "Fluxbox"|"fluxbox") WINDOW_MANAGER="Fluxbox (because stability is overrated)";;
-    "XFWM4"|"xfwm4" | "xfce") WINDOW_MANAGER="XFWM4 (four times more broke)";;
+    "XFCE"|"xfce") WINDOW_MANAGER="XFWM4 (four times more broke)";;
     "Metacity"|"metacity") WINDOW_MANAGER="Metacity (meta broke)";;
     "IceWM"|"icewm") WINDOW_MANAGER="IceWM (cold and minimal, like my bank account)";;
     "FVWM"|"fvwm") WINDOW_MANAGER="FVWM (Feels Very Wallet Miserable)";;
