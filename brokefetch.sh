@@ -318,7 +318,7 @@ case $SHELL_NAME in
     sh)SHELLOUT="$SHELL_NAME - Old is gold (which I need)";;
     dash)SHELLOUT="$SHELL_NAME - Speeeeed (for debian only)";;
 #    ksh)SHELLOUT="";;
-    idksh)SHELLOUT="idksh - What is this? (My future)";;
+    idksh)SHELLOUT="idksh - What is this? (YOUR future)";;
     *)SHELLOUT="Your shell is so niche that we don't care about it. We can't afford more code...";;
 esac
 
@@ -330,7 +330,10 @@ elif [ -n "$XDG_CURRENT_DESKTOP" ]; then
 else
     DESKTOP_ENV="$(echo "$DESKTOP_SESSION" | tr '[:upper:]' '[:lower:]')"
 fi
-
+ 
+# Convert to lowercase for consistent matching in the next case statement
+DESKTOP_ENV="$(echo "$DESKTOP_ENV" | tr '[:upper:]' '[:lower:]')"
+ 
 #Macos and windows and phone
 case "$OS_NAME" in
     "macOS")
@@ -341,21 +344,21 @@ case "$OS_NAME" in
         DESKTOP_ENV="WSL Desktop (because I can't afford a real Linux)";;
     "Android")
         DESKTOP_ENV="Android Desktop (because I can't afford a real phone)";;
-esac        
-
+esac
+ 
 case "$DESKTOP_ENV" in
-    "Aqua") DESKTOP_ENV="Aqua (because I can't afford a real desktop)";;
-    "Aero") DESKTOP_ENV="Aero (but no money for a real DE)";;
-    "Gnome" | "gnome" | "GNOME") DESKTOP_ENV="Gnome (but no extensions)";;
-    "kde" | "KDE" | "plasma") DESKTOP_ENV="KDE (but no Plasma)";;
-    "XFCE" | "xfce") DESKTOP_ENV="XFCE (Gnome ugly edition)";;
-    "LXDE" | "lxde") DESKTOP_ENV="LXDE (What's stopping you from LXqt?)";;
-    "LXqt" | "LXQT" | "lxqt") DESKTOP_ENV="LXQt (Lightweight, like your wallet)";;
-    "MATE" | "mate") DESKTOP_ENV="MATE (Gnome classic? What's that?)";;
-    "X-Cinnamon" | "cinnamon") DESKTOP_ENV="Cinnamon (but no money for a real desktop)";;
-    "Hyprland" | "hyprland") DESKTOP_ENV="Hyprland (Yeah Hyprland is a DE lil bro)";;
-    "TTY") DESKTOP_ENV="TTY (go touch grass bro)";;
-    *) DESKTOP_ENV="Unknown DE (probably broke like you)";;
+    "aqua") DESKTOP_ENV="Aqua (because I can't afford a real desktop)";;
+    "aero") DESKTOP_ENV="Aero (but no money for a real DE)";;
+    "gnome") DESKTOP_ENV="Gnome (but no extensions)";;
+    "kde" | "plasma") DESKTOP_ENV="KDE (but no Plasma)";;
+    "xfce") DESKTOP_ENV="XFCE (Gnome ugly edition)";;
+    "lxde") DESKTOP_ENV="LXDE (What's stopping you from LXqt?)";;
+    "lxqt") DESKTOP_ENV="LXQt (Lightweight, like your wallet)";;
+    "mate") DESKTOP_ENV="MATE (Gnome classic? What's that?)";;
+    "x-cinnamon" | "cinnamon") DESKTOP_ENV="Cinnamon (but no money for a real desktop)";;
+    "hyprland") DESKTOP_ENV="Hyprland (Yeah Hyprland is a DE lil bro)";;
+    "tty") DESKTOP_ENV="TTY (go touch grass bro)";;
+    *) DESKTOP_ENV="${XDG_CURRENT_DESKTOP} (No funny name for you)";;
 esac
 
 # Window Managers
@@ -394,7 +397,7 @@ case "$WINDOW_MANAGER" in
     "awesome") WINDOW_MANAGER="awesome (self-proclaimed)";;
     "herbstluftwm") WINDOW_MANAGER="herbstluftwm (gesundheit)";;
     "wayfire") WINDOW_MANAGER="Wayfire (burning your GPU for fun)";;
-    "Hyprland"|"hyprland") WINDOW_MANAGER="Aquamarine (To drown myself in)";;
+    "hyprland"|"Hyprland") WINDOW_MANAGER="Aquamarine (To drown myself in)";;
     "Quartz Compositor") WINDOW_MANAGER="Quartz Compositor (shiny but overpriced)";;
     "Desktop Window Manager (DWM)") WINDOW_MANAGER="Desktop Window Manager (Windows’ least exciting acronym)";;
     "tty") WINDOW_MANAGER="tty (Idk what to say here tbh)";;

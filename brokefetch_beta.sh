@@ -319,7 +319,7 @@ case $SHELL_NAME in
     sh)SHELLOUT="$SHELL_NAME - Old is gold (which I need)";;
     dash)SHELLOUT="$SHELL_NAME - Speeeeed (for debian only)";;
 #    ksh)SHELLOUT="";;
-    idksh)SHELLOUT="idksh - What is this? (My future)";;
+    idksh)SHELLOUT="idksh - What is this? (YOUR future)";;
     *)SHELLOUT="Your shell is so niche that we don't care about it. We can't afford more code...";;
 esac
 
@@ -331,7 +331,10 @@ elif [ -n "$XDG_CURRENT_DESKTOP" ]; then
 else
     DESKTOP_ENV="$(echo "$DESKTOP_SESSION" | tr '[:upper:]' '[:lower:]')"
 fi
-
+ 
+# Convert to lowercase for consistent matching in the next case statement
+DESKTOP_ENV="$(echo "$DESKTOP_ENV" | tr '[:upper:]' '[:lower:]')"
+ 
 #Macos and windows and phone
 case "$OS_NAME" in
     "macOS")
@@ -342,31 +345,27 @@ case "$OS_NAME" in
         DESKTOP_ENV="WSL Desktop (because I can't afford a real Linux)";;
     "Android")
         DESKTOP_ENV="Android Desktop (because I can't afford a real phone)";;
-esac        
-
+esac
+ 
 case "$DESKTOP_ENV" in
-    "Aqua") DESKTOP_ENV="Aqua (because I can't afford a real desktop)";;
-    "Aero") DESKTOP_ENV="Aero (but no money for a real DE)";;
-    "Gnome" | "gnome" | "GNOME") DESKTOP_ENV="Gnome (but no extensions)";;
-    "kde" | "KDE" | "plasma") DESKTOP_ENV="KDE (but no Plasma)";;
-    "XFCE" | "xfce") DESKTOP_ENV="XFCE (Gnome ugly edition)";;
-    "LXDE" | "lxde") DESKTOP_ENV="LXDE (What's stopping you from LXqt?)";;
-    "LXqt" | "LXQT" | "lxqt") DESKTOP_ENV="LXQt (Lightweight, like your wallet)";;
-    "MATE" | "mate") DESKTOP_ENV="MATE (Gnome classic? What's that?)";;
-    "X-Cinnamon" | "cinnamon") DESKTOP_ENV="Cinnamon (but no money for a real desktop)";;
-    "Hyprland" | "hyprland") DESKTOP_ENV="Hyprland (Yeah Hyprland is a DE lil bro)";;
-    "TTY") DESKTOP_ENV="TTY (go touch grass bro)";;
-    *) DESKTOP_ENV="Unknown DE (probably broke like you)";;
+    "aqua") DESKTOP_ENV="Aqua (because I can't afford a real desktop)";;
+    "aero") DESKTOP_ENV="Aero (but no money for a real DE)";;
+    "gnome") DESKTOP_ENV="Gnome (but no extensions)";;
+    "kde" | "plasma") DESKTOP_ENV="KDE (but no Plasma)";;
+    "xfce") DESKTOP_ENV="XFCE (Gnome ugly edition)";;
+    "lxde") DESKTOP_ENV="LXDE (What's stopping you from LXqt?)";;
+    "lxqt") DESKTOP_ENV="LXQt (Lightweight, like your wallet)";;
+    "mate") DESKTOP_ENV="MATE (Gnome classic? What's that?)";;
+    "x-cinnamon" | "cinnamon") DESKTOP_ENV="Cinnamon (but no money for a real desktop)";;
+    "hyprland") DESKTOP_ENV="Hyprland (Yeah Hyprland is a DE lil bro)";;
+    "tty") DESKTOP_ENV="TTY (go touch grass bro)";;
+    
+    *) DESKTOP_ENV="${XDG_CURRENT_DESKTOP} (No funny name for you)";;
 esac
 
 # Window Managers
 
-# WM DETECION IN PROGRESS
-if [ -n "$XDG_CURRENT_WM" ]; then
-    WINDOW_MANAGER="$XDG_CURRENT_WM"
-else
-    WINDOW_MANAGER="$(echo "$XDG_SESSION_TYPE" | tr '[:upper:]' '[:lower:]')"
-fi
+WINDOW_SYSTEM="$(echo "$XDG_SESSION_TYPE" | tr '[:upper:]' '[:lower:]')"
 
 case "$OS_NAME" in
     "macOS")
@@ -382,7 +381,7 @@ esac
 # --- Funny WM names ---
 case "$DESKTOP_SESSION" in
     "Andoir Window Manager") WINDOW_MANAGER="Andoir Window Manager (Termux ig)";;
-    "KWin"|"kwin"|"kwin_wayland" | "plasma") WINDOW_MANAGER="KWin (the KDE janitor)";;
+    "kde" | "plasma") WINDOW_MANAGER="KWin (the KDE janitor)";;
     "Mutter"|"mutter" | "gnome") WINDOW_MANAGER="Mutter (the GNOME babysitter)";;
     "Sway"|"sway") WINDOW_MANAGER="Sway (i3 but woke)";;
     "i3") WINDOW_MANAGER="i3 (tiled like my bathroom)";;
@@ -395,7 +394,7 @@ case "$DESKTOP_SESSION" in
     "awesome") WINDOW_MANAGER="awesome (self-proclaimed)";;
     "herbstluftwm") WINDOW_MANAGER="herbstluftwm (gesundheit)";;
     "wayfire") WINDOW_MANAGER="Wayfire (burning your GPU for fun)";;
-    "Hyprland"|"hyprland") WINDOW_MANAGER="Aquamarine (To drown myself in)";;
+    "hyprland"|"Hyprland") WINDOW_MANAGER="Aquamarine (To drown myself in)";;
     "Quartz Compositor") WINDOW_MANAGER="Quartz Compositor (shiny but overpriced)";;
     "Desktop Window Manager (DWM)") WINDOW_MANAGER="Desktop Window Manager (Windows’ least exciting acronym)";;
     "tty") WINDOW_MANAGER="tty (Idk what to say here tbh)";;
@@ -403,6 +402,12 @@ case "$DESKTOP_SESSION" in
     "X11"|"x11") WINDOW_MANAGER="X11 (Wayland is good for toddlers)";;
     *) WINDOW_MANAGER="$WINDOW_MANAGER (probably broke like you)";;
 esac
+
+case "$WINDOW_SYSTEM" in
+    "Wayland"|"wayland") WINDOW_SYSTEM="Wayland (X11 is old and scary)";;
+    "X11"|"x11") WINDOW_SYSTEM="X11 (Wayland is good for toddlers)";;
+    *) WINDOW_SYSTEM="${XDG_SESSION_TYPE} (probably broke like you)";;
+esac 
 
 # Initialize
 ASCII_DISTRO=""
@@ -616,7 +621,7 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii12="       -osssssso.      :ssssssso.         "
 	    ascii13="      :osssssss/        osssso+++.        "
 	    ascii14="     /ossssssss/        +ssssooo/-        "
-	    ascii15="   \`/ossssso+/:-        -:/+osssso+-     "
+	    ascii15="   \`/ossssso+/:-        -:/+osssso+-      "
 	    ascii16="  \`+sso+:-\`                 \`.-/+oso:    "
     	ascii17=" \`++:.                           \`-/+/   "
     	ascii18=" .\`                                 \`/   "
@@ -704,8 +709,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii12="⣿⣿⣿⣿⣿⣿⠇⠀⠐⠈⡃⠷⡶⠀⠘⣤⣷⣶⢹⣿⣿⣿ "
         ascii13="⣿⣿⣿⣿⡟⠋⣾⠿⠧⠠⣸⣷⣶⠀⠀⠙⢿⡿⡸⣿⣿⣿ "
         ascii14="⣿⣿⣿⣿⣷⢠⠅⡌⢎⡓⡼⢫⠣⠁⠀⣐⡀⢤⣁⣿⣿⣿ "
-        ascii15="How it feels having outdated packages?"
-        ascii16=""
+        ascii15="                       "
+        ascii16="How it feels having outdated packages?"
         ascii17=""
         ascii18=""
         ascii19=""
@@ -1305,11 +1310,11 @@ echo -e "${COLOR}${ascii07}${BOLD}Shell:${RESET} $SHELLOUT"
 echo -e "${COLOR}${ascii08}${BOLD}Resolution:${RESET} CRT 640x480"
 echo -e "${COLOR}${ascii09}${BOLD}DE:${RESET} $DESKTOP_ENV" #Crying
 echo -e "${COLOR}${ascii10}${BOLD}WM:${RESET} $WINDOW_MANAGER"
-echo -e "${COLOR}${ascii11}${BOLD}Terminal:${RESET} $TERMINAL"
-echo -e "${COLOR}${ascii12}${BOLD}CPU:${RESET} $CPU"
-echo -e "${COLOR}${ascii13}${BOLD}GPU:${RESET} $GPU"
-echo -e "${COLOR}${ascii14}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
-echo -e "${COLOR}${ascii15}"
+echo -e "${COLOR}${ascii11}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
+echo -e "${COLOR}${ascii12}${BOLD}Terminal:${RESET} $TERMINAL"
+echo -e "${COLOR}${ascii13}${BOLD}CPU:${RESET} $CPU"
+echo -e "${COLOR}${ascii14}${BOLD}GPU:${RESET} $GPU"
+echo -e "${COLOR}${ascii15}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
 echo -e "${COLOR}${ascii16}"
 echo -e "${COLOR}${ascii17}"
 echo -e "${COLOR}${ascii18}"
