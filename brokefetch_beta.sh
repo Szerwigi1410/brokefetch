@@ -1,4 +1,6 @@
+
 #!/bin/bash
+export LC_ALL=en_US.UTF-8
 
 # IMPORTANT NOTE: This script is called "brokefetch_beta.sh" because it is not fully functional yet.
 # It is a work in progress. When completed, it will replace "brokefetch.sh".
@@ -31,7 +33,7 @@ elif command -v apk &>/dev/null; then
 elif command -v pkg &>/dev/null; then
     PKG_COUNT=$(pkg info | wc -l)
 elif command -v brew &>/dev/null; then
-    PKG_COUNT=$(brew list | wc -l | awk '{print $1}')
+    PKG_COUNT=$(brew list | tr -cd '\0-\177' | wc -l)
 else
     PKG_COUNT="1 000 000" # Unknown package manager
 fi
@@ -52,7 +54,7 @@ fi
 
 # Load values from the config
 source "$CONFIG_FILE" 
-
+#!/bin/bash
 # OS
 if [ -f /etc/os-release ]; then
     # linux
@@ -1406,25 +1408,25 @@ line20="${BOLD}BROKEFETCH 🥀 1.7${RESET}"
 
 # Loop 00-20 safely
 for i in $(seq 0 20); do    
-    num=$(printf "%02d" "$i")
-    varname="line$num"
-    line="${!varname:-}"   
-    width="${COLUMNS:-80}" 
+        num=$(printf "%02d" "$i")
+        varname="line$num"
+        line="${!varname:-}"   
+        width="${COLUMNS:-80}" 
 
-    echo -e "$line" | awk -v w="$width" '
-    {
-      out=""; vis=0
-      while (length($0) > 0 && vis < w) {
-        if (match($0,/^\x1b\[[0-9;]*[A-Za-z]/)) {
-          out = out substr($0,1,RLENGTH)
-          $0 = substr($0,RLENGTH+1)
-        } else {
-          ch = substr($0,1,1)
-          out = out ch
-          $0 = substr($0,2)
-          vis++
-        }
-      }
-      print out
+    printf "%b\n" "$line" | gawk -v w="$width" '
+        {
+            out=""; vis=0
+            while (length($0) > 0 && vis < w) {
+                if (match($0,/^\x1b\[[0-9;]*[A-Za-z]/)) {
+                    out = out substr($0,1,RLENGTH)
+                    $0 = substr($0,RLENGTH+1)
+                } else {
+                    ch = substr($0,1,1)
+                    out = out ch
+                    $0 = substr($0,2)
+                    vis++
+                }
+            }
+            print out
     }'
 done

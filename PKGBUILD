@@ -7,6 +7,7 @@ arch=('any')
 url="https://github.com/Szerwigi1410/brokefetch"
 license=('MIT')
 depends=('bash')
+depends=('bash' 'gawk')
 source=("$pkgname::git+$url")
 sha256sums=('SKIP')
 

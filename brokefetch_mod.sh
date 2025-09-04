@@ -1,10 +1,12 @@
+
 #!/bin/bash
+export LC_ALL=en_US.UTF-8
 
 # IMPORTANT NOTE: This script is called "brokefetch_mod.sh" because it is modular which means it uses external sources to work.
 # It is a work in progress.
 # This script will display different ASCII for each OS from an external logos folders.
 
-# --- CONFIGURATION ---
+#!/bin/bash
 CONFIG_FILE="$HOME/.config/brokefetch/config"
 #i did this so they think twice before thet get flashbanged :> 
 ASCII_DIR="/usr/share/brokefetch/logos/logos"
@@ -13,10 +15,10 @@ OS_LIST_FILE="$(dirname "$0")/os_list.txt"
 # Create default config if it doesn't exist
 if [[ ! -f "$CONFIG_FILE" ]]; then
     mkdir -p "$(dirname "$CONFIG_FILE")"
-    echo -e "# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE" > "$CONFIG_FILE"
-	echo -e "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
-	echo -e "# Set UPTIME_OVERRIDE to your desired uptime in hours" >> "$CONFIG_FILE"
-	echo -e "RAM_MB=128\nUPTIME_OVERRIDE=16h\nCOLOR_NAME=CYAN" >> "$CONFIG_FILE"
+    printf "%s\n" "# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE" > "$CONFIG_FILE"
+    printf "%s\n" "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
+    printf "%s\n" "# Set UPTIME_OVERRIDE to your desired uptime in hours" >> "$CONFIG_FILE"
+    printf "%s\n" "RAM_MB=128" "UPTIME_OVERRIDE=16h" "COLOR_NAME=CYAN" >> "$CONFIG_FILE"
 fi
 
 # Load values from the config file
@@ -24,7 +26,7 @@ source "$CONFIG_FILE"
 
 # Create logos directory if it doesn't exist
 if [[ ! -d "$ASCII_DIR" ]]; then
-    mkdir -p "$ASCII_DIR"
+   sudo mkdir -p "$ASCII_DIR"
 fi
 
 # Array to hold the ASCII art lines
@@ -98,7 +100,7 @@ elif command -v apk &>/dev/null; then
 elif command -v pkg &>/dev/null; then
     PKG_COUNT=$(pkg info | wc -l)
 elif command -v brew &>/dev/null; then
-    PKG_COUNT=$(brew list | wc -l | awk '{print $1}')
+    PKG_COUNT=$(brew list | tr -cd '\0-\177' | wc -l)
 else
     PKG_COUNT="-1" # Unknown package manager
 fi
@@ -851,7 +853,7 @@ while getopts ":hva:li:" option; do
          echo " -i <file> lets you use a custom ASCII file from anywhere on the system"
          echo " -c enables colors in the output"
          echo ""
-         echo -e "The config file is currently located at ${BOLD}~/.config/brokefetch/${RESET}"
+         printf "%s\n" "The config file is currently located at ${BOLD}~/.config/brokefetch/${RESET}"
          exit;;
       v) # display Version
          echo "brokefetch EDGE version 1.8"
@@ -985,8 +987,8 @@ num_info_lines=${#info[@]}
 max_lines=$((num_ascii_lines > num_info_lines ? num_ascii_lines : num_info_lines))
 
 # Print the header line first
-printf "${COLOR}%s${RESET}\n" "${ASCII_ART_LINES[0]}"
-printf "${COLOR}%s${RESET}\n" "${ASCII_ART_LINES[1]}"
+printf "%b\n" "${COLOR}${ASCII_ART_LINES[0]}${RESET}"
+printf "%b\n" "${COLOR}${ASCII_ART_LINES[1]}${RESET}"
 
 # Print the body
 for ((i=2; i<max_lines; i++)); do
@@ -995,8 +997,8 @@ for ((i=2; i<max_lines; i++)); do
     if (( i-2 < num_info_lines )); then
         info_line="${info[$((i-2))]}"
     fi
-    printf "${COLOR}%-${max_width}s${RESET} %s\n" "$ascii_line" "$info_line"
+    printf "%b\n" "${COLOR}$(printf "%-${max_width}s" "$ascii_line")${RESET} $info_line"
 done
 
 echo
-printf "${BOLD}BROKEFETCH 🥀 1.8${RESET}\n"
+printf "%b\n" "${BOLD}BROKEFETCH 🥀 1.8${RESET}"
