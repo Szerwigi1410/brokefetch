@@ -51,9 +51,24 @@ curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/m
 yay -S brokefetch-git
 ```
 
-### AUR mod
+### ~AUR mod~ not any more 😭
+
 ```bash
 yay -S brokefetch-mod
+```
+
+### pacman
+
+install aserdev's repo
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/aserdevyt/aserdev-repo/refs/heads/main/install.sh)
+```
+
+install brokefetch
+
+```bash
+sudo pacman -Sy brokefetch
 ```
 
 ### Homebrew
