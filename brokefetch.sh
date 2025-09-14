@@ -47,7 +47,11 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
     echo -e "# Bold ascii logo? (true/fasle)" >> "$CONFIG_FILE"
     echo -e "ASCII_BOLD=false\n" >> "$CONFIG_FILE"
     echo -e "# Cpu text (RANDOM for random funny text or whatever u like inside \"\")" >> "$CONFIG_FILE"
-    echo -e "CPU_TEXT=RANDOM" >> "$CONFIG_FILE"
+    echo -e "CPU_TEXT=RANDOM\n" >> "$CONFIG_FILE"
+    echo -e "# enter your preferred screen type (CRT, LCD, OLED etc)" >> "$CONFIG_FILE"
+    echo -e "SCREEN_TYPE=CRT\n" >> "$CONFIG_FILE"
+    echo -e "# enter your preffered resolution (see the brokefetch wiki for supported resolutions)" >> "$CONFIG_FILE"
+    echo -e "SCREEN_RES=VGA\n" >> "$CONFIG_FILE"
 fi
 
 # Load values from the config
@@ -278,6 +282,34 @@ if [ "$CPU_TEXT" = RANDOM ]; then
 else
     CPU="$CPU_TEXT"
 fi
+
+#MONITOR
+
+MONITOR_TYPE="$SCREEN_TYPE"
+
+case $SCREEN_RES in
+    "VGA")MONITOR_RES="640x480";;
+    "SVGA")MONITOR_RES="800x600";;
+    "XGA")MONITOR_RES="1024x768";;
+    "HD")MONITOR_RES="1280x720";;
+    "WXGA")MONITOR_RES="1280x800";;
+    "SXGA")MONITOR_RES="1280x1024";;
+    "HD_1366")MONITOR_RES="1366x768";;
+    "WXGA_PLUS")MONITOR_RES="1440x900";;
+    "HD_PLUS" | "HD+")MONITOR_RES="1600x900";;
+    "WSXGA_PLUS" | "WSXGA+")MONITOR_RES="1680x1050";;
+    "FHD")MONITOR_RES="1920x1080";;
+    "WUXGA")MONITOR_RES="1920x1200";;
+    "UW_FHD")MONITOR_RES="2560x1080";;
+    "QHD")MONITOR_RES="2560x1440";;
+    "WQXGA")MONITOR_RES="2560x1600";;
+    "UW_QHD")MONITOR_RES="3440x1440";;
+    "UHD" | "4K")MONITOR_RES="3840x2160";;
+    "DUAL_QHD")MONITOR_RES="5120x1440";;
+    "5K")MONITOR_RES="5120x2880";;
+    "UHD" | "8K")MONITOR_RES="7680x4320";;
+    *)MONITOR_RES=$SCREEN_RES;;
+esac
 
 #GPU
 if [ -f /etc/os-release ]; then
@@ -1438,7 +1470,7 @@ line04="${BOLD_A}${COLOR}${ascii04}${BOLD}Kernel:${RESET} $KERNEL"
 line05="${BOLD_A}${COLOR}${ascii05}${BOLD}Uptime:${RESET} $UPTIME (sleep not included)"
 line06="${BOLD_A}${COLOR}${ascii06}${BOLD}Packages:${RESET} $PKG_COUNT (none legal)"
 line07="${BOLD_A}${COLOR}${ascii07}${BOLD}Shell:${RESET} $SHELLOUT"
-line08="${BOLD_A}${COLOR}${ascii08}${BOLD}Resolution:${RESET} CRT 640x480"
+line08="${BOLD_A}${COLOR}${ascii08}${BOLD}Resolution:${RESET} $MONITOR_TYPE $MONITOR_RES"
 line09="${BOLD_A}${COLOR}${ascii09}${BOLD}DE:${RESET} $DESKTOP_ENV" #Crying
 line10="${BOLD_A}${COLOR}${ascii10}${BOLD}WM:${RESET} $WINDOW_MANAGER"
 line11="${BOLD_A}${COLOR}${ascii11}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
