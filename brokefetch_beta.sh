@@ -47,7 +47,9 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
 	echo -e "# Set UPTIME_OVERRIDE to your desired uptime in hours\n" >> "$CONFIG_FILE"
 	echo -e "RAM_MB=128\nUPTIME_OVERRIDE=16h\nCOLOR_NAME=DISTRO\n" >> "$CONFIG_FILE"
     echo -e "# Bold ascii logo? (true/fasle)" >> "$CONFIG_FILE"
-    echo -e "ASCII_BOLD=false" >> "$CONFIG_FILE"
+    echo -e "ASCII_BOLD=false\n" >> "$CONFIG_FILE"
+    echo -e "# Cpu text (RANDOM for random funny text or whatever u like inside \"\")" >> "$CONFIG_FILE"
+    echo -e "CPU_TEXT=RANDOM" >> "$CONFIG_FILE"
 fi
 
 # Load values from the config
@@ -261,9 +263,10 @@ fi
 
 #CPU
 
-cpu_rand=$(($RANDOM%8))
+cpu_rand=$(($RANDOM%9))
 
-case $cpu_rand in
+if [ "$CPU_TEXT" = RANDOM ]; then
+    case $cpu_rand in
 	0)CPU="Imaginary (thinking hard...)";;
 	1)CPU="Hopes and dreams";;
 	2)CPU="Two sticks rubbing together";;
@@ -273,7 +276,10 @@ case $cpu_rand in
 	6)CPU="Corei14billon (I wish)";;
  	7)CPU="Open it and look";;
   	8)CPU="Could be Intel, maybe AMD";;
-esac
+    esac
+else
+    CPU="$CPU_TEXT"
+fi
 
 #GPU
 if [ -f /etc/os-release ]; then
@@ -1453,7 +1459,7 @@ for i in $(seq 0 20); do
     num=$(printf "%02d" "$i")
     varname="line$num"
     line="${!varname:-}"   
-    width="${COLUMNS:-80}" 
+    width="${COLUMNS:-105}" 
 
     echo -e "$line" | awk -v w="$width" '
     {

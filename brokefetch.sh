@@ -45,7 +45,9 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
 	echo -e "# Set UPTIME_OVERRIDE to your desired uptime in hours\n" >> "$CONFIG_FILE"
 	echo -e "RAM_MB=128\nUPTIME_OVERRIDE=16h\nCOLOR_NAME=DISTRO\n" >> "$CONFIG_FILE"
     echo -e "# Bold ascii logo? (true/fasle)" >> "$CONFIG_FILE"
-    echo -e "ASCII_BOLD=false" >> "$CONFIG_FILE"
+    echo -e "ASCII_BOLD=false\n" >> "$CONFIG_FILE"
+    echo -e "# Cpu text (RANDOM for random funny text or whatever u like inside \"\")" >> "$CONFIG_FILE"
+    echo -e "CPU_TEXT=RANDOM" >> "$CONFIG_FILE"
 fi
 
 # Load values from the config
@@ -259,9 +261,10 @@ fi
 
 #CPU
 
-cpu_rand=$(($RANDOM%8))
+cpu_rand=$(($RANDOM%9))
 
-case $cpu_rand in
+if [ "$CPU_TEXT" = RANDOM ]; then
+    case $cpu_rand in
 	0)CPU="Imaginary (thinking hard...)";;
 	1)CPU="Hopes and dreams";;
 	2)CPU="Two sticks rubbing together";;
@@ -271,7 +274,10 @@ case $cpu_rand in
 	6)CPU="Corei14billon (I wish)";;
  	7)CPU="Open it and look";;
   	8)CPU="Could be Intel, maybe AMD";;
-esac
+    esac
+else
+    CPU="$CPU_TEXT"
+fi
 
 #GPU
 if [ -f /etc/os-release ]; then
@@ -1342,6 +1348,50 @@ case "$DISTRO_TO_DISPLAY" in
         ascii18="                                           "
         ascii19="                                           "
         ;;
+    "thinkpad")
+        ascii00="${WHITE} /88888888 /88      ${RED} /88${WHITE}           /88       /8888888                 /88 ${COLOR}"
+        ascii01="${WHITE}|__  88__/| 88      ${RED}|__/${WHITE}          | 88      | 88__  88               | 88 ${COLOR}"
+        ascii02="${WHITE}   | 88   | 8888888  /88 /8888888 | 88   /88| 88  \ 88 /888888   /8888888 ${COLOR}"
+        ascii03="${WHITE}   | 88   | 88__  88| 88| 88__  88| 88  /88/| 8888888/|____  88 /88__  88 ${COLOR}"
+        ascii04="${WHITE}   | 88   | 88  \ 88| 88| 88  \ 88| 888888/ | 88____/  /8888888| 88  | 88 ${COLOR}"
+        ascii05="${WHITE}   | 88   | 88  | 88| 88| 88  | 88| 88_  88 | 88      /88__  88| 88  | 88 ${COLOR}"
+        ascii06="${WHITE}   | 88   | 88  | 88| 88| 88  | 88| 88 \  88| 88     |  8888888|  8888888 ${COLOR}"
+        ascii07="${WHITE}   |__/   |__/  |__/|__/|__/  |__/|__/  \__/|__/      \_______/ \_______/ ${COLOR}"
+        ascii08="${COLOR}                                                                          "                                                                         
+        ascii09="${COLOR}                                                                          "                                                                         
+        ascii10="${COLOR}                                                                          "
+        ascii11="${COLOR}                                                                          "
+        ascii12="${COLOR}                                                                          "
+        ascii13="${COLOR}                                                                          "
+        ascii14="${COLOR}                                                                          "
+        ascii15="${COLOR}                                                                          "
+        ascii16="${COLOR}                                                                          "
+        ascii17="${COLOR}                                                                          "
+        ascii18="${COLOR}                                                                          "
+        ascii19="You found an easter egg!"
+        ;;    
+    "thinkpad2")                                                                                                                                
+        ascii00="                                                                                                                                      dddddddd "
+        ascii01="${RED}TTTTTTTTTTTTTTTTTTTTTTThhhhhhh               ${RED}iiii                   kkkkkkkk           ${WHITE}PPPPPPPPPPPPPPPPP                              d::::::d "
+        ascii02="${RED}T${WHITE}:::::::::::::::::::::Th${WHITE}:::::h              ${RED}i::::i                  ${WHITE}k::::::k           P::::::::::::::::P                             d::::::d "
+        ascii03="${RED}T${WHITE}:::::::::::::::::::::Th${WHITE}:::::h               ${RED}iiii                   ${WHITE}k::::::k           P::::::PPPPPP:::::P                            d::::::d "
+        ascii04="${RED}T${WHITE}:::::${RED}TT:::::::TT:::::Th${WHITE}:::::h                                      k::::::k           PP:::::P     P:::::P                           d:::::d  "
+        ascii05="${RED}TTTTTT  T${WHITE}:::::${RED}T  TTTTTT h${WHITE}::::h hhhhh       iiiiiiinnnn  nnnnnnnn     k:::::k    kkkkkkk  P::::P     P:::::Paaaaaaaaaaaaa      ddddddddd:::::d  "
+        ascii06="        ${RED}T${WHITE}:::::${RED}T         h${WHITE}::::hh:::::hhh    i:::::in:::nn::::::::nn   k:::::k   k:::::k   P::::P     P:::::Pa::::::::::::a   dd::::::::::::::d  "
+        ascii07="        ${RED}T${WHITE}:::::${RED}T         h${WHITE}::::::::::::::hh   i::::in::::::::::::::nn  k:::::k  k:::::k    P::::PPPPPP:::::P aaaaaaaaa:::::a d::::::::::::::::d  "
+        ascii08="        ${RED}T${WHITE}:::::${RED}T         h${WHITE}:::::::${RED}hhh${WHITE}::::::h  i::::inn:::::::::::::::n k:::::k k:::::k     P:::::::::::::PP           a::::ad:::::::ddddd:::::d  "
+        ascii09="        ${RED}T${WHITE}:::::${RED}T         h${WHITE}::::::${RED}h   h${WHITE}::::::h i::::i  n:::::nnnn:::::n k::::::k:::::k      P::::PPPPPPPPP      aaaaaaa:::::ad::::::d    d:::::d  "
+        ascii10="        ${RED}T${WHITE}:::::${RED}T         h${WHITE}:::::${RED}h     h${WHITE}:::::h i::::i  n::::n    n::::n k:::::::::::k       P::::P            aa::::::::::::ad:::::d     d:::::d  "
+        ascii11="        ${RED}T${WHITE}:::::${RED}T         h${WHITE}:::::${RED}h     h${WHITE}:::::h i::::i  n::::n    n::::n k:::::::::::k       P::::P           a::::aaaa::::::ad:::::d     d:::::d  "
+        ascii12="        ${RED}T${WHITE}:::::${RED}T         h${WHITE}:::::${RED}h     h${WHITE}:::::h i::::i  n::::n    n::::n k::::::k:::::k      P::::P          a::::a    a:::::ad:::::d     d:::::d  "
+        ascii13="      ${RED}TT${WHITE}:::::::${RED}TT       h${WHITE}:::::${RED}h     h${WHITE}:::::hi::::::i n::::n    n::::nk::::::k k:::::k   PP::::::PP        a::::a    a:::::ad::::::ddddd::::::dd "
+        ascii14="      ${RED}T${WHITE}:::::::::${RED}T       h${WHITE}:::::${RED}h     h${WHITE}:::::hi::::::i n::::n    n::::nk::::::k  k:::::k  P::::::::P        a:::::aaaa::::::a d:::::::::::::::::d "
+        ascii15="     ${RED} T${WHITE}:::::::::${RED}T       h${WHITE}:::::${RED}h     h${WHITE}:::::hi::::::i n::::n    n::::nk::::::k   k:::::k P::::::::P         a::::::::::aa:::a d:::::::::ddd::::d "
+        ascii16="      ${RED}TTTTTTTTTTT       ${RED}hhhhhhh     hhhhhhhiiiiiiii nnnnnn    nnnnnnkkkkkkkk    kkkkkkkPPPPPPPPPP          aaaaaaaaaa  aaaa  ddddddddd   ddddd "
+        ascii17=""
+        ascii18=""
+        ascii19="" #finish later         
+        ;;        
     *)
         # Default ASCII art for unknown distros
         ascii00="${YELLOW}        S2#####                    "
@@ -1407,7 +1457,7 @@ for i in $(seq 0 20); do
     num=$(printf "%02d" "$i")
     varname="line$num"
     line="${!varname:-}"   
-    width="${COLUMNS:-80}" 
+    width="${COLUMNS:-105}" 
 
     echo -e "$line" | awk -v w="$width" '
     {
