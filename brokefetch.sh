@@ -1,4 +1,6 @@
+
 #!/bin/bash
+export LC_ALL=en_US.UTF-8
 
 # IMPORTANT NOTE: This script is called "brokefetch.sh" because it is ther most stable/recomended.
 # and brokefetch_beta.sh will replace this script 
@@ -29,7 +31,7 @@ elif command -v apk &>/dev/null; then
 elif command -v pkg &>/dev/null; then
     PKG_COUNT=$(pkg info | wc -l)
 elif command -v brew &>/dev/null; then
-    PKG_COUNT=$(brew list | wc -l | awk '{print $1}')
+    PKG_COUNT=$(brew list | wc -l)
 else
     PKG_COUNT="1 000 000" # Unknown package manager
 fi
@@ -40,12 +42,12 @@ CONFIG_FILE="$HOME/.config/brokefetch/config"
 # If there is no config – create a default one.
 if [[ ! -f "$CONFIG_FILE" ]]; then
     mkdir -p "$(dirname "$CONFIG_FILE")"
-    echo -e "# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE, YELLOW, PURPLE, BLACK, GRAY and DISTRO" > "$CONFIG_FILE"
-	echo -e "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
-	echo -e "# Set UPTIME_OVERRIDE to your desired uptime in hours\n" >> "$CONFIG_FILE"
-	echo -e "RAM_MB=128\nUPTIME_OVERRIDE=16h\nCOLOR_NAME=DISTRO\n" >> "$CONFIG_FILE"
-    echo -e "# Bold ascii logo? (true/fasle)" >> "$CONFIG_FILE"
-    echo -e "ASCII_BOLD=false" >> "$CONFIG_FILE"
+    printf "%s\n" "# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE, YELLOW, PURPLE, BLACK, GRAY and DISTRO" > "$CONFIG_FILE"
+    printf "%s\n" "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
+    printf "%s\n" "# Set UPTIME_OVERRIDE to your desired uptime in hours" >> "$CONFIG_FILE"
+    printf "%s\n" "RAM_MB=128" "UPTIME_OVERRIDE=16h" "COLOR_NAME=DISTRO" >> "$CONFIG_FILE"
+    printf "%s\n" "# Bold ascii logo? (true/fasle)" >> "$CONFIG_FILE"
+    printf "%s\n" "ASCII_BOLD=false" >> "$CONFIG_FILE"
 fi
 
 # Load values from the config
@@ -54,7 +56,8 @@ source "$CONFIG_FILE"
 # OS
 if [ -f /etc/os-release ]; then
     # linux
-    OS_NAME="$(awk -F= '/^NAME=/{print $2}' /etc/os-release | tr -d '"')"
+    OS_NAME="$(grep '^NAME=' /etc/os-release | cut -d= -f2 | tr -d '"')"
+
 elif grep -q Microsoft /proc/version 2>/dev/null; then
     # windows subsystem for linux
     OS_NAME="WSL"
@@ -162,7 +165,8 @@ fi
 
 # Uptime - macOS
 if [ "$OS" = "macOS" ]; then
-  BOOT_TIME=$(sysctl -n kern.boottime | awk -F'[ ,}]+' '{print $4}')
+  BOOT_TIME=$(sysctl -n kern.boottime | LC_ALL=C awk -F'[ ,}]+' '{print $4}')
+
   NOW=$(date +%s)
   UPTIME_S=$((NOW - BOOT_TIME))
   UPTIME_H=$(( UPTIME_S / 3600 ))
@@ -276,7 +280,8 @@ esac
 #GPU
 if [ -f /etc/os-release ]; then
     # linux
-    GPU_NAME="$(lspci | grep -iE 'VGA' | awk -F ': ' '{print $2}' | awk '{print $1}' | tr '[:upper:]' '[:lower:]')"
+    GPU_NAME="$(lspci | grep -iE 'VGA' | LC_ALL=C awk -F ': ' '{print $2}' | LC_ALL=C awk '{print $1}' | tr '[:upper:]' '[:lower:]')"
+
 elif grep -q Microsoft /proc/version 2>/dev/null; then
     # windows subsystem for linux
     GPU_NAME="WSL"
@@ -342,7 +347,8 @@ esac
 #Shell
 if [ -f /etc/os-release ]; then
     # linux
-    SHELL_NAME="$(echo $SHELL | grep -Ei "/bin" | awk -F "bin/" '{print $2}')"
+    SHELL_NAME="${SHELL##*/bin/}"
+
 elif grep -q Microsoft /proc/version 2>/dev/null; then
     # windows subsystem for linux
     SHELL_NAME="WSL"
@@ -353,7 +359,8 @@ else
     # Mac, Windows, Fallback (such as freeBSD)
     case "$(uname -s)" in
         Darwin)
-            SHELL_NAME="$(echo $SHELL | grep -Ei "/bin" | awk -F "bin/" '{print $2}')"
+            SHELL_NAME="${SHELL##*/bin/}"
+
             ;;
         MINGW*|MSYS*|CYGWIN*)
             SHELL_NAME="pwsh"
@@ -511,7 +518,7 @@ while getopts ":hva:l" option; do
          echo " -a lets you override ASCII art distro name"
          echo " -l lists all available ASCII arts"
          echo ""
-         echo -e "The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
+         printf "%s\n" "The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
          exit;;
       v) # display Version
          echo "brokefetch EDGE version 1.7"
@@ -1409,7 +1416,7 @@ for i in $(seq 0 20); do
     line="${!varname:-}"   
     width="${COLUMNS:-80}" 
 
-    echo -e "$line" | awk -v w="$width" '
+    printf "%b\n" "$line" | LC_ALL=C awk -v w="$width" '
     {
       out=""; vis=0
       while (length($0) > 0 && vis < w) {
