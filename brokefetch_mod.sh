@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Ensure the script always runs under bash. If it's being executed from a
+# different shell (for example `zsh` via `source`), re-exec under `bash`.
+if [ -z "${BASH_VERSION:-}" ]; then
+    # If script was sourced (no $0), or we can't exec, print an instruction.
+    if ! exec bash "$0" "$@"; then
+        echo "This script requires bash. Run: bash $0" >&2
+        exit 1
+    fi
+fi
+
 # IMPORTANT NOTE: This script is called "brokefetch_mod.sh" because it is modular which means it uses external sources to work.
 # It is a work in progress.
 # This script will display different ASCII for each OS from an external logos folders.
@@ -13,14 +23,53 @@ OS_LIST_FILE="$(dirname "$0")/os_list.txt"
 # Create default config if it doesn't exist
 if [[ ! -f "$CONFIG_FILE" ]]; then
     mkdir -p "$(dirname "$CONFIG_FILE")"
-    echo -e "# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE" > "$CONFIG_FILE"
-	echo -e "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
-	echo -e "# Set UPTIME_OVERRIDE to your desired uptime in hours" >> "$CONFIG_FILE"
-	echo -e "RAM_MB=128\nUPTIME_OVERRIDE=16h\nCOLOR_NAME=CYAN" >> "$CONFIG_FILE"
+    cat > "$CONFIG_FILE" <<'EOF'
+# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE
+# Set RAM_MB to your desired memory size in MB
+# Set UPTIME_OVERRIDE to your desired uptime in hours
+RAM_MB=128
+UPTIME_OVERRIDE=16h
+COLOR_NAME=CYAN
+# Optional: override the detected OS name (used for mapping and ascii selection)
+# Example: OS_OVERRIDE=aserdev   or OS_OVERRIDE="Arch Linux"
+# If set, automatic OS detection will be skipped.
+OS_OVERRIDE=
+# Optional: path to an ASCII file (absolute) to override auto logo selection
+# ASCII_OVERRIDE_FILE=/path/to/custom_ascii.txt
+# Optional: distro name to force a specific logo from the logos directory
+# ASCII_OVERRIDE=arch
+# Comma-separated order of sysinfo entries to display (keys: name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory)
+SYSINFO_ORDER=name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory
+# Comma-separated enabled sysinfo keys (subset of SYSINFO_ORDER). Set to empty to disable all.
+SYSINFO_ENABLED=name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory
+EOF
 fi
 
 # Load values from the config file
 source "$CONFIG_FILE"
+
+# Normalize and parse SYSINFO_ORDER and SYSINFO_ENABLED
+if [ -z "$SYSINFO_ORDER" ]; then
+    SYSINFO_ORDER="name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory"
+fi
+if [ -z "$SYSINFO_ENABLED" ]; then
+    SYSINFO_ENABLED="$SYSINFO_ORDER"
+fi
+IFS=',' read -ra ORDER_ARR <<< "$(echo "$SYSINFO_ORDER" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')"
+IFS=',' read -ra ENABLED_ARR <<< "$(echo "$SYSINFO_ENABLED" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')"
+
+# Helper to check if a key is enabled
+is_enabled() {
+    local key="$1"
+    for e in "${ENABLED_ARR[@]}"; do
+        if [ "$e" = "$key" ]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+# ASCII overrides are handled later after helper functions are defined
 
 # Create logos directory if it doesn't exist
 if [[ ! -d "$ASCII_DIR" ]]; then
@@ -103,30 +152,34 @@ else
     PKG_COUNT="-1" # Unknown package manager
 fi
 
-# OS
-if [ -f /etc/os-release ]; then
-    # linux
-    OS_NAME="$(awk -F= '/^NAME=/{print $2}' /etc/os-release | tr -d '"')"
-elif grep -q Microsoft /proc/version 2>/dev/null; then
-    # windows subsystem for linux
-    OS_NAME="WSL"
-elif [[ "$(uname -o)" == "Android" ]]; then
-    # Termux on Android
-    OS_NAME="Android"
+# OS detection (can be overridden by OS_OVERRIDE in config)
+if [[ -n "${OS_OVERRIDE:-}" ]]; then
+    OS_NAME="$OS_OVERRIDE"
 else
-    # Mac, Windows, Fallback (such as freeBSD)
-    case "$(uname -s)" in
-        Darwin)
-            OS_NAME="macOS"
-            ;;
-        MINGW*|MSYS*|CYGWIN*)
-            OS_NAME="Windows"
-            ;;
-        *)
-            # A new fallback case for unknown OS
-            OS_NAME="Generic Linux"
-            ;;
-    esac
+    if [ -f /etc/os-release ]; then
+        # linux
+        OS_NAME="$(awk -F= '/^NAME=/{print $2}' /etc/os-release | tr -d '"')"
+    elif grep -q Microsoft /proc/version 2>/dev/null; then
+        # windows subsystem for linux
+        OS_NAME="WSL"
+    elif [[ "$(uname -o)" == "Android" ]]; then
+        # Termux on Android
+        OS_NAME="Android"
+    else
+        # Mac, Windows, Fallback (such as freeBSD)
+        case "$(uname -s)" in
+            Darwin)
+                OS_NAME="macOS"
+                ;;
+            MINGW*|MSYS*|CYGWIN*)
+                OS_NAME="Windows"
+                ;;
+            *)
+                # A new fallback case for unknown OS
+                OS_NAME="Generic Linux"
+                ;;
+        esac
+    fi
 fi
 
 
@@ -904,18 +957,23 @@ unset ascii_art_lines
 if [[ -n "$ASCII_FILE_PATH" ]]; then
     # Use the user-specified file path directly
     mapfile -t ASCII_ART_LINES < "$ASCII_FILE_PATH"
-elif [[ -n "$ASCII_OVERRIDE" ]]; then
-    DISTRO_TO_DISPLAY=$(get_ascii_filename "$ASCII_OVERRIDE")
-    if ! load_ascii "$DISTRO_TO_DISPLAY"; then
-        # Fallback to a default if override file not found
-        load_ascii "default" || true
-    fi
 else
-    DISTRO_TO_DISPLAY=$(get_ascii_filename "$OS_NAME")
+    # If ASCII_OVERRIDE set explicitly in config/args, prefer it
+    if [[ -n "$ASCII_OVERRIDE" ]]; then
+        DISTRO_TO_DISPLAY=$(get_ascii_filename "$ASCII_OVERRIDE")
+    else
+        DISTRO_TO_DISPLAY=$(get_ascii_filename "$OS_NAME")
+    fi
+
     if ! load_ascii "$DISTRO_TO_DISPLAY"; then
-        # Load default ASCII if no specific file is found
+        # Fallback to a default if specific file not found
         load_ascii "default" || true
     fi
+fi
+
+# Debug hint when OS_OVERRIDE is in effect
+if [[ -n "${OS_OVERRIDE:-}" ]]; then
+    printf "%s\n" "[DEBUG] OS override in effect: using OS_NAME='$OS_NAME' -> ascii='$DISTRO_TO_DISPLAY'" 1>&2
 fi
 
 # Use default ASCII if no specific or default file exists
@@ -955,28 +1013,67 @@ done
 # Add a small buffer for spacing
 max_width=$((max_width + 4))
 
-# Value of the color
-COLOR=${!COLOR_NAME}
+# Value of the color - safe lookup
+if [[ -n "${COLOR_NAME:-}" ]]; then
+    case "${COLOR_NAME^^}" in
+        RED)   COLOR="$RED"   ;;
+        GREEN) COLOR="$GREEN" ;;
+        BLUE)  COLOR="$BLUE"  ;;
+        CYAN)  COLOR="$CYAN"  ;;
+        WHITE) COLOR="$WHITE" ;;
+        YELLOW)COLOR="$YELLOW";;
+        PURPLE)COLOR="$PURPLE";;
+        *)     COLOR=""        ;;
+    esac
+else
+    COLOR=""
+fi
 
 # Combine the ASCII art with the system info using printf for alignment
-info=(
-    "${COLOR}${BOLD}${RESET}$(whoami)@brokelaptop"
-    "${COLOR}${RESET}-----------------------"
-    "${COLOR}${BOLD}OS:${RESET} ${OS}"
-    "${COLOR}${BOLD}Host:${RESET} ${HOST}"
-    "${COLOR}${BOLD}Kernel:${RESET} ${KERNEL}"
-    "${COLOR}${BOLD}Uptime:${RESET} ${UPTIME_OVERRIDE}"
-    "${COLOR}${BOLD}Packages:${RESET} ${PKG_COUNT} (none legal)"
-    "${COLOR}${BOLD}Shell:${RESET} ${SHELLOUT}"
-    "${COLOR}${BOLD}Resolution:${RESET} CRT 640x480"
-    "${COLOR}${BOLD}DE:${RESET} ${DESKTOP_ENV}"
-    "${COLOR}${BOLD}WM:${RESET} ${WINDOW_MANAGER}"
-    "${COLOR}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
-    "${COLOR}${BOLD}Terminal:${RESET} ${TERMINAL}"
-    "${COLOR}${BOLD}CPU:${RESET} ${CPU}"
-    "${COLOR}${BOLD}GPU:${RESET} ${GPU}"
-    "${COLOR}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
-)
+declare -a SYSINFO_LINES
+
+# Mapping of keys to formatted right-hand strings (without ascii left column)
+declare -A SYSINFO_MAP
+SYSINFO_MAP[name]="${COLOR}${BOLD}OS:${RESET} ${OS}"
+SYSINFO_MAP[host]="${COLOR}${BOLD}Host:${RESET} ${HOST}"
+SYSINFO_MAP[kernel]="${COLOR}${BOLD}Kernel:${RESET} ${KERNEL}"
+SYSINFO_MAP[uptime]="${COLOR}${BOLD}Uptime:${RESET} ${UPTIME}"
+SYSINFO_MAP[packages]="${COLOR}${BOLD}Packages:${RESET} ${PKG_COUNT} (none legal)"
+SYSINFO_MAP[shell]="${COLOR}${BOLD}Shell:${RESET} ${SHELLOUT}"
+SYSINFO_MAP[resolution]="${COLOR}${BOLD}Resolution:${RESET} ${MONITOR_TYPE} ${MONITOR_RES}"
+SYSINFO_MAP[de]="${COLOR}${BOLD}DE:${RESET} ${DESKTOP_ENV}"
+SYSINFO_MAP[wm]="${COLOR}${BOLD}WM:${RESET} ${WINDOW_MANAGER}"
+SYSINFO_MAP[window_system]="${COLOR}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
+SYSINFO_MAP[terminal]="${COLOR}${BOLD}Terminal:${RESET} ${TERMINAL}"
+SYSINFO_MAP[cpu]="${COLOR}${BOLD}CPU:${RESET} ${CPU}"
+SYSINFO_MAP[gpu]="${COLOR}${BOLD}GPU:${RESET} ${GPU}"
+SYSINFO_MAP[memory]="${COLOR}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
+
+# Build SYSINFO_LINES in the requested order and respecting enabled keys
+for key in "${ORDER_ARR[@]}"; do
+    key=$(echo "$key" | tr '[:upper:]' '[:lower:]')
+    if is_enabled "$key"; then
+        if [ -n "${SYSINFO_MAP[$key]}" ]; then
+            SYSINFO_LINES+=("${SYSINFO_MAP[$key]}")
+        fi
+    fi
+done
+
+# Append any enabled keys not present in ORDER_ARR
+for key in "${ENABLED_ARR[@]}"; do
+    skip=0
+    for k2 in "${ORDER_ARR[@]}"; do
+        if [ "$k2" = "$key" ]; then
+            skip=1
+            break
+        fi
+    done
+    if [ $skip -eq 0 ]; then
+        if [ -n "${SYSINFO_MAP[$key]}" ]; then
+            SYSINFO_LINES+=("${SYSINFO_MAP[$key]}")
+        fi
+    fi
+done
 
 # --- OUTPUT ---
 # Loop through the combined output lines
@@ -984,16 +1081,18 @@ num_ascii_lines=${#ASCII_ART_LINES[@]}
 num_info_lines=${#info[@]}
 max_lines=$((num_ascii_lines > num_info_lines ? num_ascii_lines : num_info_lines))
 
-# Print the header line first
-printf "${COLOR}%s${RESET}\n" "${ASCII_ART_LINES[0]}"
-printf "${COLOR}%s${RESET}\n" "${ASCII_ART_LINES[1]}"
+# Print the header line(s)
+for ((i=0; i< ( num_ascii_lines < 2 ? num_ascii_lines : 2 ); i++)); do
+    printf "${COLOR}%s${RESET}\n" "${ASCII_ART_LINES[$i]}"
+done
 
-# Print the body
+# Print the body combining ASCII_ART_LINES with SYSINFO_LINES
 for ((i=2; i<max_lines; i++)); do
     ascii_line="${ASCII_ART_LINES[$i]:-}"
     info_line=""
-    if (( i-2 < num_info_lines )); then
-        info_line="${info[$((i-2))]}"
+    info_idx=$((i-2))
+    if (( info_idx < ${#SYSINFO_LINES[@]} )); then
+        info_line="${SYSINFO_LINES[$info_idx]}"
     fi
     printf "${COLOR}%-${max_width}s${RESET} %s\n" "$ascii_line" "$info_line"
 done
