@@ -27,19 +27,25 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
 # Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE
 # Set RAM_MB to your desired memory size in MB
 # Set UPTIME_OVERRIDE to your desired uptime in hours
+
 RAM_MB=128
 UPTIME_OVERRIDE=16h
 COLOR_NAME=CYAN
+
 # Optional: override the detected OS name (used for mapping and ascii selection)
 # Example: OS_OVERRIDE=aserdev   or OS_OVERRIDE="Arch Linux"
 # If set, automatic OS detection will be skipped.
 OS_OVERRIDE=
+
 # Optional: path to an ASCII file (absolute) to override auto logo selection
 # ASCII_OVERRIDE_FILE=/path/to/custom_ascii.txt
+
 # Optional: distro name to force a specific logo from the logos directory
 # ASCII_OVERRIDE=arch
+
 # Comma-separated order of sysinfo entries to display (keys: name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory)
 SYSINFO_ORDER=name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory
+
 # Comma-separated enabled sysinfo keys (subset of SYSINFO_ORDER). Set to empty to disable all.
 SYSINFO_ENABLED=name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory
 EOF
