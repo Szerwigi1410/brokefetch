@@ -308,6 +308,7 @@ case $SCREEN_RES in
     "DUAL_QHD")MONITOR_RES="5120x1440";;
     "5K")MONITOR_RES="5120x2880";;
     "UHD_8K" | "8K")MONITOR_RES="7680x4320";;
+    "CURRENT")MONITOR_RES="$(cat /sys/class/graphics/fb0/virtual_size | tr , x)";;
     *)MONITOR_RES=$SCREEN_RES;;
 esac
 
