@@ -42,22 +42,63 @@ CONFIG_FILE="$HOME/.config/brokefetch/config"
 # If there is no config – create a default one.
 if [[ ! -f "$CONFIG_FILE" ]]; then
     mkdir -p "$(dirname "$CONFIG_FILE")"
-    echo -e "# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE, YELLOW, PURPLE, BLACK, GRAY and DISTRO" > "$CONFIG_FILE"
-	echo -e "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
-	echo -e "# Set UPTIME_OVERRIDE to your desired uptime in hours\n" >> "$CONFIG_FILE"
-	echo -e "RAM_MB=128\nUPTIME_OVERRIDE=16h\nCOLOR_NAME=DISTRO\n" >> "$CONFIG_FILE"
-    echo -e "# Bold ascii logo? (true/fasle)" >> "$CONFIG_FILE"
-    echo -e "ASCII_BOLD=false\n" >> "$CONFIG_FILE"
-    echo -e "# Cpu text (RANDOM for random funny text or whatever u like inside \"\")" >> "$CONFIG_FILE"
-    echo -e "CPU_TEXT=RANDOM\n" >> "$CONFIG_FILE"
-    echo -e "# enter your preferred screen type (CRT, LCD, OLED etc)" >> "$CONFIG_FILE"
-    echo -e "SCREEN_TYPE=CRT\n" >> "$CONFIG_FILE"
-    echo -e "# enter your preffered resolution (see the brokefetch wiki for supported resolutions)" >> "$CONFIG_FILE"
-    echo -e "SCREEN_RES=VGA\n" >> "$CONFIG_FILE"
+    cat > "$CONFIG_FILE" <<'EOF'
+# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE, YELLOW, PURPLE, BLACK, GRAY and DISTRO
+# Set RAM_MB to your desired memory size in MB
+# Set UPTIME_OVERRIDE to your desired uptime in hours
+
+RAM_MB=128
+UPTIME_OVERRIDE=16h
+COLOR_NAME=DISTRO
+
+# Bold ascii logo? (true/false)
+ASCII_BOLD=false
+
+# Cpu text (RANDOM for random funny text or whatever u like inside "")
+CPU_TEXT=RANDOM
+
+# enter your preferred screen type (CRT, LCD, OLED etc)
+SCREEN_TYPE=CRT
+
+# enter your preferred resolution (see the brokefetch wiki for supported resolutions)
+SCREEN_RES=VGA
+
+# Comma-separated order of sysinfo entries to display (keys: name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory)
+SYSINFO_ORDER=name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory
+
+# Comma-separated enabled sysinfo keys (subset of SYSINFO_ORDER). Set to empty to disable all.
+SYSINFO_ENABLED=name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory
+EOF
 fi
 
 # Load values from the config
 source "$CONFIG_FILE" 
+
+# Default sysinfo order (comma-separated) and enabled map (comma-separated keys to show)
+# Example: SYSINFO_ORDER="name,cpu,gpu,ram,uptime,packages,shell,resolution,de,wm,window_system,terminal,hostname"
+# Example: SYSINFO_ENABLED="name,cpu,gpu,ram,uptime,packages"
+if [ -z "$SYSINFO_ORDER" ]; then
+    SYSINFO_ORDER="name,host,kernel,uptime,packages,shell,resolution,de,wm,window_system,terminal,cpu,gpu,memory"
+fi
+
+if [ -z "$SYSINFO_ENABLED" ]; then
+    SYSINFO_ENABLED="$SYSINFO_ORDER"
+fi
+
+# Convert SYSINFO_ORDER and SYSINFO_ENABLED into arrays (normalized lowercase, trimmed)
+IFS=',' read -ra ORDER_ARR <<< "$(echo "$SYSINFO_ORDER" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')"
+IFS=',' read -ra ENABLED_ARR <<< "$(echo "$SYSINFO_ENABLED" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')"
+
+# Helper to check if a key is enabled
+is_enabled() {
+    local key="$1"
+    for e in "${ENABLED_ARR[@]}"; do
+        if [ "$e" = "$key" ]; then
+            return 0
+        fi
+    done
+    return 1
+}
 
 # OS
 if [ -f /etc/os-release ]; then
@@ -94,7 +135,7 @@ case "$OS_NAME" in
     "Amazon Linux")        OS="Amazon (sold my data to afford this)";; #
     "Arch Linux")          OS="Arch Linux (we get it bro)";; #
     "Artix Linux")         OS="Artix (SystemD-broke-my-wallet-too)";; #
-    "Aserdev")             OS="Aserdev (because I can't type properly)";; #
+    "Aserdev")             OS="Aserdev (arch with a budget pacman repo)";; #
     "CentOS Linux")        OS="CentOS (no support, no money)";; #
     "Debian GNU/Linux")    OS="Plebian 12 (brokeworm)";; #
     "EndeavourOS")         OS="EndavoorOS (Arch for fetuses)";; #
@@ -253,7 +294,23 @@ if [ "$COLOR_NAME" = "DISTRO" ]; then
         *) COLOR="$BLUE";;
     esac
 else
-    COLOR=${!COLOR_NAME}
+    # Safe lookup for COLOR_NAME to avoid invalid indirect expansion
+    if [[ -n "${COLOR_NAME:-}" ]]; then
+        case "${COLOR_NAME^^}" in
+            RED)   COLOR="$RED"   ;;
+            GREEN) COLOR="$GREEN" ;;
+            BLUE)  COLOR="$BLUE"  ;;
+            CYAN)  COLOR="$CYAN"  ;;
+            WHITE) COLOR="$WHITE" ;;
+            YELLOW)COLOR="$YELLOW";;
+            PURPLE)COLOR="$PURPLE";;
+            BLACK) COLOR="$BLACK";;
+            GRAY)  COLOR="$GRAY";;
+            *)     COLOR=""        ;;
+        esac
+    else
+        COLOR=""
+    fi
 fi
 
 # Bold ascii
@@ -310,6 +367,7 @@ case $SCREEN_RES in
     "DUAL_QHD")MONITOR_RES="5120x1440";;
     "5K")MONITOR_RES="5120x2880";;
     "UHD_8K" | "8K")MONITOR_RES="7680x4320";;
+	"CURRENT")MONITOR_RES="$(cat /sys/class/graphics/fb0/virtual_size | tr , x)";;
     *)MONITOR_RES=$SCREEN_RES;;
 esac
 
@@ -760,10 +818,10 @@ case "$DISTRO_TO_DISPLAY" in
         ;;
     "aserdev")
         ascii00="    _    ____  _____ ____       "
-        ascii01="   / \  / ___|| ____|  _ \\     "
+        ascii01="   / \  / ___|| ____|  _ \\      "
         ascii02="  / _ \ \___ \|  _| | |_) |     "
         ascii03=" / ___ \ ___) | |___|  _ <      "
-        ascii04="/_/   \_\____/|_____|_| \_\\    "
+        ascii04="/_/   \_\____/|_____|_| \_\\     "
         ascii05="                                "
         ascii06=" ____  _______     __           "
         ascii07="|  _ \| ____\ \   / /           "
@@ -772,7 +830,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii10="|____/|_____|  \_/              "
         ascii11="                                "
         ascii12="                                "
-        ascii13=" this distro doesn't even exist "
+        ascii13=" better than arch and cheaper   "
         ascii14="                                "
         ascii15="                                "
         ascii16="                                "
@@ -909,7 +967,7 @@ case "$DISTRO_TO_DISPLAY" in
     	ascii15="                                   "
     	ascii16="Just tell me why not linux?"
     	ascii17="I'm not hating, just asking"
-    	ascii18=""
+    	ascii18="ik now ,it is more stable "
     	ascii19=""
         ;;
     "garuda linux" | "garuda")
@@ -1466,47 +1524,87 @@ done
 # === OUTPUT ===
 line00="${BOLD_A}${COLOR}${ascii00}${RESET}$(whoami)@brokelaptop"
 line01="${BOLD_A}${COLOR}${ascii01}${RESET}-----------------------"
-line02="${BOLD_A}${COLOR}${ascii02}${BOLD}OS:${RESET} $OS"
-line03="${BOLD_A}${COLOR}${ascii03}${BOLD}Host:${RESET} $HOST"
-line04="${BOLD_A}${COLOR}${ascii04}${BOLD}Kernel:${RESET} $KERNEL"
-line05="${BOLD_A}${COLOR}${ascii05}${BOLD}Uptime:${RESET} $UPTIME (sleep not included)"
-line06="${BOLD_A}${COLOR}${ascii06}${BOLD}Packages:${RESET} $PKG_COUNT (none legal)"
-line07="${BOLD_A}${COLOR}${ascii07}${BOLD}Shell:${RESET} $SHELLOUT"
-line08="${BOLD_A}${COLOR}${ascii08}${BOLD}Resolution:${RESET} $MONITOR_TYPE $MONITOR_RES"
-line09="${BOLD_A}${COLOR}${ascii09}${BOLD}DE:${RESET} $DESKTOP_ENV" #Crying
-line10="${BOLD_A}${COLOR}${ascii10}${BOLD}WM:${RESET} $WINDOW_MANAGER"
-line11="${BOLD_A}${COLOR}${ascii11}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
-line12="${BOLD_A}${COLOR}${ascii12}${BOLD}Terminal:${RESET} $TERMINAL"
-line13="${BOLD_A}${COLOR}${ascii13}${BOLD}CPU:${RESET} $CPU"
-line14="${BOLD_A}${COLOR}${ascii14}${BOLD}GPU:${RESET} $GPU"
-line15="${BOLD_A}${COLOR}${ascii15}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
-line16="${BOLD_A}${COLOR}${ascii16}"
-line17="${BOLD_A}${COLOR}${ascii17}"
-line18="${BOLD_A}${COLOR}${ascii18}"
-line19="${BOLD_A}${COLOR}${ascii19}"
+declare -a SYSINFO_LINES
+
+# Populate a mapping of known keys to formatted strings
+declare -A SYSINFO_MAP
+SYSINFO_MAP[name]="${BOLD}OS:${RESET} $OS"
+SYSINFO_MAP[host]="${BOLD}Host:${RESET} $HOST"
+SYSINFO_MAP[kernel]="${BOLD}Kernel:${RESET} $KERNEL"
+SYSINFO_MAP[uptime]="${BOLD}Uptime:${RESET} $UPTIME (sleep not included)"
+SYSINFO_MAP[packages]="${BOLD}Packages:${RESET} $PKG_COUNT (none legal)"
+SYSINFO_MAP[shell]="${BOLD}Shell:${RESET} $SHELLOUT"
+SYSINFO_MAP[resolution]="${BOLD}Resolution:${RESET} $MONITOR_TYPE $MONITOR_RES"
+SYSINFO_MAP[de]="${BOLD}DE:${RESET} $DESKTOP_ENV"
+SYSINFO_MAP[wm]="${BOLD}WM:${RESET} $WINDOW_MANAGER"
+SYSINFO_MAP[window_system]="${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
+SYSINFO_MAP[terminal]="${BOLD}Terminal:${RESET} $TERMINAL"
+SYSINFO_MAP[cpu]="${BOLD}CPU:${RESET} $CPU"
+SYSINFO_MAP[gpu]="${BOLD}GPU:${RESET} $GPU"
+SYSINFO_MAP[memory]="${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
+
+# Fill SYSINFO_LINES in order requested by SYSINFO_ORDER, respecting SYSINFO_ENABLED
+for key in "${ORDER_ARR[@]}"; do
+    key=$(echo "$key" | tr '[:upper:]' '[:lower:]')
+    if is_enabled "$key"; then
+        if [ -n "${SYSINFO_MAP[$key]}" ]; then
+            SYSINFO_LINES+=("${SYSINFO_MAP[$key]}")
+        fi
+    fi
+done
+
+# Any remaining enabled keys that weren't in ORDER_ARR: append in default order
+for key in "${ENABLED_ARR[@]}"; do
+    skip=0
+    for k2 in "${ORDER_ARR[@]}"; do
+        if [ "$k2" = "$key" ]; then
+            skip=1
+            break
+        fi
+    done
+    if [ $skip -eq 0 ]; then
+        if [ -n "${SYSINFO_MAP[$key]}" ]; then
+            SYSINFO_LINES+=("${SYSINFO_MAP[$key]}")
+        fi
+    fi
+done
+
 line20="${BOLD}BROKEFETCH 🥀 1.7${RESET}"
 
-# Loop 00-20 safely
-for i in $(seq 0 20); do    
-    num=$(printf "%02d" "$i")
-    varname="line$num"
-    line="${!varname:-}"   
-    width="${COLUMNS:-105}" 
+# Build lines 02..15 by combining asciiXX left column and ordered SYSINFO_LINES on the right
+for idx in $(seq 2 15); do
+        slot=$((idx-2))
+        ascii_var="ascii$(printf "%02d" $idx)"
+        ascii_val="${!ascii_var}"
+        rhs=""
+        if [ $slot -lt ${#SYSINFO_LINES[@]} ]; then
+                rhs=" ${SYSINFO_LINES[$slot]}"
+        fi
+        eval line$(printf "%02d" $idx)="\${BOLD_A}\${COLOR}\${ascii_val}\${RESET}\${rhs}"
+done
 
-    echo -e "$line" | awk -v w="$width" '
-    {
-      out=""; vis=0
-      while (length($0) > 0 && vis < w) {
-        if (match($0,/^\x1b\[[0-9;]*[A-Za-z]/)) {
-          out = out substr($0,1,RLENGTH)
-          $0 = substr($0,RLENGTH+1)
-        } else {
-          ch = substr($0,1,1)
-          out = out ch
-          $0 = substr($0,2)
-          vis++
-        }
-      }
-      print out
-    }'
+# ensure line00 and line01 already set above
+# Loop 00-20 safely and print while preserving escape sequences
+for i in $(seq 0 20); do
+        num=$(printf "%02d" "$i")
+        varname="line$num"
+        line="${!varname:-}"
+        width="${COLUMNS:-105}"
+
+        echo -e "$line" | awk -v w="$width" '
+        {
+            out=""; vis=0
+            while (length($0) > 0 && vis < w) {
+                if (match($0,/^\x1b\[[0-9;]*[A-Za-z]/)) {
+                    out = out substr($0,1,RLENGTH)
+                    $0 = substr($0,RLENGTH+1)
+                } else {
+                    ch = substr($0,1,1)
+                    out = out ch
+                    $0 = substr($0,2)
+                    vis++
+                }
+            }
+            print out
+        }'
 done
