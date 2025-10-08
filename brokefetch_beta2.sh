@@ -560,17 +560,19 @@ case "$TERM" in
     *) TERMINAL="Terminal of regret";;
 esac
 
+# Variables for combined options
+show_help=false
+use_dialog=false
+
 # Get options
-while getopts ":hva:l" option; do
+while getopts ":hdva:l" option; do
    case $option in
-      h) # display Help
-         echo "Only the therapist can help you at this point."
-         echo "Oh and btw the -v option displays the version of brokefetch EDGE."
-         echo " -a lets you override ASCII art distro name"
-         echo " -l lists all available ASCII arts"
-         echo ""
-         echo -e "The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
-         exit;;
+      h) 
+        show_help=true
+        ;;
+      d)
+        use_dialog=true
+        ;;  
       v) # display Version
          echo "brokefetch EDGE version 1.7"
          echo "Make sure to star the repository on GitHub :)"
@@ -600,6 +602,24 @@ while getopts ":hva:l" option; do
          exit;;
    esac
 done
+
+# Handle -h and -d after parsing all options
+if $show_help; then
+    help_text="Only the therapist can help you at this point.
+Oh and btw the -v option displays the version of brokefetch EDGE.
+-a lets you override ASCII art distro name
+-l lists all available ASCII arts
+ 
+The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
+
+if $use_dialog; then
+        dialog --title "Brokefetch Help" --msgbox "$help_text" 15 60
+        clear
+    else
+        echo -e "$help_text"
+    fi
+    exit
+fi
 
 # Normalize override (lowercase); fallback to OS name
 if [[ -n "$ASCII_DISTRO" ]]; then
