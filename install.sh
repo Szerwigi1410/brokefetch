@@ -35,6 +35,7 @@ check_git() {
 # These URLs should point to the raw files in your GitHub repository.
 NORMAL_URL="https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/brokefetch.sh"
 EDGE_URL="https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/brokefetch_beta.sh"
+BETA2_URL="https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/brokefetch_beta2.sh"
 EDGE_AC_URL="https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/brokefetch_mod.sh"
 REPO_URL="https://github.com/Szerwigi1410/brokefetch.git"
 
@@ -56,6 +57,9 @@ if [ -f "brokefetch.sh" ]; then
 fi
 if [ -f "brokefetch_beta.sh" ]; then
     available_scripts+=("brokefetch_beta.sh")
+fi
+if [ -f "brokefetch_beta2.sh" ]; then
+    available_scripts+=("brokefetch_beta2.sh")
 fi
 if [ -f "brokefetch_mod.sh" ]; then
     available_scripts+=("brokefetch_mod.sh")
@@ -95,6 +99,19 @@ if [ ${#available_scripts[@]} -eq 0 ]; then
                 fi
                 ;;
             3 )
+                echo "Downloading the beta2 version..."
+                if curl -sSL "$BETA2_URL" -o "$temp_dir/brokefetch_beta2.sh"; then
+                    source_file="$temp_dir/brokefetch_beta2.sh"
+                    script_to_install="brokefetch_beta2.sh"
+                    downloaded=1
+                    break
+                else
+                    echo "Error: Failed to download the beta2 version. Exiting."
+                    rm -r "$temp_dir"
+                    exit 1
+                fi
+                ;;    
+            4 )
                 echo "Downloading the modular version..."
                 if curl -sSL "$EDGE_AC_URL" -o "$temp_dir/brokefetch_mod.sh"; then
                     source_file="$temp_dir/brokefetch_mod.sh"
@@ -107,7 +124,7 @@ if [ ${#available_scripts[@]} -eq 0 ]; then
                     exit 1
                 fi
                 ;;
-            4 )
+            5 )
                 echo "Exiting installation."
                 rm -rf "$temp_dir"
                 exit 0
