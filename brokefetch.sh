@@ -558,6 +558,9 @@ while getopts ":hva:lbcr" option; do
          echo "Oh and btw the -v option displays the version of brokefetch EDGE."
          echo " -a lets you override ASCII art distro name"
          echo " -l lists all available ASCII arts"
+         echo " -r resets the config file to default"
+         echo " -s shows config, color and other variable values"
+         echo " -d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)"
          echo ""
          echo -e "The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
          exit;;
@@ -592,12 +595,56 @@ while getopts ":hva:lbcr" option; do
         }
         SercetCalendar 
         clear #another easter egg
+        exit
         ;;
       r)
         echo -e "Resetting config"
         echo -e "Run brokefetch again to see the effect"
         ConfigGenerator
         ;;                 
+      s)
+        echo -e "${BOLD}=== CONFIG FILE VALUES ==========================${RESET}"
+        echo -e "${COLOR}RAM_MB value is:${RESET} ${RAM_MB}"
+        echo -e "${COLOR}COLOR_NAME value is:${RESET} ${COLOR_NAME}"
+        echo -e "${COLOR}ASCII_BOLD value is:${RESET} ${ASCII_BOLD}"
+        echo -e "${COLOR}CPU_TEXT value is:${RESET} ${CPU_TEXT}"
+        echo -e "${COLOR}SCREEN_TYPE value is:${RESET} ${SCREEN_TYPE}"
+        echo -e "${COLOR}SCREEN_RES value is:${RESET} ${SCREEN_RES}"
+        echo -e "${COLOR}DISPLAY_COLORS_ROW1 value is:${RESET} ${DISPLAY_COLORS_ROW1}"
+        echo -e "${COLOR}DISPLAY_COLORS_ROW2 value is:${RESET} ${DISPLAY_COLORS_ROW2}"
+        echo -e "${BOLD}=== OTHER VALUES ================================${RESET}"
+        echo -e "${COLOR}OS_NAME value is:${RESET} ${OS_NAME}"
+        echo -e "${COLOR}OS value is:${RESET} ${OS}"
+        echo -e "${COLOR}HOST value is:${RESET} ${HOST}"
+        echo -e "${COLOR}KERNEL value is:${RESET} ${KERNEL}"
+        echo -e "${COLOR}KERNEL_NAME value is:${RESET} ${KERNEL_NAME}"
+        echo -e "${COLOR}UPTIME value is:${RESET} ${UPTIME}"
+        echo -e "${COLOR}SHELL_NAME value is:${RESET} ${SHELL_NAME}"
+        echo -e "${COLOR}SHELLOUT value is:${RESET} ${SHELLOUT}"
+        echo -e "${COLOR}MONITOR_TYPE value is:${RESET} ${MONITOR_TYPE}"
+        echo -e "${COLOR}MONITOR_RES value is:${RESET} ${MONITOR_RES}"
+        echo -e "${COLOR}DESKTOP_ENV value is:${RESET} ${DESKTOP_ENV}"
+        echo -e "${COLOR}WINDOW_MANAGER value is:${RESET} ${WINDOW_MANAGER}"
+        echo -e "${COLOR}WINDOW_SYSTEM value is:${RESET} ${WINDOW_SYSTEM}"
+        echo -e "${COLOR}TERMINAL value is:${RESET} ${TERMINAL}"
+        echo -e "${COLOR}CPU value is:${RESET} ${CPU}"
+        echo -e "${COLOR}GPU value is:${RESET} ${GPU}"
+        echo -e "${COLOR}MEMORY_MB value is:${RESET} ${MEMORY_MB}"
+        echo -e "=== COLOR VALUES ================================"
+        echo "COLOR value is: ${COLOR}"
+        echo "BOLD value is: ${BOLD}"
+        echo "RESET value is: ${RESET}"
+        echo "GREEN value is: ${GREEN}"
+        echo "RED value is: ${RED}"
+        echo "BLUE value is: ${BLUE}"
+        echo "CYAN value is: ${CYAN}"
+        echo "WHITE value is: ${WHITE}"
+        echo "YELLOW value is: ${YELLOW}"
+        echo "PURPLE value is: ${PURPLE}"
+        echo "BLACK value is: ${BLACK}"
+        echo "GRAY value is: ${GRAY}"
+
+        exit;;      
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
