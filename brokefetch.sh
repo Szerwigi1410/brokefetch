@@ -551,7 +551,7 @@ case "$TERM" in
 esac
 
 # Get options
-while getopts ":hva:lbcr" option; do
+while getopts ":hva:lbcrs" option; do
    case $option in
       h) # display Help
          echo "Only the therapist can help you at this point."
