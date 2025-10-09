@@ -52,6 +52,11 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
     echo -e "SCREEN_TYPE=CRT\n" >> "$CONFIG_FILE"
     echo -e "# enter your preffered resolution (see the brokefetch wiki for supported resolutions)" >> "$CONFIG_FILE"
     echo -e "SCREEN_RES=VGA\n" >> "$CONFIG_FILE"
+    echo -e "# Color blocks" >> "$CONFIG_FILE"
+    echo -e "DISPLAY_COLORS_ROW1=true" >> "$CONFIG_FILE"
+    echo -e "DISPLAY_COLORS_ROW2=true\n" >> "$CONFIG_FILE"
+    echo -e "# Set the width of color blocks using spaces, example \"  \" " >> "$CONFIG_FILE"
+    echo -e "COLOR_BLOCK_WIDTH=\"   \"\n" >> "$CONFIG_FILE"
 fi
 
 # Load values from the config
@@ -1475,6 +1480,32 @@ for i in $(seq -w 1 15); do
     fi
 done
 
+# == Color bloks ===
+
+SIZE_BLOX="$COLOR_BLOCK_WIDTH"
+
+if [ "$DISPLAY_COLORS_ROW1" = true ]; then
+
+    COLOR_BLOCKS_ROW_1="$(for color in {0..7}; do
+      code=$((40 + color))
+      echo -en "\e[${code}m${SIZE_BLOX}\e[0m"
+    done
+    echo)"
+else [ "$DISPLAY_COLORS_ROW1" = false ];
+    COLOR_BLOCKS_ROW_1=""
+fi    
+
+if [ "$DISPLAY_COLORS_ROW2" = true ]; then
+
+    COLOR_BLOCKS_ROW_2="$(for color in {0..7}; do
+      code=$((100 + color))
+      echo -en "\e[${code}m${SIZE_BLOX}\e[0m"
+    done
+    echo)"
+else [ "$DISPLAY_COLORS_ROW1" = false ];
+    COLOR_BLOCKS_ROW_2=""
+fi
+
 # === OUTPUT ===
 line00="${BOLD_A}${COLOR}${ascii00}${RESET}$(whoami)@brokelaptop"
 line01="${BOLD_A}${COLOR}${ascii01}${RESET}-----------------------"
@@ -1493,8 +1524,8 @@ line13="${BOLD_A}${COLOR}${ascii13}${BOLD}CPU:${RESET} $CPU"
 line14="${BOLD_A}${COLOR}${ascii14}${BOLD}GPU:${RESET} $GPU"
 line15="${BOLD_A}${COLOR}${ascii15}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
 line16="${BOLD_A}${COLOR}${ascii16}"
-line17="${BOLD_A}${COLOR}${ascii17}"
-line18="${BOLD_A}${COLOR}${ascii18}"
+line17="${BOLD_A}${COLOR}${ascii17} $COLOR_BLOCKS_ROW_1"
+line18="${BOLD_A}${COLOR}${ascii18} $COLOR_BLOCKS_ROW_2"
 line19="${BOLD_A}${COLOR}${ascii19}"
 line20="${BOLD}BROKEFETCH 🥀 1.7${RESET}"
 
