@@ -37,8 +37,7 @@ fi
 # CONFIG
 CONFIG_FILE="$HOME/.config/brokefetch/config"
 
-# If there is no config – create a default one.
-if [[ ! -f "$CONFIG_FILE" ]]; then
+function ConfigGenerator() {
     mkdir -p "$(dirname "$CONFIG_FILE")"
     echo -e "# Available COLOR_NAME options: RED, GREEN, BLUE, CYAN, WHITE, YELLOW, PURPLE, BLACK, GRAY and DISTRO" > "$CONFIG_FILE"
 	echo -e "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
@@ -57,6 +56,11 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
     echo -e "DISPLAY_COLORS_ROW2=true\n" >> "$CONFIG_FILE"
     echo -e "# Set the width of color blocks using spaces, example \"  \" " >> "$CONFIG_FILE"
     echo -e "COLOR_BLOCK_WIDTH=\"   \"\n" >> "$CONFIG_FILE"
+}
+
+# If there is no config – create a default one.
+if [[ ! -f "$CONFIG_FILE" ]]; then
+    ConfigGenerator
 fi
 
 # Load values from the config
