@@ -547,7 +547,7 @@ case "$TERM" in
 esac
 
 # Get options
-while getopts ":hva:lb" option; do
+while getopts ":hva:lbc" option; do
    case $option in
       h) # display Help
          echo "Only the therapist can help you at this point."
@@ -580,7 +580,15 @@ while getopts ":hva:lb" option; do
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠛⠛⠛⠛⠛⠛⠋⠉⠁⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠃⠀⠀⠀⠀⠀⠉⠛⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠈⠛⠓⠀⠀⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠃⠀⠀⡾⠀⢰⠇⠀⠀⠀⠀⠀⠀⠹⡄⠀⠑⠲⠶⠶⠒⠒⡆⠀⠀⠀⠀⠘⣇⠀⠙⠲⠶⠖⢲⠀⠀⠀⠸⣄⠀⠙⠲⠶⠶⠒⢺⡆⠀⠀⡏⠀⢸⠁⠀⠀⠀⡇⠀⢸⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠇⠀⣼⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠲⠤⠤⠴⠶⠒⠃⠀⠀⠀⠀⠀⠈⠓⠶⠤⠤⠶⠚⠀⠀⠀⠀⠈⠑⠲⠦⠤⠴⠖⠚⠁⠀⠘⠳⠶⠋⠀⠀⠀⠘⠳⠶⠋⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠤⠤⠤⠴⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-        exit;;           
+        exit;;
+      c) 
+        function SercetCalendar() 
+        { 
+        dialog --calendar "calendar" 5 50 
+        }
+        SercetCalendar 
+        clear #another easter egg
+        ;;             
      \?) # Invalid option
          echo "We don't type that here."
          exit;;

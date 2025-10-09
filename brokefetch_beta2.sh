@@ -570,7 +570,7 @@ show_help=false
 use_dialog=false
 
 # Get options
-while getopts ":hdva:l" option; do
+while getopts ":hdva:lbc" option; do
    case $option in
       h) 
         show_help=true
@@ -601,7 +601,15 @@ while getopts ":hdva:l" option; do
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠛⠛⠛⠛⠛⠛⠋⠉⠁⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠃⠀⠀⠀⠀⠀⠉⠛⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠈⠛⠓⠀⠀⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠃⠀⠀⡾⠀⢰⠇⠀⠀⠀⠀⠀⠀⠹⡄⠀⠑⠲⠶⠶⠒⠒⡆⠀⠀⠀⠀⠘⣇⠀⠙⠲⠶⠖⢲⠀⠀⠀⠸⣄⠀⠙⠲⠶⠶⠒⢺⡆⠀⠀⡏⠀⢸⠁⠀⠀⠀⡇⠀⢸⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠇⠀⣼⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠲⠤⠤⠴⠶⠒⠃⠀⠀⠀⠀⠀⠈⠓⠶⠤⠤⠶⠚⠀⠀⠀⠀⠈⠑⠲⠦⠤⠴⠖⠚⠁⠀⠘⠳⠶⠋⠀⠀⠀⠘⠳⠶⠋⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠤⠤⠤⠴⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-        exit;;           
+        exit;;
+      c) 
+        function SercetCalendar() 
+        { 
+        dialog --calendar "calendar" 5 50 
+        }
+        SercetCalendar 
+        clear #another easter egg
+        ;;
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
