@@ -677,7 +677,7 @@ Oh and btw the -v option displays the version of brokefetch EDGE.
 -l lists all available ASCII arts
 -r resets the config file to default
 -s shows config, color and other variable values
--d uses dialog to show help (if dialog is installed)
+-d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)
  
 The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
 
