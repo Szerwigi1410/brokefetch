@@ -574,7 +574,7 @@ show_help=false
 use_dialog=false
 
 # Get options
-while getopts ":hdva:lbc" option; do
+while getopts ":hdva:lbcr" option; do
    case $option in
       h) 
         show_help=true
@@ -614,6 +614,11 @@ while getopts ":hdva:lbc" option; do
         SercetCalendar 
         clear #another easter egg
         ;;
+      r)
+        echo -e "Resetting config"
+        echo -e "Run brokefetch again to see the effect"
+        ConfigGenerator
+        ;;  
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
@@ -1537,7 +1542,8 @@ case "$INFOLINE00" in
     "cpu" | "processor") info00="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info00="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info00="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info00="";;
+    "empty") info00="";;
+    *) info00="$INFOLINE00";;
 esac    
 
 case "$INFOLINE01" in
@@ -1557,7 +1563,8 @@ case "$INFOLINE01" in
     "cpu" | "processor") info01="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info01="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info01="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info01="";;
+    "empty") info01="";;
+    *) info01="$INFOLINE01";;
 esac
 
 case "$INFOLINE02" in
@@ -1577,7 +1584,8 @@ case "$INFOLINE02" in
     "cpu" | "processor") info02="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info02="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info02="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info02="";;
+    "empty") info02="";;
+    *) info02="$INFOLINE02";;
 esac
 
 case "$INFOLINE03" in
@@ -1597,7 +1605,8 @@ case "$INFOLINE03" in
     "cpu" | "processor") info03="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info03="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info03="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info03="";;
+    "empty") info03="";;
+    *) info03="$INFOLINE03";;
 esac
 
 case "$INFOLINE04" in
@@ -1617,7 +1626,8 @@ case "$INFOLINE04" in
     "cpu" | "processor") info04="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info04="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info04="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info04="";;
+    "empty") info04="";;
+    *) info04="$INFOLINE04";;
 esac
 
 case "$INFOLINE05" in
@@ -1637,7 +1647,8 @@ case "$INFOLINE05" in
     "cpu" | "processor") info05="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info05="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info05="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info05="";;
+    "empty") info05="";;
+    *) info05="$INFOLINE05";;
 esac
 
 case "$INFOLINE06" in
@@ -1657,7 +1668,8 @@ case "$INFOLINE06" in
     "cpu" | "processor") info06="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info06="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info06="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info06="";;
+    "empty") info06="";;
+    *) info06="$INFOLINE06";;
 esac
 
 case "$INFOLINE07" in
@@ -1677,7 +1689,8 @@ case "$INFOLINE07" in
     "cpu" | "processor") info07="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info07="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info07="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info07="";;
+    "empty") info07="";;
+    *) info07="$INFOLINE07";;
 esac
 
 case "$INFOLINE08" in
@@ -1697,7 +1710,8 @@ case "$INFOLINE08" in
     "cpu" | "processor") info08="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info08="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info08="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info08="";;
+    "empty") info08="";;
+    *) info08="$INFOLINE08";;
 esac
 
 case "$INFOLINE09" in
@@ -1717,7 +1731,8 @@ case "$INFOLINE09" in
     "cpu" | "processor") info09="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info09="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info09="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info09="";;
+    "empty") info09="";;
+    *) info09="$INFOLINE09";;
 esac
 
 case "$INFOLINE10" in
@@ -1737,7 +1752,8 @@ case "$INFOLINE10" in
     "cpu" | "processor") info10="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info10="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info10="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info10="";;
+    "empty") info10="";;
+    *) info10="$INFOLINE10";;
 esac
 
 case "$INFOLINE11" in
@@ -1757,7 +1773,8 @@ case "$INFOLINE11" in
     "cpu" | "processor") info11="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info11="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info11="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info11="";;
+    "empty") info11="";;
+    *) info11="$INFOLINE11";;
 esac
 
 case "$INFOLINE12" in
@@ -1777,7 +1794,8 @@ case "$INFOLINE12" in
     "cpu" | "processor") info12="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info12="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info12="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info12="";;
+    "empty") info12="";;
+    *) info12="$INFOLINE12";;
 esac
 
 case "$INFOLINE13" in
@@ -1797,7 +1815,8 @@ case "$INFOLINE13" in
     "cpu" | "processor") info13="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info13="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info13="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info13="";;
+    "empty") info13="";;
+    *) info13="$INFOLINE13";;
 esac
 
 case "$INFOLINE14" in
@@ -1817,7 +1836,8 @@ case "$INFOLINE14" in
     "cpu" | "processor") info14="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info14="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info14="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info14="";;
+    "empty") info14="";;
+    *) info14="$INFOLINE14";;
 esac
 
 case "$INFOLINE15" in
@@ -1837,7 +1857,8 @@ case "$INFOLINE15" in
     "cpu" | "processor") info15="CPU:${RESET} $CPU";;
     "gpu" | "video_card") info15="GPU:${RESET} $GPU";;
     "mem" | "memory" | "ram") info15="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
-    *) info15="";;
+    "empty") info15="";;
+    *) info15="$INFOLINE15";;
 esac
 
 # maybe I did it the stupid way but atleast it fully works and I understand how it works. - Szerwigi1410

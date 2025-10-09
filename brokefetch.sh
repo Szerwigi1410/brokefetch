@@ -551,7 +551,7 @@ case "$TERM" in
 esac
 
 # Get options
-while getopts ":hva:lbc" option; do
+while getopts ":hva:lbcr" option; do
    case $option in
       h) # display Help
          echo "Only the therapist can help you at this point."
@@ -592,7 +592,12 @@ while getopts ":hva:lbc" option; do
         }
         SercetCalendar 
         clear #another easter egg
-        ;;             
+        ;;
+      r)
+        echo -e "Resetting config"
+        echo -e "Run brokefetch again to see the effect"
+        ConfigGenerator
+        ;;                 
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
