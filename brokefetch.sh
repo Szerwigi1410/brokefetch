@@ -550,20 +550,19 @@ case "$TERM" in
     *) TERMINAL="Terminal of regret";;
 esac
 
+# Variables for combined options
+show_help=false
+use_dialog=false
+
 # Get options
-while getopts ":hva:lbcrs" option; do
+while getopts ":hdva:lbcrs" option; do
    case $option in
-      h) # display Help
-         echo "Only the therapist can help you at this point."
-         echo "Oh and btw the -v option displays the version of brokefetch EDGE."
-         echo " -a lets you override ASCII art distro name"
-         echo " -l lists all available ASCII arts"
-         echo " -r resets the config file to default"
-         echo " -s shows config, color and other variable values"
-         echo " -d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)"
-         echo ""
-         echo -e "The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
-         exit;;
+      h) 
+        show_help=true
+        ;;
+      d)
+        use_dialog=true
+        ;;  
       v) # display Version
          echo "brokefetch EDGE version 1.7"
          echo "Make sure to star the repository on GitHub :)"
@@ -601,7 +600,7 @@ while getopts ":hva:lbcrs" option; do
         echo -e "Resetting config"
         echo -e "Run brokefetch again to see the effect"
         ConfigGenerator
-        ;;                 
+        ;;
       s)
         echo -e "${BOLD}=== CONFIG FILE VALUES ==========================${RESET}"
         echo -e "${COLOR}RAM_MB value is:${RESET} ${RAM_MB}"
@@ -644,12 +643,33 @@ while getopts ":hva:lbcrs" option; do
         echo "BLACK value is: ${BLACK}"
         echo "GRAY value is: ${GRAY}"
 
-        exit;;      
+        exit;;    
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
    esac
 done
+
+# Handle -h and -d after parsing all options
+if $show_help; then
+    help_text="Only the therapist can help you at this point.
+Oh and btw the -v option displays the version of brokefetch EDGE.
+-a lets you override ASCII art distro name
+-l lists all available ASCII arts
+-r resets the config file to default
+-s shows config, color and other variable values
+-d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)
+ 
+The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
+
+if $use_dialog; then
+        dialog --title "Brokefetch Help" --msgbox "$help_text" 15 60
+        clear
+    else
+        echo -e "$help_text"
+    fi
+    exit
+fi
 
 # Normalize override (lowercase); fallback to OS name
 if [[ -n "$ASCII_DISTRO" ]]; then
