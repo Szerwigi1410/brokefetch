@@ -372,7 +372,7 @@ esac
 
 #HOSTNAME
 
-host_rand=$(($RANDOM%8))
+host_rand=$(($RANDOM%9))
 
 case $host_rand in
     0)HOST="Bedroom Floor (Carpet extra)";;
@@ -699,10 +699,10 @@ case "$DISTRO_TO_DISPLAY" in
         ascii12="                                   "
         ascii13="                                   "
         ascii14="                                   "
-        ascii15=""
+        ascii15="                                   "
         ascii16="that's it"
-        ascii17=""
-        ascii18=""
+        ascii17="                                  "
+        ascii18="                                  "
         ascii19=""
     ;;
     "aeon")
@@ -723,8 +723,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="                       "
         ascii15="                       "
         ascii16=""
-        ascii17=""
-        ascii18=""
+        ascii17="                      "
+        ascii18="                      "
         ascii19=""
         ;;
     "alpine linux" | "alpine")
@@ -745,8 +745,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14=" \`yddddddddddddddddddddddddddddddddddy\`    "
         ascii15="  \`sdddddddddddddddddddddddddddddddds\`     "
         ascii16="    +dddddddddddddddddddddddddddddd+       "
-        ascii17="     /dddddddddddddddddddddddddddd/        "
-        ascii18="      :dddddddddddddddddddddddddd:         "
+        ascii17="     /dddddddddddddddddddddddddddd/       "
+        ascii18="      :dddddddddddddddddddddddddd:        "
         ascii19="       .hddddddddddddddddddddddh.          "
         ;;    
     "almalinux")
@@ -767,8 +767,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="        ${RED}o${WHITE}.   .                   .   .${RED}o    "
         ascii15="         ${RED}oo${WHITE}...........................${RED}oo   " 
         ascii16="          ${RED}ooooooooooooooooooooooooooooo                  "
-        ascii17="         I still don't know what this is.                      "
-        ascii18=""
+        ascii17="         I still don't know what this is. "
+        ascii18="                                          "
         ascii19=""
         ;;
     "amazon")
@@ -789,8 +789,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="                       "
         ascii15="                       "
         ascii16="                       "
-        ascii17="                       "
-        ascii18="                       "
+        ascii17="                      "
+        ascii18="                      "
         ascii19="                       "
         ;;
     "android")
@@ -809,10 +809,10 @@ case "$DISTRO_TO_DISPLAY" in
         ascii12="${GREEN}⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿        "
         ascii13="${GREEN}⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿        "
         ascii14="${GREEN}⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠉⠉⠁        "
-        ascii15="                                "
+        ascii15="${GREEN}                        "
         ascii16=""
-        ascii17=""
-        ascii18=""
+        ascii17="                       "
+        ascii18="                       "
         ascii19=""
         ;;
     "arch" | "arch linux")
@@ -855,8 +855,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="     'ooooxxxxxkxxoiiii:''     .i'             "
         ascii15="    'ooooxxxxxoi:::'a       ''ioxo'            "
         ascii16="   aooooxooi::aa         .:iiixkxxo'           "
-        ascii17="  aooooi:'a                a'';ioxxo'          "
-        ascii18=" ai:'a                          '':io'         "
+        ascii17="  aooooi:'a                a'';ioxxo'         "
+        ascii18=" ai:'a                          '':io'        "
         ascii19="systemd isn't that bad bruh replace your heart "
         ;;
     "aserdev")
@@ -864,7 +864,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii01="   / \  / ___|| ____|  _ \\     "
         ascii02="  / _ \ \___ \|  _| | |_) |     "
         ascii03=" / ___ \ ___) | |___|  _ <      "
-        ascii04="/_/   \_\____/|_____|_| \_\\    "
+        ascii04="/_/   \_\____/|_____|_| \_\\     "
         ascii05="                                "
         ascii06=" ____  _______     __           "
         ascii07="|  _ \| ____\ \   / /           "
@@ -899,8 +899,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="    ${BLUE}co${RED}so${YELLOW}o${GREEN}sl.s${CYAN}osl.l${BLUE}os.${RED}o${YELLOW}o.o${GREEN}s${CYAN}o..s${BLUE}o.${RED}s${YELLOW}o.s${GREEN}o..l${CYAN}s.${BLUE}osl.o${RED}s${YELLOW}osl..${GREEN}osl ${COLOR}   "
         ascii15="     ${COLOR}We were promised stability, not this...        "
         ascii16=""
-        ascii17=""
-        ascii18=""
+        ascii17="                                                                "
+        ascii18="                                                               "
         ascii19=""
         ;;
     "debian" | "debian gnu/linux")
@@ -921,8 +921,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="⣿⣿⣿⣿⣷⢠⠅⡌⢎⡓⡼⢫⠣⠁⠀⣐⡀⢤⣁⣿⣿⣿ "
         ascii15="                       "
         ascii16="How it feels having outdated packages?"
-        ascii17=""
-        ascii18=""
+        ascii17="                      "
+        ascii18="                      "
         ascii19=""
         ;;
     "elementary")
@@ -943,8 +943,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="      eeeeeee         eeeeeee          "
         ascii15="         eeeeeeeeeeeeeeeee             "
         ascii16="                                       "
-        ascii17="                                       "
-        ascii18="   can you even afford a macbook?      "
+        ascii17="                                      "
+        ascii18="   can you even afford a macbook?     "
         ascii19="                                       "
         ;;
     "endeavouros")
@@ -965,8 +965,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="  a:::::::::::::::::::::::::------aa               "
         ascii15="       go use arch bro,ru broke to see arch wiki   "
         ascii16=""
-        ascii17=""
-        ascii18=""
+        ascii17="                                                  "
+        ascii18="                                                  "
         ascii19=""
         ;;
     "fedora" | "fedora linux")
@@ -987,8 +987,8 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii14=":---${WHITE}:sdNMMMMNds:${COLOR}------------:        "
 	    ascii15=":------${WHITE}:://:${COLOR}-------------::          "
 	    ascii16=":---------------------://            "
-	    ascii17=""
-	    ascii18=""
+	    ascii17="                                    "
+	    ascii18="                                    "
 	    ascii19=""
         ;;
     "freebsd" | "paidbsd")
@@ -1009,8 +1009,8 @@ case "$DISTRO_TO_DISPLAY" in
     	ascii14="          ${COLOR}.---.....----.           "
     	ascii15="                                   "
     	ascii16="Just tell me why not linux?"
-    	ascii17="I'm not hating, just asking"
-    	ascii18=""
+    	ascii17="I'm not hating, just asking        "
+    	ascii18="                                  "
     	ascii19=""
         ;;
     "garuda linux" | "garuda")
@@ -1031,8 +1031,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="    dxx8o                      .@@;.           "
         ascii15="      dx88                   .t@x.             "
         ascii16="        d:SS@8ba89aa67a853Sxxad.               "
-        ascii17="          .d988999889889899dd.                 "
-        ascii18="Indian scammer who uses an arch-based disrto?"
+        ascii17="          .d988999889889899dd.                "
+        ascii18="Indian scammer who uses an arch-based disrto? "
         ascii19="damn"
         ;; 
     "gentoo")
@@ -1042,7 +1042,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii03=" ${PURPLE}dos2${COLOR}mMMMMMMMMMMMM${PURPLE}NmdmmmmdD${COLOR}hhy${PURPLE}s1/s             "
         ascii04=" ${PURPLE}oms2${COLOR}MMMMMMMMMMM${PURPLE}Ns1hhyyyos2h${COLOR}mddd${PURPLE}hhhds1oc       "
         ascii05="${PURPLE}.ys2d${COLOR}MMMMMMMMMM${PURPLE}ds1hs++so/ss2${COLOR}mdddhh${PURPLE}hhdms1+d     "
-        ascii06=" ${PURPLE}oys2hdm${COLOR}NMMMMMMMN${COLOR}s1dyooys2${COLOR}dmddddhh${PURPLE}hhyhNs1d.    "
+        ascii06=" ${PURPLE}oys2hdm${COLOR}NMMMMMMMN${PURPLE}s1dyooys2${COLOR}dmddddhh${PURPLE}hhyhNs1d.    "
         ascii07="  ${PURPLE}:os2yhhd${COLOR}NNMMMMMMMNNNmmdddhhhhhyyms${PURPLE}1Mh        "
         ascii08="    ${PURPLE}.:s2+syd${COLOR}NMMMMMNNNmmmdddhhhhhhm${PURPLE}Ms1my        "
         ascii09="       ${PURPLE}/ms2${COLOR}MMMMMMNNNmmmdddhhhhhmM${PURPLE}Nhs1s:        "
@@ -1053,30 +1053,30 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="${PURPLE}yMs2${COLOR}MNNNNNNNmmmmmNNM${PURPLE}mhs+/s1-s                  "
         ascii15="${PURPLE}/hs2${COLOR}MMNNNNNNNNMNdh${PURPLE}s++/s1-s                     "
         ascii16="${PURPLE}d/s2o${COLOR}hdmmdd${PURPLE}hys+++/:s1.s                        "
-        ascii17="  ${PURPLE}s-//////:--.                                 "
-        ascii18="see your power bill HAHAHAHAHAHA              "
+        ascii17="  ${PURPLE}s-//////:--.                                "
+        ascii18="you spent 3 days compiling your kernel        "
         ascii19=""
         ;;
     "linuxlite")
         ascii00="          ,xXc             "
         ascii01="      .l0MMMMMO            "
-        ascii02="   .kNMMMMMS2WS1MMMN,      "
-        ascii03="   KMMMMMMS2KS1MMMMMMo     "
-        ascii04="  'MMMMMMNS2KS1MMMMMM:     "
-        ascii05="  kMMMMMMS2OS1MMMMMMO      "
-        ascii06="  MMMMMMS20S1XMMMMMW.      "
-        ascii07=" oMMMMMS2xS1MMMMMMM:       "
-        ascii08=" WMMMMMS2xS1MMMMMMO        "
-        ascii09=":MMMMMMS2OS1XMMMMW         "   
-        ascii10=".0MMMMMS2xS1MMMMM;         "
-        ascii11=":;cKMMWS2xS1MMMMO          "
-        ascii12="'MMWMMXS2OS1MMMMl          "
-        ascii13=" kMMMMKS2OS1MMMMMX:        "
-        ascii14=" .WMMMMKS2OS1WMMM0c        "
-        ascii15="  lMMMMMWS2OS1WMNd:'       "
-        ascii16="   oollXMKS2o1Xxl;.       "
-        ascii17="                           "
-        ascii18="isn't 'linux' lite enough? "
+        ascii02="   .kNMMMMM${WHITE}S2WS1${COLOR}MMMN,      "
+        ascii03="   KMMMMMM${WHITE}S2KS1${COLOR}MMMMMMo     "
+        ascii04="  'MMMMMMN${WHITE}S2KS1${COLOR}MMMMMM:     "
+        ascii05="  kMMMMMM${WHITE}S2OS1${COLOR}MMMMMMO      "
+        ascii06="  MMMMMM${WHITE}S20S1${COLOR}XMMMMMW.      "
+        ascii07=" oMMMMM${WHITE}S2xS1${COLOR}MMMMMMM:       "
+        ascii08=" WMMMMM${WHITE}S2xS1${COLOR}MMMMMMO        "
+        ascii09=":MMMMMM${WHITE}S2OS1${COLOR}XMMMMW         "   
+        ascii10=".0MMMMM${WHITE}S2xS1${COLOR}MMMMM;         "
+        ascii11=":;cKMMW${WHITE}S2xS1${COLOR}MMMMO          "
+        ascii12="'MMWMMX${WHITE}S2OS1${COLOR}MMMMl          "
+        ascii13=" kMMMMK${WHITE}S2OS1${COLOR}MMMMMX:        "
+        ascii14=" .WMMMMK${WHITE}S2OS1${COLOR}WMMM0c        "
+        ascii15="  lMMMMMWS${WHITE}2OS1${COLOR}WMNd:'       "
+        ascii16="   oollXMK${WHITE}S2o1${COLOR}Xxl;.       "
+        ascii17="                          "
+        ascii18="isn't 'linux' lite enough?"
         ascii19="                           "
         ;;
     "macos")
@@ -1097,8 +1097,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="    kMMMMMMMMMMMMMMMMMMMMMMd     "
         ascii15="     ;KMMMMMMMWXXWMMMMMMMk.      "
         ascii16="       .cooc,.    .,coo:.        "
-        ascii17=""
-        ascii18="How are your kidneys doing?"
+        ascii17="                                "
+        ascii18="How are your kidneys doing?     "
         ascii19="You still have both of them, right?"
         ;;
     "manjaro" | "manjaro linux")
@@ -1119,12 +1119,12 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="You cant say you use Arch btw  "
         ascii15="                               "
         ascii16=""
-        ascii17=""
-        ascii18=""
+        ascii17="                              "
+        ascii18="                              "
         ascii19=""
         ;;
     "linexin")
-        ascii00=" ⢀⣴⠿⠛⠛⠷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡾⠟⠛⠻⣦⡀"
+        ascii00="⢀⣴⠿⠛⠛⠷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡾⠟⠛⠻⣦⡀ "
         ascii01="⣼⠏⠀⠀⠀⠀⠈⠻⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠟⠁⠀⠀⠀⠀⠘⣧ "
         ascii02="⣿⠀⠀⠀⠀⠀⠀⠀⠈⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⣿ "
         ascii03="⣿⠀⠀⢀⡿⠛⠷⣦⡀⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠏⠁⠀⠀⣠⠾⠛⢻⡄⠀⠀⣿ "
@@ -1141,8 +1141,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠷⣤⣬⣿⡆⠀⠀⢾⡟⠷⠶⣦⣄⠀⠀⠀⠀⣠⣴⠶⠾⠟⣿⠀⠀⢰⣿⣥⣤⡶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀ "
         ascii15="⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⢸⣇⠀⠀⠀⢻⣆⠀⠀⣰⡟⠁⠀⠀⣰⡇⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
         ascii16="⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⣿⣿⣿⡶⢶⣽⣷⣤⣤⡾⣫⣶⢶⣝⢷⣤⣤⣶⣯⣶⢶⣟⣿⣿⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
-        ascii17="⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⣿⣿⣿⣿⣍⣸⣧⣤⡶⠟⠋⠀⠀⠙⠻⢶⣤⣸⣇⣻⡿⣿⣿⣿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
-        ascii18="⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡿⠿⠛⠛⢹⣿⣭⠥⠤⠤⠤⠤⠤⠤⠤⠤⠬⣭⣿⡏⠛⠛⠿⢿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+        ascii17="⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⣿⣿⣿⣿⣍⣸⣧⣤⡶⠟⠋⠀⠀⠙⠻⢶⣤⣸⣇⣻⡿⣿⣿⣿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+        ascii18="⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡿⠿⠛⠛⢹⣿⣭⠥⠤⠤⠤⠤⠤⠤⠤⠤⠬⣭⣿⡏⠛⠛⠿⢿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
         ascii19="⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠻⠶⢦⣤⣤⡴⠶⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
         ;;
 
@@ -1164,8 +1164,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="${GREEN}⣿⣿⡆⠙⣿⣿⣿⡆⠖⢰⣶⣶⢊⣅⢭⣭⣭⣅⡨⢭⣭⡤⣴⣴⣶⡦⡰⣶⢢⣿⣿⣿⠟⣵⣿⣿   "
         ascii15="${GREEN}⣿⣿⣿⠀⠌⢻⣿⣿⣾⠸⣿⡇⣿⣿⣾⣿⣿⣿⣿⣆⢻⡇⣨⣉⠸⡿⣠⠏⣿⣿⡿⡋⣼⣿⣿⣿   "
         ascii16="${GREEN}⣿⣿⣿⡇⡟⣠⡙⠻⣿⡌⣿⢣⣿⣿⣿⣿⣿⣿⣿⣿⡸⢼⣿⣿⡐⡇⣿⣤⠿⠋⢴⢰⣿⣿⣿⣿   "
-        ascii17="${GREEN}⣿⣿⣿⡇⡇⣿⡇⠇⣬⣅⠻⠸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⠇⠇⣫⣵⣾⣦⢸⢸⣿⣿⣿⣿   "
-        ascii18="${GREEN}⣿⣿⣿⣷⠁⣿⣧⣸⣿⣿⠉⣿⣶⣯⡉⣩⣟⣛⣛⣛⠉⡉⢍⣴⣆⠀⣿⣿⣿⣿⠀⢸⣿⣿⣿⣿   "
+        ascii17="${GREEN}⣿⣿⣿⡇⡇⣿⡇⠇⣬⣅⠻⠸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⠇⠇⣫⣵⣾⣦⢸⢸⣿⣿⣿⣿  "
+        ascii18="${GREEN}⣿⣿⣿⣷⠁⣿⣧⣸⣿⣿⠉⣿⣶⣯⡉⣩⣟⣛⣛⣛⠉⡉⢍⣴⣆⠀⣿⣿⣿⣿⠀⢸⣿⣿⣿⣿  "
         ascii19="${GREEN}⣿⣿⣿⣿⢼⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣾⣿⣿⣶⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿   "
         ;;
     "nixos")
@@ -1186,8 +1186,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="                          "
         ascii15="                          "
         ascii16="                          "
-        ascii17="                          "
-        ascii18="                          "
+        ascii17="                         "
+        ascii18="                         "
         ascii19="                          "
         ;;
     "nobara")
@@ -1208,30 +1208,30 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠉⠉⠛⠛⢿⣿⣿⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿"
         ascii15="⠘⢿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⠟⠁"
         ascii16="  ⠈⠙⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠛⠉⠁"
-        ascii17=""
-        ascii18="So ur a gamer huh?"
+        ascii17="                                     "
+        ascii18="So ur a gamer huh?                   "
         ascii19=""
         ;;
     "opensuse tumbleweed" | "tumbleweed")
         ascii00="           ${WHITE}.;ldkO0000Okdl;.${COLOR}             "
-        ascii01="       ${WHITE}.;d00xl:^''''''^:ok00d;.${COLOR}        "
-        ascii02="     ${WHITE}.d00l'                'o00d.${COLOR}      "
-        ascii03="   ${WHITE}.d0Kd'  ${COLOR}Okxol:;,${CYAN}.${COLOR}          ${WHITE}:O0d${COLOR}     "
-        ascii04="  ${WHITE}.OK${COLOR}KKK0kOKKKKKKKKKKOxo:,      ${WHITE}lKO.${COLOR}   "
-        ascii05=" ${WHITE},0K${COLOR}KKKKKKKKKKKKKKK0P^${WHITE},,,${COLOR}^dx:    ${WHITE};00,${COLOR}  "
-        ascii06="${WHITE}.OK${COLOR}KKKKKKKKKKKKKKKk'${WHITE}.oOPPb.${COLOR}'0k.   ${WHITE}cKO.${COLOR} "
-        ascii07="${WHITE}:KK${COLOR}KKKKKKKKKKKKKKK: ${WHITE}kKx..dd${COLOR} lKd   ${WHITE}'OK:${COLOR} "
-        ascii08="${WHITE}dKK${COLOR}KKKKKKKKKOx0KKKd ${WHITE}^0KKKO'${COLOR} kKKc   ${WHITE}dKd${COLOR} "
-        ascii09="${WHITE}dKK${COLOR}KKKKKKKKKK;.;oOKx,..${WHITE}^${COLOR}..;kKKK0.  ${WHITE}dKd${COLOR} "
-        ascii10="${WHITE}:KK${COLOR}KKKKKKKKKK0o;...^cdxxOK0O/^^'  ${WHITE}.0K:${COLOR} "
+        ascii01="       ${WHITE}.;d00xl:^''''''^:ok00d;.${COLOR}         "
+        ascii02="     ${WHITE}.d00l'                'o00d.${COLOR}       "
+        ascii03="   ${WHITE}.d0Kd'  ${COLOR}Okxol:;,.${COLOR}          ${WHITE}:O0d${COLOR}      "
+        ascii04="  ${WHITE}.OK${COLOR}KKK0kOKKKKKKKKKKOxo:,      ${WHITE}lKO.${COLOR}    "
+        ascii05=" ${WHITE},0K${COLOR}KKKKKKKKKKKKKKK0P^${WHITE},,,${COLOR}^dx:    ${WHITE};00,${COLOR}   "
+        ascii06="${WHITE}.OK${COLOR}KKKKKKKKKKKKKKKk'${WHITE}.oOPPb.${COLOR}'0k.   ${WHITE}cKO.${COLOR}  "
+        ascii07="${WHITE}:KK${COLOR}KKKKKKKKKKKKKKK: ${WHITE}kKx..dd${COLOR} lKd   ${WHITE}'OK:${COLOR}  "
+        ascii08="${WHITE}dKK${COLOR}KKKKKKKKKOx0KKKd ${WHITE}^0KKKO'${COLOR} kKKc   ${WHITE}dKd${COLOR}  "
+        ascii09="${WHITE}dKK${COLOR}KKKKKKKKKK;.;oOKx,..${WHITE}^${COLOR}..;kKKK0.  ${WHITE}dKd${COLOR}  "
+        ascii10="${WHITE}:KK${COLOR}KKKKKKKKKK0o;...^cdxxOK0O/^^'  ${WHITE}.0K:${COLOR}  "
         ascii11="${WHITE}kKK${COLOR}KKKKKKKKKKKKK0x;,,......,;od   ${WHITE}lKk${COLOR}   "
         ascii12="${WHITE}'0K${COLOR}KKKKKKKKKKKKKKKKKKKK00KKOo^   ${WHITE}c00'${COLOR}   "
-        ascii13="  ${WHITE}'kK${COLOR}KKOxddxkOO00000Okxoc;''   ${WHITE}.dKk'${COLOR}   "
-        ascii14="    ${WHITE}l0Ko.                    .c00l'${COLOR}    "
-        ascii15="     ${WHITE}'l0Kk:.              .;xK0l'  "
+        ascii13="  ${WHITE}'kK${COLOR}KKOxddxkOO00000Okxoc;''   ${WHITE}.dKk'${COLOR}    "
+        ascii14="    ${WHITE}l0Ko.                    .c00l'${COLOR}     "
+        ascii15="     ${WHITE}'l0Kk:.              .;xK0l'  ${COLOR}     "
         ascii16="        ${WHITE}'lkK0xl:;,,,,;:ldO0kl' "
-        ascii17="            ${WHITE}'^:ldxkkkkxdl:^'    "
-        ascii18=""
+        ascii17="            ${WHITE}'^:ldxkkkkxdl:^'           "
+        ascii18="                                       "
         ascii19=""
         ;;
     "opensuse leap" | "leap")
@@ -1252,8 +1252,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="     ====+    ====         "
         ascii15="       ==== =====          "
         ascii16="         ======            "
-        ascii17="           ==              "
-        ascii18=""
+        ascii17="           ==             "
+        ascii18="                          "
         ascii19=""
         ;;            
     "pop!_os" | "popos")
@@ -1274,31 +1274,31 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
         ascii15="                               "
         ascii16=""
-        ascii17=""
-        ascii18=""
+        ascii17="                              "
+        ascii18="                              "
         ascii19=""
         ;;
     "kali linux" | "kali")
-        ascii00="..............                                  "
-        ascii01="            ..,;:ccc,.                          "
-        ascii02="          ......''';lxO.                        "
-        ascii03=".....''''..........,:ld;                        "
-        ascii04="           .';;;:::;,,.x,                       "
-        ascii05="      ..'''.            0Xxoc:,.  ...           "
-        ascii06="  ....                ,ONkc;,;cokOdc',.         "
-        ascii07=" .                   OMo           ':${GRAY}dd${COLOR}o.       "
-        ascii08="                    dMc               :OO;      "
-        ascii09="                    0M.                 .:o.    "
-        ascii10="                    ;Wd                         "
-        ascii11="                     ;XO,                       "
-        ascii12="                       ,d0Odlc;,..              "
-        ascii13="                           ..',;:cdOOd::,.      "
-        ascii14="                                    .:d;.':;.   "
-        ascii15="                                       'd,  .'  "
-        ascii16="                                         ;l   .."
+        ascii00="..............                                   "
+        ascii01="            ..,;:ccc,.                           "
+        ascii02="          ......''';lxO.                         "
+        ascii03=".....''''..........,:ld;                         "
+        ascii04="           .';;;:::;,,.x,                        "
+        ascii05="      ..'''.            0Xxoc:,.  ...            "
+        ascii06="  ....                ,ONkc;,;cokOdc',.          "
+        ascii07=" .                   OMo           ':${GRAY}dd${COLOR}o.        "
+        ascii08="                    dMc               :OO;       "
+        ascii09="                    0M.                 .:o.     "
+        ascii10="                    ;Wd                          "
+        ascii11="                     ;XO,                        "
+        ascii12="                       ,d0Odlc;,..               "
+        ascii13="                           ..',;:cdOOd::,.       "
+        ascii14="                                    .:d;.':;.    "
+        ascii15="                                       'd,  .'   "
+        ascii16="                                         ;l   .. "
         ascii17="                                          .o    "
         ascii18="                                            c   "
-        ascii19="                                            .'  " 
+        ascii19="                                            .'   " 
         ;;    
     "rhel")
         ascii00="           .MMM..:MMMMMMM                  "
@@ -1318,8 +1318,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="               ''MMMMMMMMMMMMMMMMM'        "
         ascii15="      this is a scam go buy a mac          "
         ascii16="                                           "
-        ascii17="                                           "
-        ascii18="                                           "
+        ascii17="                                          "
+        ascii18="                                          "
         ascii19="                                           "
         ;;
     "rockylinux" | "rocky linux")
@@ -1340,8 +1340,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="                                                  "
         ascii15="                                                  "
         ascii16="                                                  "
-        ascii17="                                                  "
-        ascii18="                                                  "
+        ascii17="                                                 "
+        ascii18="                                                 "
         ascii19="                                                  "
         ;;
     "slackware" | "old ahh linux")
@@ -1362,12 +1362,12 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="  ::::${WHITE}ocl${COLOR}:${WHITE}ccslclccclclccclclc${COLOR}:::::::::::::     "
         ascii15="   :::${WHITE}oclcccccccccccccllllllllllllll${COLOR}:::::      "
         ascii16="      ::::::::::::::::::::::::::::::::        "
-        ascii17="         ::::::::::::::::::::::::::::  "
-        ascii18="           ::::::::::::::::::::::       "
-        ascii19="${BLUE}     BOOMER i bet your pc is from the 90s              "
+        ascii17="         ::::::::::::::::::::::::::::         "
+        ascii18="           ::::::::::::::::::::::             "
+        ascii19="${COLOR}     BOOMER i bet your pc is from the 90s              "
         ;;
     "solus")
-        ascii00="         ...........        "       
+        ascii00="         ...........           "       
 	    ascii01="⠀⠀⠀⠀⠀⠀⢀⣤⣾⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀⠀ ⠀⠀"
 	    ascii02="⠀⠀⠀⠀⣠⣾⣿⣿⣿⠃⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀ ⠀⠀"
 	    ascii03="⠀⠀⢀⣾⣿⣿⣿⣿⠏⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀ ⠀"
@@ -1383,10 +1383,10 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii12="⠀⠀⠀⠀⠀⠁⠠⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠄⠊⠀⠀⠀⠀⠀ ⠀"
 	    ascii13="⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⠠⠤⢀⢀⣀⡀⠀⠤⠄⠒⠈⠀⠀⠀⠀⠀⠀⠀ ⠀⠀"
  	    ascii14="                               "
-        ascii15="I'm all alone on this distro.    "
+        ascii15="I'm all alone on this distro.  "
         ascii16=""
-      	ascii17=""
-    	ascii18=""
+      	ascii17="                              "
+    	ascii18="                              "
      	ascii19=""
         ;;
     "ubuntu" | "kubuntu" | "lubuntu" | "xubuntu" | "ubuntustudio" | "ubuntu mate" | "ubuntu budgie")
@@ -1407,8 +1407,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="  +sssssssss${WHITE}dm${COLOR}yd${WHITE}MMMMMMMMddddy${COLOR}ssssssss+     "
         ascii15="   /sssssssssss${WHITE}hdmNNNNmyNMMMMh${COLOR}ssssss/      "
         ascii16="    .ossssssssssssssssss${WHITE}dMMMNy${COLOR}sssso.       "
-        ascii17="      -+sssssssssssssssss${WHITE}yyy${COLOR}ssss+-         "
-        ascii18="        \`:+ssssssssssssssssss+:\`           "
+        ascii17="      -+sssssssssssssssss${WHITE}yyy${COLOR}ssss+-        "
+        ascii18="        \`:+ssssssssssssssssss+:\`          "
         ascii19="            .-/+oossssoo+/-.               "
         ;;
     "void linux" | "void")
@@ -1429,14 +1429,14 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="        -Invnvvnsi..___..=sv=.     .             "
         ascii15="          +Invnvnvnnnnnnnnvvnn.                  "
         ascii16="           ~|Invnvnvvnvvvnnv}+                  "
-        ascii17="               -~|{*l}*|~%                       "
-        ascii18="                                                 "
+        ascii17="               -~|{*l}*|~%                      "
+        ascii18="                                                "
         ascii19=""
         ;;
     "windows" | wsl)
         win_rand=$(($RANDOM%3))
         case $win_rand in
-            0)WIN="You are not getting the newer logo";;
+            0)WIN="You are not getting the newer logo       ";;
             1)WIN="Still using Windows in $(date +%Y)? Lowkey crazy";;
             2)WIN="Check your ram and cpu usage HAHAHAHAHAHA";;
         esac
@@ -1458,7 +1458,7 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii15="                 \"VEzjt:;;z>*\`         "
 	    ascii16=""
 	    ascii17="${WIN}"
-	    ascii18=""
+	    ascii18="                                         "
 	    ascii19=""
         ;;
     "zorin")
@@ -1479,8 +1479,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="                                           "
         ascii15="                                           "
         ascii16="    if linux replaced macbooks             "
-        ascii17="                                           "
-        ascii18="                                           "
+        ascii17="                                          "
+        ascii18="                                          "
         ascii19="                                           "
         ;;
     "thinkpad")
@@ -1501,8 +1501,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="${COLOR}                                                                          "
         ascii15="${COLOR}                                                                          "
         ascii16="${COLOR}                                                                          "
-        ascii17="${COLOR}                                                                          "
-        ascii18="${COLOR}                                                                          "
+        ascii17="${COLOR}                                                                         "
+        ascii18="${COLOR}                                                                         "
         ascii19="You found an easter egg!"
         ;;    
     "thinkpad2")                                                                                                                                
@@ -1526,7 +1526,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii17=""
         ascii18=""
         ascii19="" #finish later         
-        ;;        
+        ;;
     *)
         # Default ASCII art for unknown distros
         ascii00="${YELLOW}        S2#####                    "
@@ -1546,8 +1546,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii14="${YELLOW}   wth are you using this for?     "
         ascii15="${YELLOW}                                   "
         ascii16="${YELLOW}                                   "
-        ascii17="${YELLOW}                                   "
-        ascii18="${YELLOW}                                   "
+        ascii17="${YELLOW}                                  "
+        ascii18="${YELLOW}                                  "
         ascii19="${YELLOW}                                   "
         ;;
 esac
