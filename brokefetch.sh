@@ -1636,7 +1636,7 @@ else
     line18="${BOLD_A}${COLOR}${ascii18} $COLOR_BLOCKS_ROW_2"
     line19="${BOLD_A}${COLOR}${ascii19}"
 fi
-line20="${BOLD}BROKEFETCH v1.7${RESET}"
+line20="${BOLD}BROKEFETCH v1.7 🥀${RESET}"
 
 # Loop 00-20 safely
 for i in $(seq 0 20); do
