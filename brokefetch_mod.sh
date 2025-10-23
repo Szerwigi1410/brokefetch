@@ -151,7 +151,7 @@ elif command -v rpm &>/dev/null; then
 elif command -v apk &>/dev/null; then
     PKG_COUNT=$(apk info | wc -l)
 elif command -v pkg &>/dev/null; then
-    PKG_COUNT=$(pkg info | wc -l)
+    PKG_COUNT=$(pkg info | wc -l | xargs)
 elif command -v brew &>/dev/null; then
     PKG_COUNT=$(brew list | wc -l | awk '{print $1}')
 else
