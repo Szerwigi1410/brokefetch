@@ -553,9 +553,10 @@ esac
 # Variables for combined options
 show_help=false
 use_dialog=false
+ukraine_flag=false
 
 # Get options
-while getopts ":hdva:lbcrs" option; do
+while getopts ":hdva:lbcrsu" option; do
    case $option in
       h) 
         show_help=true
@@ -564,7 +565,7 @@ while getopts ":hdva:lbcrs" option; do
         use_dialog=true
         ;;  
       v) # display Version
-         echo "brokefetch EDGE version 1.7"
+         echo "brokefetch version 1.7"
          echo "Make sure to star the repository on GitHub :)"
          exit;;
       a) # Set ASCII override to what the user typed
@@ -644,6 +645,10 @@ while getopts ":hdva:lbcrs" option; do
         echo "GRAY value is: ${GRAY}"
 
         exit;;    
+      u) # Show Ukraine flag
+         ukraine_flag=true
+         ASCII_DISTRO="ukraine"
+         ;;
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
@@ -658,6 +663,7 @@ Oh and btw the -v option displays the version of brokefetch EDGE.
 -l lists all available ASCII arts
 -r resets the config file to default
 -s shows config, color and other variable values
+-u shows Ukraine flag (Slava Ukraini!)
 -d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)
  
 The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
@@ -987,7 +993,7 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii14=":---${WHITE}:sdNMMMMNds:${COLOR}------------:        "
 	    ascii15=":------${WHITE}:://:${COLOR}-------------::          "
 	    ascii16=":---------------------://            "
-	    ascii17="                                    "
+	    ascii17="    https://is.gd/6bFfzt                            "
 	    ascii18="                                    "
 	    ascii19=""
         ;;
@@ -1166,7 +1172,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="${GREEN}⣿⣿⣿⡇⡟⣠⡙⠻⣿⡌⣿⢣⣿⣿⣿⣿⣿⣿⣿⣿⡸⢼⣿⣿⡐⡇⣿⣤⠿⠋⢴⢰⣿⣿⣿⣿   "
         ascii17="${GREEN}⣿⣿⣿⡇⡇⣿⡇⠇⣬⣅⠻⠸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⠇⠇⣫⣵⣾⣦⢸⢸⣿⣿⣿⣿  "
         ascii18="${GREEN}⣿⣿⣿⣷⠁⣿⣧⣸⣿⣿⠉⣿⣶⣯⡉⣩⣟⣛⣛⣛⠉⡉⢍⣴⣆⠀⣿⣿⣿⣿⠀⢸⣿⣿⣿⣿  "
-        ascii19="${GREEN}⣿⣿⣿⣿⢼⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣾⣿⣿⣶⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿   "
+        ascii19="${GREEN}You dont have money to turn up the heat.   "
         ;;
     "nixos")
         ascii00="$1  ▗▄   $2▗▄ ▄▖                "
@@ -1231,7 +1237,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii15="     ${WHITE}'l0Kk:.              .;xK0l'  ${COLOR}     "
         ascii16="        ${WHITE}'lkK0xl:;,,,,;:ldO0kl' "
         ascii17="            ${WHITE}'^:ldxkkkkxdl:^'           "
-        ascii18="                                       "
+        ascii18="            tumble "WEED"                      "
         ascii19=""
         ;;
     "opensuse leap" | "leap")
@@ -1253,7 +1259,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii15="       ==== =====          "
         ascii16="         ======            "
         ascii17="           ==             "
-        ascii18="                          "
+        ascii18="   Leap into the debt    "
         ascii19=""
         ;;            
     "pop!_os" | "popos")
@@ -1272,7 +1278,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii12="⣿⣿⣿⣿⣿⣿⣿⣿⣿⡛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⢛⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
         ascii13="⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
         ascii14="⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
-        ascii15="                               "
+        ascii15="         mmmm, fizzy               "
         ascii16=""
         ascii17="                              "
         ascii18="                              "
@@ -1298,7 +1304,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="                                         ;l   .. "
         ascii17="                                          .o    "
         ascii18="                                            c   "
-        ascii19="                                            .'   " 
+        ascii19="                  Bro is not a hacker        .'   " 
         ;;    
     "rhel")
         ascii00="           .MMM..:MMMMMMM                  "
@@ -1526,6 +1532,53 @@ case "$DISTRO_TO_DISPLAY" in
         ascii17=""
         ascii18=""
         ascii19="" #finish later         
+        ;;
+    "ukraine")
+        if [[ "$ukraine_flag" == true ]]; then
+            # Ukraine flag with proper proportions (1:1 ratio blue:yellow)
+            ascii00="${BLUE}████████████████████████████   "
+            ascii01="${BLUE}████████████████████████████   "
+            ascii02="${BLUE}████████████████████████████   "
+            ascii03="${BLUE}████████████████████████████   "
+            ascii04="${YELLOW}████████████████████████████   "
+            ascii05="${YELLOW}████████████████████████████   "
+            ascii06="${YELLOW}████████████████████████████   "
+            ascii07="${YELLOW}████████████████████████████   "
+            ascii08="                               "
+            ascii09="      ${CYAN}Slava Ukraini!           "
+            ascii10="                               "
+            ascii11="                               "
+            ascii12="                               "
+            ascii13="                               "
+            ascii14="                               "
+            ascii15="                               "
+            ascii16="                               "
+            ascii17="                               "
+            ascii18="                               "
+            ascii19="                               "
+        else
+            # Fallback to default if -u flag not used
+            ascii00="${BLUE}████████████████████████████   "
+            ascii01="${BLUE}████████████████████████████   "
+            ascii02="${BLUE}████████████████████████████   "
+            ascii03="${BLUE}████████████████████████████   "
+            ascii04="${YELLOW}████████████████████████████   "
+            ascii05="${YELLOW}████████████████████████████   "
+            ascii06="${YELLOW}████████████████████████████   "
+            ascii07="${YELLOW}████████████████████████████   "
+            ascii08="                               "
+            ascii09="      ${CYAN}Slava Ukraini!           "
+            ascii10="                               "
+            ascii11="                               "
+            ascii12="                               "
+            ascii13="                               "
+            ascii14="                               "
+            ascii15="                               "
+            ascii16="                               "
+            ascii17="                               "
+            ascii18="                               "
+            ascii19="                               "
+        fi
         ;;
     *)
         # Default ASCII art for unknown distros
