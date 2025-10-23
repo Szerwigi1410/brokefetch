@@ -1415,7 +1415,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="    .ossssssssssssssssss${WHITE}dMMMNy${COLOR}sssso.       "
         ascii17="      -+sssssssssssssssss${WHITE}yyy${COLOR}ssss+-        "
         ascii18="        \`:+ssssssssssssssssss+:\`          "
-        ascii19="            .-/+oossssoo+/-.               "
+        ascii19="            .-/+oossssoo+/-.    tbh i dont have anything bad to say about this           "
         ;;
     "void linux" | "void")
         ascii00="               __.;=====;.__                    "
@@ -1437,7 +1437,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="           ~|Invnvnvvnvvvnnv}+                  "
         ascii17="               -~|{*l}*|~%                      "
         ascii18="                                                "
-        ascii19=""
+        ascii19="              Void in ur wallet                 "
         ;;
     "windows" | wsl)
         win_rand=$(($RANDOM%3))
