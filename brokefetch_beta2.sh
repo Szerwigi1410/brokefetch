@@ -49,6 +49,8 @@ function ConfigGenerator() {
     echo -e "ASCII_BOLD=false\n" >> "$CONFIG_FILE"
     echo -e "# Cpu text (RANDOM for random funny text or whatever u like inside \"\")" >> "$CONFIG_FILE"
     echo -e "CPU_TEXT=RANDOM\n" >> "$CONFIG_FILE"
+    echo -e "# GPU detection method (lspci, glx, vulkan, fastfetch, neofetch) linux/freebsd only (tested with intel igpu)" >> "$CONFIG_FILE"
+    echo -e "GPU_DETECTION=lspci\n" >> "$CONFIG_FILE"
     echo -e "# enter your preferred screen type (CRT, LCD, OLED etc)" >> "$CONFIG_FILE"
     echo -e "SCREEN_TYPE=CRT\n" >> "$CONFIG_FILE"
     echo -e "# enter your preffered resolution (see the brokefetch wiki for supported resolutions)" >> "$CONFIG_FILE"
@@ -342,9 +344,18 @@ case $SCREEN_RES in
 esac
 
 #GPU
+
+case $GPU_DETECTION in
+    "glx")GPU_DT="$(glxinfo | grep 'Device' | awk '{print $3}' | tr '[:upper:]' '[:lower:]' | xargs)";;
+    "lspci")GPU_DT="$(lspci | grep -iE 'VGA' | awk -F ': ' '{print $2}' | awk '{print $1}' | xargs | tr '[:upper:]' '[:lower:]')";;
+    "vulkan")GPU_DT="$(vulkaninfo | grep "GPU id" | awk '{print $5}' | head -1 | tr '[:upper:]' '[:lower:]' | xargs)";;
+    "neofetch")GPU_DT="$(neofetch --stdout | grep "GPU:" | awk '{print tolower($2)}')";;
+    "fastfetch")GPU_DT="$(fastfetch | grep 'GPU: ' | awk -F: '{print $2}' | xargs)";;
+esac
+
 if [ -f /etc/os-release ]; then
     # linux
-    GPU_NAME="$(lspci | grep -iE 'VGA' | awk -F ': ' '{print $2}' | awk '{print $1}' | tr '[:upper:]' '[:lower:]')"
+    GPU_NAME="$GPU_DT"
 elif grep -q Microsoft /proc/version 2>/dev/null; then
     # windows subsystem for linux
     GPU_NAME="WSL"
@@ -375,7 +386,7 @@ case "$GPU_NAME" in
         GPU="Radeon 7000 (from 2001)"
     fi
     ;;
-    Intel | intel)GPU="Inetl (I can't afford a real one)";;
+    "Intel" | "intel" | "intel(r)" | "(intel(r)")GPU="Inetl (I can't afford a real one)";;
     IDK)GPU="Voodoo 3Dfx (I wish)";;
     WSL)GPU="Emulated (Like my life)";;
     Android)GPU="Adreno (from 2010)";;
@@ -627,6 +638,7 @@ while getopts ":hdva:lbcrs" option; do
         echo -e "${COLOR}COLOR_NAME value is:${RESET} ${COLOR_NAME}"
         echo -e "${COLOR}ASCII_BOLD value is:${RESET} ${ASCII_BOLD}"
         echo -e "${COLOR}CPU_TEXT value is:${RESET} ${CPU_TEXT}"
+        echo -e "${COLOR}GPU_DETECTION value is:${RESET} ${GPU_DETECTION}"
         echo -e "${COLOR}SCREEN_TYPE value is:${RESET} ${SCREEN_TYPE}"
         echo -e "${COLOR}SCREEN_RES value is:${RESET} ${SCREEN_RES}"
         echo -e "${COLOR}DISPLAY_COLORS_ROW1 value is:${RESET} ${DISPLAY_COLORS_ROW1}"
@@ -648,6 +660,7 @@ while getopts ":hdva:lbcrs" option; do
         echo -e "${COLOR}TERMINAL value is:${RESET} ${TERMINAL}"
         echo -e "${COLOR}CPU value is:${RESET} ${CPU}"
         echo -e "${COLOR}GPU value is:${RESET} ${GPU}"
+        echo -e "${COLOR}GPU_DT value is:${RESET} ${GPU_DT}"
         echo -e "${COLOR}MEMORY_MB value is:${RESET} ${MEMORY_MB}"
         echo -e "=== COLOR VALUES ================================"
         echo "COLOR value is: ${COLOR}"
@@ -683,7 +696,7 @@ Oh and btw the -v option displays the version of brokefetch EDGE.
 The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
 
 if $use_dialog; then
-        dialog --title "Brokefetch Help" --msgbox "$help_text" 15 60
+        dialog --title "Brokefetch Help" --msgbox "$help_text" 16 60
         clear
     else
         echo -e "$help_text"
@@ -1029,7 +1042,7 @@ case "$DISTRO_TO_DISPLAY" in
     	ascii14="          ${COLOR}.---.....----.           "
     	ascii15="                                   "
     	ascii16="Just tell me why not linux?"
-    	ascii17="I'm not hating, just asking        "
+    	ascii17="I'm not hating, just asking       "
     	ascii18="                                  "
     	ascii19=""
         ;;
