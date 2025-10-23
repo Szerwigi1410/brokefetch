@@ -351,6 +351,7 @@ case $GPU_DETECTION in
     "vulkan")GPU_DT="$(vulkaninfo | grep "GPU id" | awk '{print $5}' | head -1 | tr '[:upper:]' '[:lower:]' | xargs)";;
     "neofetch")GPU_DT="$(neofetch --stdout | grep "GPU:" | awk '{print tolower($2)}')";;
     "fastfetch")GPU_DT="$(fastfetch | grep 'GPU: ' | awk -F: '{print $2}' | xargs)";;
+    "wealthfetch")GPU_DT="$(wealthfetch | grep 'GPU' | awk -F: '{print $2}' | xargs)";; #fix later
 esac
 
 if [ -f /etc/os-release ]; then
