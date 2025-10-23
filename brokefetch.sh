@@ -1638,12 +1638,20 @@ else
 fi
 line20="${BOLD}BROKEFETCH v1.7 🥀${RESET}"
 
-# Loop 00-20 safely
+# Loop 00-20 with width handling to prevent screen distortion
 for i in $(seq 0 20); do
     num=$(printf "%02d" "$i")
     varname="line$num"
     line="${!varname:-}"   
     
-    # Use echo -e to properly interpret ANSI escape codes
-    echo -e "$line"
+    if [ -n "$line" ]; then
+        # Simple width truncation using terminal capabilities
+        width="${COLUMNS:-105}"
+        # Use printf to truncate if line is too long, preserve all formatting
+        if [ ${#line} -gt $((width + 50)) ]; then  # +50 buffer for ANSI codes
+            echo -e "$line" | cut -c1-$width
+        else
+            echo -e "$line"
+        fi
+    fi
 done
