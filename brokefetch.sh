@@ -553,10 +553,10 @@ esac
 # Variables for combined options
 show_help=false
 use_dialog=false
-ukraine_flag=false
+polish_flag=false
 
 # Get options
-while getopts ":hdva:lbcrsu" option; do
+while getopts ":hdva:lbcrsp" option; do
    case $option in
       h) 
         show_help=true
@@ -645,8 +645,8 @@ while getopts ":hdva:lbcrsu" option; do
         echo "GRAY value is: ${GRAY}"
 
         exit;;    
-      u) # Show Ukraine flag
-         ukraine_flag=true
+      p) # Show Ukraine flag
+         polish_flag=true
          ASCII_DISTRO="ukraine"
          ;;
      \?) # Invalid option
@@ -663,7 +663,6 @@ Oh and btw the -v option displays the version of brokefetch EDGE.
 -l lists all available ASCII arts
 -r resets the config file to default
 -s shows config, color and other variable values
--u shows Ukraine flag (Slava Ukraini!)
 -d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)
  
 The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
@@ -1533,19 +1532,19 @@ case "$DISTRO_TO_DISPLAY" in
         ascii18=""
         ascii19="" #finish later         
         ;;
-    "ukraine")
-        if [[ "$ukraine_flag" == true ]]; then
-            # Ukraine flag with proper proportions (1:1 ratio blue:yellow)
-            ascii00="${BLUE}████████████████████████████   "
-            ascii01="${BLUE}████████████████████████████   "
-            ascii02="${BLUE}████████████████████████████   "
-            ascii03="${BLUE}████████████████████████████   "
-            ascii04="${YELLOW}████████████████████████████   "
-            ascii05="${YELLOW}████████████████████████████   "
-            ascii06="${YELLOW}████████████████████████████   "
-            ascii07="${YELLOW}████████████████████████████   "
+    "Poland")
+        if [[ "$polish_flag" == true ]]; then
+            # polish flag with proper proportions (1:1 ratio blue:yellow)
+            ascii00="${RED}████████████████████████████   "
+            ascii01="${RED}████████████████████████████   "
+            ascii02="${RED}████████████████████████████   "
+            ascii03="${RED}████████████████████████████   "
+            ascii04="${WHITE}████████████████████████████   "
+            ascii05="${WHITE}████████████████████████████   "
+            ascii06="${WHITE}████████████████████████████   "
+            ascii07="${WHITE}████████████████████████████   "
             ascii08="                               "
-            ascii09="      ${CYAN}Slava Ukraini!           "
+            ascii09="      ${WHITE}Niech żyje Polska!           "
             ascii10="                               "
             ascii11="                               "
             ascii12="                               "
@@ -1557,17 +1556,17 @@ case "$DISTRO_TO_DISPLAY" in
             ascii18="                               "
             ascii19="                               "
         else
-            # Fallback to default if -u flag not used
-            ascii00="${BLUE}████████████████████████████   "
-            ascii01="${BLUE}████████████████████████████   "
-            ascii02="${BLUE}████████████████████████████   "
-            ascii03="${BLUE}████████████████████████████   "
-            ascii04="${YELLOW}████████████████████████████   "
-            ascii05="${YELLOW}████████████████████████████   "
-            ascii06="${YELLOW}████████████████████████████   "
-            ascii07="${YELLOW}████████████████████████████   "
+            # Fallback to default if -p flag not used
+			ascii00="${RED}████████████████████████████   "
+            ascii01="${RED}████████████████████████████   "
+            ascii02="${RED}████████████████████████████   "
+            ascii03="${RED}████████████████████████████   "
+            ascii04="${WHITE}████████████████████████████   "
+            ascii05="${WHITE}████████████████████████████   "
+            ascii06="${WHITE}████████████████████████████   "
+            ascii07="${WHITE}████████████████████████████   "
             ascii08="                               "
-            ascii09="      ${CYAN}Slava Ukraini!           "
+            ascii09="      ${WHITE}Niech żyje Polska!           "
             ascii10="                               "
             ascii11="                               "
             ascii12="                               "
