@@ -238,7 +238,7 @@ if [ "$COLOR_NAME" = "DISTRO" ]; then
         "Linexin") COLOR="$WHITE";;
         "Linux Mint") COLOR="$WHITE";;
         "Linux Lite") COLOR="$YELLOW";;
-        "macOS") COLOR="$GRAY";;
+        "macOS") COLOR="$CYAN";;
         "Nobara Linux") COLOR="$WHTE";;
         "NixOS") COLOR="$CYAN";;
         "openSUSE Tumbleweed") COLOR="$GREEN";;
@@ -553,9 +553,10 @@ esac
 # Variables for combined options
 show_help=false
 use_dialog=false
+polish_flag=false
 
 # Get options
-while getopts ":hdva:lbcrs" option; do
+while getopts ":hdva:lbcrsp" option; do
    case $option in
       h) 
         show_help=true
@@ -564,7 +565,7 @@ while getopts ":hdva:lbcrs" option; do
         use_dialog=true
         ;;  
       v) # display Version
-         echo "brokefetch EDGE version 1.7"
+         echo "brokefetch version 1.7"
          echo "Make sure to star the repository on GitHub :)"
          exit;;
       a) # Set ASCII override to what the user typed
@@ -644,6 +645,10 @@ while getopts ":hdva:lbcrs" option; do
         echo "GRAY value is: ${GRAY}"
 
         exit;;    
+      p) # Show polish flag
+         polish_flag=true
+         ASCII_DISTRO="poland"
+         ;;
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
@@ -987,7 +992,7 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii14=":---${WHITE}:sdNMMMMNds:${COLOR}------------:        "
 	    ascii15=":------${WHITE}:://:${COLOR}-------------::          "
 	    ascii16=":---------------------://            "
-	    ascii17="                                    "
+	    ascii17="    https://is.gd/6bFfzt                            "
 	    ascii18="                                    "
 	    ascii19=""
         ;;
@@ -1080,26 +1085,26 @@ case "$DISTRO_TO_DISPLAY" in
         ascii19="                           "
         ;;
     "macos")
-        ascii00="                    'c.          "
-        ascii01="                 ,xNMM.          "
-        ascii02="               .OMMMMo           "
-        ascii03="               OMMM0,            "
-        ascii04="     .;loddo:' loolloddol;.      "
-        ascii05="   cKMMMMMMMMMMNWMMMMMMMMMM0:    "
-        ascii06=" .KMMMMMMMMMMMMMMMMMMMMMMMWd.    "
-        ascii07=" XMMMMLMMMMMMMMMMMMMMMMMMX.      "
-        ascii08=";MMMMMMIMMMMMMMMMMMMMMMMM:       "
-        ascii09=":MMMMMMMNMMMMMMMMMMMMMMMM:       "
-        ascii10=".MMMMMMMMUMMMMMMMMMMMMMMMX.      "
-        ascii11=" kMMMMMMMMXMMMMMMMMMMMMMMMWd.    "
-        ascii12=" .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   "
-        ascii13="  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   "
-        ascii14="    kMMMMMMMMMMMMMMMMMMMMMMd     "
-        ascii15="     ;KMMMMMMMWXXWMMMMMMMk.      "
-        ascii16="       .cooc,.    .,coo:.        "
-        ascii17="                                "
-        ascii18="How are your kidneys doing?     "
-        ascii19="You still have both of them, right?"
+        ascii00="${GREEN}                    'c.          "
+        ascii01="${GREEN}                 ,xNMM.          "
+        ascii02="${GREEN}               .OMMMMo           "
+        ascii03="${GREEN}               OMMM0,            "
+        ascii04="${GREEN}     .;loddo:' loolloddol;.      "
+        ascii05="${GREEN}   cKMMMMMMMMMMNWMMMMMMMMMM0:    "
+        ascii06="${GREEN} .KMMMMMMMMMMMMMMMMMMMMMMMWd.    "
+        ascii07="${YELLOW} XMMMMLMMMMMMMMMMMMMMMMMMX.      "
+        ascii08="${YELLOW};MMMMMMIMMMMMMMMMMMMMMMMM:       "
+        ascii09="${RED}:MMMMMMMNMMMMMMMMMMMMMMMM:       "
+        ascii10="${RED}.MMMMMMMMUMMMMMMMMMMMMMMMX.      "
+        ascii11="${RED} kMMMMMMMMXMMMMMMMMMMMMMMMWd.    "
+        ascii12="${RED} .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   "
+        ascii13="${PURPLE}  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   "
+        ascii14="${PURPLE}    kMMMMMMMMMMMMMMMMMMMMMMd     "
+        ascii15="${BLUE}     ;KMMMMMMMWXXWMMMMMMMk.      "
+        ascii16="${BLUE}       .cooc,.    .,coo:.        "
+        ascii17="${BLUE}                                "
+        ascii18="${WHITE}How are your kidneys doing?     "
+        ascii19="${WHITE}You still have both of them, right?"
         ;;
     "manjaro" | "manjaro linux")
         ascii00="██████████████████  ████████   "
@@ -1166,7 +1171,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="${GREEN}⣿⣿⣿⡇⡟⣠⡙⠻⣿⡌⣿⢣⣿⣿⣿⣿⣿⣿⣿⣿⡸⢼⣿⣿⡐⡇⣿⣤⠿⠋⢴⢰⣿⣿⣿⣿   "
         ascii17="${GREEN}⣿⣿⣿⡇⡇⣿⡇⠇⣬⣅⠻⠸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⠇⠇⣫⣵⣾⣦⢸⢸⣿⣿⣿⣿  "
         ascii18="${GREEN}⣿⣿⣿⣷⠁⣿⣧⣸⣿⣿⠉⣿⣶⣯⡉⣩⣟⣛⣛⣛⠉⡉⢍⣴⣆⠀⣿⣿⣿⣿⠀⢸⣿⣿⣿⣿  "
-        ascii19="${GREEN}⣿⣿⣿⣿⢼⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣾⣿⣿⣶⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿   "
+        ascii19="${GREEN}You dont have money to turn up the heat.   "
         ;;
     "nixos")
         ascii00="$1  ▗▄   $2▗▄ ▄▖                "
@@ -1231,7 +1236,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii15="     ${WHITE}'l0Kk:.              .;xK0l'  ${COLOR}     "
         ascii16="        ${WHITE}'lkK0xl:;,,,,;:ldO0kl' "
         ascii17="            ${WHITE}'^:ldxkkkkxdl:^'           "
-        ascii18="                                       "
+        ascii18="            tumble "WEED"                      "
         ascii19=""
         ;;
     "opensuse leap" | "leap")
@@ -1253,7 +1258,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii15="       ==== =====          "
         ascii16="         ======            "
         ascii17="           ==             "
-        ascii18="                          "
+        ascii18="   Leap into the debt    "
         ascii19=""
         ;;            
     "pop!_os" | "popos")
@@ -1272,7 +1277,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii12="⣿⣿⣿⣿⣿⣿⣿⣿⣿⡛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⢛⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
         ascii13="⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
         ascii14="⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
-        ascii15="                               "
+        ascii15="         mmmm, fizzy               "
         ascii16=""
         ascii17="                              "
         ascii18="                              "
@@ -1298,7 +1303,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="                                         ;l   .. "
         ascii17="                                          .o    "
         ascii18="                                            c   "
-        ascii19="                                            .'   " 
+        ascii19="                  Bro is not a hacker        .'   " 
         ;;    
     "rhel")
         ascii00="           .MMM..:MMMMMMM                  "
@@ -1409,7 +1414,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="    .ossssssssssssssssss${WHITE}dMMMNy${COLOR}sssso.       "
         ascii17="      -+sssssssssssssssss${WHITE}yyy${COLOR}ssss+-        "
         ascii18="        \`:+ssssssssssssssssss+:\`          "
-        ascii19="            .-/+oossssoo+/-.               "
+        ascii19="            .-/+oossssoo+/-.    tbh i dont have anything bad to say about this           "
         ;;
     "void linux" | "void")
         ascii00="               __.;=====;.__                    "
@@ -1431,7 +1436,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="           ~|Invnvnvvnvvvnnv}+                  "
         ascii17="               -~|{*l}*|~%                      "
         ascii18="                                                "
-        ascii19=""
+        ascii19="              Void in ur wallet                 "
         ;;
     "windows" | wsl)
         win_rand=$(($RANDOM%3))
@@ -1527,6 +1532,53 @@ case "$DISTRO_TO_DISPLAY" in
         ascii18=""
         ascii19="" #finish later         
         ;;
+    "poland")
+        if [[ "$polish_flag" == true ]]; then
+            # polish flag with proper proportions (1:1 ratio white:red)
+            ascii00="${WHITE}████████████████████████████   "
+            ascii01="${WHITE}████████████████████████████   "
+            ascii02="${WHITE}████████████████████████████   "
+            ascii03="${WHITE}████████████████████████████   "
+            ascii04="${RED}████████████████████████████   "
+            ascii05="${RED}████████████████████████████   "
+            ascii06="${RED}████████████████████████████   "
+            ascii07="${RED}████████████████████████████   "
+            ascii08="                               "
+            ascii09="      ${WHITE}Niech żyje Polska!           "
+            ascii10="                               "
+            ascii11="                               "
+            ascii12="                               "
+            ascii13="                               "
+            ascii14="                               "
+            ascii15="                               "
+            ascii16="                               "
+            ascii17="                               "
+            ascii18="                               "
+            ascii19="                               "
+        else
+            # Fallback to default if -p flag not used
+			ascii00="${WHITE}████████████████████████████   "
+            ascii01="${WHITE}████████████████████████████   "
+            ascii02="${WHITE}████████████████████████████   "
+            ascii03="${WHITE}████████████████████████████   "
+            ascii04="${RED}████████████████████████████   "
+            ascii05="${RED}████████████████████████████   "
+            ascii06="${RED}████████████████████████████   "
+            ascii07="${RED}████████████████████████████   "
+            ascii08="                               "
+            ascii09="      ${WHITE}Niech żyje Polska!           "
+            ascii10="                               "
+            ascii11="                               "
+            ascii12="                               "
+            ascii13="                               "
+            ascii14="                               "
+            ascii15="                               "
+            ascii16="                               "
+            ascii17="                               "
+            ascii18="                               "
+            ascii19="                               "
+        fi
+        ;;
     *)
         # Default ASCII art for unknown distros
         ascii00="${YELLOW}        S2#####                    "
@@ -1572,7 +1624,7 @@ if [ "$DISPLAY_COLORS_ROW1" = true ]; then
 
     COLOR_BLOCKS_ROW_1="$(for color in {0..7}; do
       code=$((40 + color))
-      echo -en "\e[${code}m${SIZE_BLOX}\e[0m"
+      echo -en "\033[${code}m${SIZE_BLOX}\033[0m"
     done
     echo)"
 else [ "$DISPLAY_COLORS_ROW1" = false ];
@@ -1583,57 +1635,75 @@ if [ "$DISPLAY_COLORS_ROW2" = true ]; then
 
     COLOR_BLOCKS_ROW_2="$(for color in {0..7}; do
       code=$((100 + color))
-      echo -en "\e[${code}m${SIZE_BLOX}\e[0m"
+      echo -en "\033[${code}m${SIZE_BLOX}\033[0m"
     done
     echo)"
-else [ "$DISPLAY_COLORS_ROW1" = false ];
+else [ "$DISPLAY_COLORS_ROW2" = false ];
     COLOR_BLOCKS_ROW_2=""
 fi
 
 # === OUTPUT ===
-line00="${BOLD_A}${COLOR}${ascii00}${RESET}$(whoami)@brokelaptop"
-line01="${BOLD_A}${COLOR}${ascii01}${RESET}-----------------------"
-line02="${BOLD_A}${COLOR}${ascii02}${BOLD}OS:${RESET} $OS"
-line03="${BOLD_A}${COLOR}${ascii03}${BOLD}Host:${RESET} $HOST"
-line04="${BOLD_A}${COLOR}${ascii04}${BOLD}Kernel:${RESET} $KERNEL"
-line05="${BOLD_A}${COLOR}${ascii05}${BOLD}Uptime:${RESET} $UPTIME (sleep not included)"
-line06="${BOLD_A}${COLOR}${ascii06}${BOLD}Packages:${RESET} $PKG_COUNT (none legal)"
-line07="${BOLD_A}${COLOR}${ascii07}${BOLD}Shell:${RESET} $SHELLOUT"
-line08="${BOLD_A}${COLOR}${ascii08}${BOLD}Resolution:${RESET} $MONITOR_TYPE $MONITOR_RES"
-line09="${BOLD_A}${COLOR}${ascii09}${BOLD}DE:${RESET} $DESKTOP_ENV" #Crying
-line10="${BOLD_A}${COLOR}${ascii10}${BOLD}WM:${RESET} $WINDOW_MANAGER"
-line11="${BOLD_A}${COLOR}${ascii11}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
-line12="${BOLD_A}${COLOR}${ascii12}${BOLD}Terminal:${RESET} $TERMINAL"
-line13="${BOLD_A}${COLOR}${ascii13}${BOLD}CPU:${RESET} $CPU"
-line14="${BOLD_A}${COLOR}${ascii14}${BOLD}GPU:${RESET} $GPU"
-line15="${BOLD_A}${COLOR}${ascii15}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
-line16="${BOLD_A}${COLOR}${ascii16}"
-line17="${BOLD_A}${COLOR}${ascii17} $COLOR_BLOCKS_ROW_1"
-line18="${BOLD_A}${COLOR}${ascii18} $COLOR_BLOCKS_ROW_2"
-line19="${BOLD_A}${COLOR}${ascii19}"
-line20="${BOLD}BROKEFETCH 🥀 1.7${RESET}"
+if [ "$OS_NAME" = "macOS" ]; then
+    # Rainbow Apple logo - colors are embedded in ASCII art
+    line00="${BOLD_A}${ascii00}${RESET}$(whoami)@brokelaptop"
+    line01="${BOLD_A}${ascii01}${RESET}-----------------------"
+    line02="${BOLD_A}${ascii02}${BOLD}OS:${RESET} $OS"
+    line03="${BOLD_A}${ascii03}${BOLD}Host:${RESET} $HOST"
+    line04="${BOLD_A}${ascii04}${BOLD}Kernel:${RESET} $KERNEL"
+    line05="${BOLD_A}${ascii05}${BOLD}Uptime:${RESET} $UPTIME (sleep not included)"
+    line06="${BOLD_A}${ascii06}${BOLD}Packages:${RESET} $PKG_COUNT (none legal)"
+    line07="${BOLD_A}${ascii07}${BOLD}Shell:${RESET} $SHELLOUT"
+    line08="${BOLD_A}${ascii08}${BOLD}Resolution:${RESET} $MONITOR_TYPE $MONITOR_RES"
+    line09="${BOLD_A}${ascii09}${BOLD}DE:${RESET} $DESKTOP_ENV" #Crying
+    line10="${BOLD_A}${ascii10}${BOLD}WM:${RESET} $WINDOW_MANAGER"
+    line11="${BOLD_A}${ascii11}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
+    line12="${BOLD_A}${ascii12}${BOLD}Terminal:${RESET} $TERMINAL"
+    line13="${BOLD_A}${ascii13}${BOLD}CPU:${RESET} $CPU"
+    line14="${BOLD_A}${ascii14}${BOLD}GPU:${RESET} $GPU"
+    line15="${BOLD_A}${ascii15}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
+    line16="${BOLD_A}${ascii16}"
+    line17="${BOLD_A}${ascii17} $COLOR_BLOCKS_ROW_1"
+    line18="${BOLD_A}${ascii18} $COLOR_BLOCKS_ROW_2"
+    line19="${BOLD_A}${ascii19}"
+else
+    # Standard single-color output for other OSes
+    line00="${BOLD_A}${COLOR}${ascii00}${RESET}$(whoami)@brokelaptop"
+    line01="${BOLD_A}${COLOR}${ascii01}${RESET}-----------------------"
+    line02="${BOLD_A}${COLOR}${ascii02}${BOLD}OS:${RESET} $OS"
+    line03="${BOLD_A}${COLOR}${ascii03}${BOLD}Host:${RESET} $HOST"
+    line04="${BOLD_A}${COLOR}${ascii04}${BOLD}Kernel:${RESET} $KERNEL"
+    line05="${BOLD_A}${COLOR}${ascii05}${BOLD}Uptime:${RESET} $UPTIME (sleep not included)"
+    line06="${BOLD_A}${COLOR}${ascii06}${BOLD}Packages:${RESET} $PKG_COUNT (none legal)"
+    line07="${BOLD_A}${COLOR}${ascii07}${BOLD}Shell:${RESET} $SHELLOUT"
+    line08="${BOLD_A}${COLOR}${ascii08}${BOLD}Resolution:${RESET} $MONITOR_TYPE $MONITOR_RES"
+    line09="${BOLD_A}${COLOR}${ascii09}${BOLD}DE:${RESET} $DESKTOP_ENV" #Crying
+    line10="${BOLD_A}${COLOR}${ascii10}${BOLD}WM:${RESET} $WINDOW_MANAGER"
+    line11="${BOLD_A}${COLOR}${ascii11}${BOLD}Window system:${RESET} $WINDOW_SYSTEM"
+    line12="${BOLD_A}${COLOR}${ascii12}${BOLD}Terminal:${RESET} $TERMINAL"
+    line13="${BOLD_A}${COLOR}${ascii13}${BOLD}CPU:${RESET} $CPU"
+    line14="${BOLD_A}${COLOR}${ascii14}${BOLD}GPU:${RESET} $GPU"
+    line15="${BOLD_A}${COLOR}${ascii15}${BOLD}Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)"
+    line16="${BOLD_A}${COLOR}${ascii16}"
+    line17="${BOLD_A}${COLOR}${ascii17} $COLOR_BLOCKS_ROW_1"
+    line18="${BOLD_A}${COLOR}${ascii18} $COLOR_BLOCKS_ROW_2"
+    line19="${BOLD_A}${COLOR}${ascii19}"
+fi
+line20="${BOLD}BROKEFETCH v1.7 🥀${RESET}"
 
-# Loop 00-20 safely
+# Loop 00-20 with width handling to prevent screen distortion
 for i in $(seq 0 20); do
     num=$(printf "%02d" "$i")
     varname="line$num"
     line="${!varname:-}"   
-    width="${COLUMNS:-105}" 
-
-    echo -e "$line" | awk -v w="$width" '
-    {
-      out=""; vis=0
-      while (length($0) > 0 && vis < w) {
-        if (match($0,/^\x1b\[[0-9;]*[A-Za-z]/)) {
-          out = out substr($0,1,RLENGTH)
-          $0 = substr($0,RLENGTH+1)
-        } else {
-          ch = substr($0,1,1)
-          out = out ch
-          $0 = substr($0,2)
-          vis++
-        }
-      }
-      print out
-    }'
+    
+    if [ -n "$line" ]; then
+        # Simple width truncation using terminal capabilities
+        width="${COLUMNS:-105}"
+        # Use printf to truncate if line is too long, preserve all formatting
+        if [ ${#line} -gt $((width + 50)) ]; then  # +50 buffer for ANSI codes
+            echo -e "$line" | cut -c1-$width
+        else
+            echo -e "$line"
+        fi
+    fi
 done
