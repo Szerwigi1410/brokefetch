@@ -645,9 +645,9 @@ while getopts ":hdva:lbcrsp" option; do
         echo "GRAY value is: ${GRAY}"
 
         exit;;    
-      p) # Show Ukraine flag
+      p) # Show polish flag
          polish_flag=true
-         ASCII_DISTRO="ukraine"
+         ASCII_DISTRO="poland"
          ;;
      \?) # Invalid option
          echo "We don't type that here."
@@ -1532,17 +1532,17 @@ case "$DISTRO_TO_DISPLAY" in
         ascii18=""
         ascii19="" #finish later         
         ;;
-    "Poland")
+    "poland")
         if [[ "$polish_flag" == true ]]; then
-            # polish flag with proper proportions (1:1 ratio blue:yellow)
-            ascii00="${RED}████████████████████████████   "
-            ascii01="${RED}████████████████████████████   "
-            ascii02="${RED}████████████████████████████   "
-            ascii03="${RED}████████████████████████████   "
-            ascii04="${WHITE}████████████████████████████   "
-            ascii05="${WHITE}████████████████████████████   "
-            ascii06="${WHITE}████████████████████████████   "
-            ascii07="${WHITE}████████████████████████████   "
+            # polish flag with proper proportions (1:1 ratio white:red)
+            ascii00="${WHITE}████████████████████████████   "
+            ascii01="${WHITE}████████████████████████████   "
+            ascii02="${WHITE}████████████████████████████   "
+            ascii03="${WHITE}████████████████████████████   "
+            ascii04="${RED}████████████████████████████   "
+            ascii05="${RED}████████████████████████████   "
+            ascii06="${RED}████████████████████████████   "
+            ascii07="${RED}████████████████████████████   "
             ascii08="                               "
             ascii09="      ${WHITE}Niech żyje Polska!           "
             ascii10="                               "
@@ -1557,14 +1557,14 @@ case "$DISTRO_TO_DISPLAY" in
             ascii19="                               "
         else
             # Fallback to default if -p flag not used
-			ascii00="${RED}████████████████████████████   "
-            ascii01="${RED}████████████████████████████   "
-            ascii02="${RED}████████████████████████████   "
-            ascii03="${RED}████████████████████████████   "
-            ascii04="${WHITE}████████████████████████████   "
-            ascii05="${WHITE}████████████████████████████   "
-            ascii06="${WHITE}████████████████████████████   "
-            ascii07="${WHITE}████████████████████████████   "
+			ascii00="${WHITE}████████████████████████████   "
+            ascii01="${WHITE}████████████████████████████   "
+            ascii02="${WHITE}████████████████████████████   "
+            ascii03="${WHITE}████████████████████████████   "
+            ascii04="${RED}████████████████████████████   "
+            ascii05="${RED}████████████████████████████   "
+            ascii06="${RED}████████████████████████████   "
+            ascii07="${RED}████████████████████████████   "
             ascii08="                               "
             ascii09="      ${WHITE}Niech żyje Polska!           "
             ascii10="                               "
