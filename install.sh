@@ -99,19 +99,6 @@ if [ ${#available_scripts[@]} -eq 0 ]; then
                 fi
                 ;;
             3 )
-                echo "Downloading the beta2 version..."
-                if curl -sSL "$BETA2_URL" -o "$temp_dir/brokefetch_beta2.sh"; then
-                    source_file="$temp_dir/brokefetch_beta2.sh"
-                    script_to_install="brokefetch_beta2.sh"
-                    downloaded=1
-                    break
-                else
-                    echo "Error: Failed to download the beta2 version. Exiting."
-                    rm -r "$temp_dir"
-                    exit 1
-                fi
-                ;;    
-            4 )
                 echo "Downloading the modular version..."
                 if curl -sSL "$EDGE_AC_URL" -o "$temp_dir/brokefetch_mod.sh"; then
                     source_file="$temp_dir/brokefetch_mod.sh"
@@ -124,7 +111,7 @@ if [ ${#available_scripts[@]} -eq 0 ]; then
                     exit 1
                 fi
                 ;;
-            5 )
+            4 )
                 echo "Exiting installation."
                 rm -rf "$temp_dir"
                 exit 0
