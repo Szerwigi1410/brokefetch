@@ -49,7 +49,7 @@ curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/m
 ### OS-wide for FreeBSD users
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install.sh > install.sh ; chmod +x install.sh ; bash -c "bash install.sh" ; rm -f install.sh
+sudo curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install_UI.sh > install_UI.sh ; sudo chmod +x install_UI.sh ; sudo bash -c "bash install_UI.sh" ; sudo rm -f install_UI.sh
 ```
 
 ### AUR (yes it's back)
