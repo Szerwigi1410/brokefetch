@@ -41,10 +41,15 @@ cd brokefetch
 chmod +x install.sh
 ./install.sh
 ```
-### or use the installer "OS-wide"(experemental)
+### or use the installer "OS-wide"
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install.sh > install.sh ; chmod +x install.sh ; bash -c "./install.sh" ; rm -f install.sh
+```
+### OS-wide for FreeBSD users
+
+```bash
+curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install.sh > install.sh ; chmod +x install.sh ; bash -c "bash install.sh" ; rm -f install.sh
 ```
 
 ### AUR (yes it's back)
