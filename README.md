@@ -133,6 +133,8 @@ brew install brokefetch
 - `brokefetch_EDGE_legacy.sh` - just a backup of the old edge version (currently not present)
 - `brokefetch_mod.sh` - a version of EDGE that loads the logos from ~/.config/brokefetch/logos (mod stands for **mod**ular). Currently supports 485 ascii logos!
 
+- On FreeBSD, the default shell isn’t usually Bash, so you’ll need to run Brokefetch using bash brokefetch after installing.
+
 (brokefetch_EDGE got renamed to brokefetch_beta)
 
 ---
