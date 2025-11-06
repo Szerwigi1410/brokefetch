@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # IMPORTANT NOTE: This script is called "brokefetch.sh" because it is ther most stable/recomended.
-# and brokefetch_beta.sh will replace this script 
+# and brokefetch_beta.sh will replace this script
 
 GREEN="\033[32m"
 RED="\033[31m"
@@ -85,7 +85,7 @@ if [[ ! -f "$CONFIG_FILE" ]]; then
 fi
 
 # Load values from the config
-source "$CONFIG_FILE" 
+source "$CONFIG_FILE"
 
 # OS
 if [ -f /etc/os-release ]; then
@@ -291,7 +291,7 @@ if [ "$ASCII_BOLD" = true ]; then
     BOLD_A="${BOLD}"
 else [ "$ASCII_BOLD" = false ];
     BOLD_A=""
-fi        
+fi
 
 #CPU
 
@@ -465,10 +465,10 @@ elif [ -n "$XDG_CURRENT_DESKTOP" ]; then
 else
     DESKTOP_ENV="$(echo "$DESKTOP_SESSION" | tr '[:upper:]' '[:lower:]')"
 fi
- 
+
 # Convert to lowercase for consistent matching in the next case statement
 DESKTOP_ENV="$(echo "$DESKTOP_ENV" | tr '[:upper:]' '[:lower:]')"
- 
+
 #Macos and windows and phone
 case "$OS_NAME" in
     "macOS")
@@ -480,7 +480,7 @@ case "$OS_NAME" in
     "Android")
         DESKTOP_ENV="Android";;
 esac
- 
+
 case "$DESKTOP_ENV" in
     "aqua") DESKTOP_ENV="Aqua (because I can't afford a real desktop)";;
     "aero") DESKTOP_ENV="Aero (but no money for a real DE)";;
@@ -555,7 +555,7 @@ case "$OS_NAME" in
     "Android")
         WINDOW_SYSTEM="Maybe wayland, maybe X11";;
 esac
-        
+
 # Initialize
 ASCII_DISTRO=""
 
@@ -588,12 +588,12 @@ use_dialog=false
 # Get options
 while getopts ":hdva:lbcrs" option; do
    case $option in
-      h) 
+      h)
         show_help=true
         ;;
       d)
         use_dialog=true
-        ;;  
+        ;;
       v) # display Version
          echo "brokefetch EDGE version 1.7"
          echo "Make sure to star the repository on GitHub :)"
@@ -607,7 +607,7 @@ while getopts ":hdva:lbcrs" option; do
          exit;;
       b) # easter egg
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⢰⣶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-        echo "⠀⠀⠀⠀⠀⠀⢀⣠⣼⣿⣤⣀⡀⠀⠀⠀⠀⣤⣤⣤⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀⢠⣤⣤⣤⣤⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣤⣤⣤⣄⣀⠀⠀⠀⠀⠀⢠⣤⠀⠀⠀⠀⠀⠀⢀⣤⣤⠄⠀⠀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⠤⠤⠤⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀"      
+        echo "⠀⠀⠀⠀⠀⠀⢀⣠⣼⣿⣤⣀⡀⠀⠀⠀⠀⣤⣤⣤⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀⢠⣤⣤⣤⣤⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⣤⣤⣤⣄⣀⠀⠀⠀⠀⠀⢠⣤⠀⠀⠀⠀⠀⠀⢀⣤⣤⠄⠀⠀⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⠤⠤⠤⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⢰⣿⠋⠉⣿⠉⠻⣿⡄⠀⠀⠀⣿⡏⠉⠉⠉⠉⠉⠻⣿⡆⠀⠀⠀⢸⣿⠉⠉⠉⠉⠉⠉⠙⢻⣿⡄⠀⠀⠀⢀⣾⡿⠛⠉⠁⠈⠉⠙⢿⣷⣄⠀⠀⠀⢸⣿⠀⠀⠀⠀⢀⣴⣿⠟⠁⠀⠀⠀⣿⡏⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⢀⡔⠉⢀⡠⠤⠤⠤⡼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⠉⡽⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⢻⣷⡀⠀⣿⠀⠀⠉⠁⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⣿⡟⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⢀⣿⡇⠀⠀⢠⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡆⠀⠀⢸⣿⠀⠀⢀⣴⣿⠟⠁⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⢠⠏⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣀⡀⠀⠀⠀⣀⣀⣀⡼⠀⢠⣇⣀⣀⣀⣀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣤⣀⣀⠀⠀⠀⡏⠀⢸⢁⣀⣤⣄⣀⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⠀⠛⠿⣶⣿⣄⡀⠀⠀⠀⠀⠀⣿⣧⣤⣤⣤⣤⣴⣾⡛⠀⠀⠀⠀⢸⣿⣤⣤⣤⣤⣤⣤⣴⣾⠟⠁⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⢸⣿⣀⣴⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⣿⣷⣤⣤⣤⣤⣤⣤⣤⡄⠀⣠⠤⠤⠤⠇⠀⠸⠤⠤⠤⠤⡄⠀⢀⡴⠊⠁⣀⣤⣄⡀⠈⢳⡀⠀⣇⣀⣀⡀⠀⢀⣀⣀⣀⣀⡼⠀⠀⠀⡠⠚⠉⢀⣀⣤⣀⣀⣸⠀⠀⢰⠃⠀⠞⠁⣀⣀⡀⠈⢳⠀⠀⠀⠀"
@@ -618,12 +618,12 @@ while getopts ":hdva:lbcrs" option; do
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠇⠀⣼⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠲⠤⠤⠴⠶⠒⠃⠀⠀⠀⠀⠀⠈⠓⠶⠤⠤⠶⠚⠀⠀⠀⠀⠈⠑⠲⠦⠤⠴⠖⠚⠁⠀⠘⠳⠶⠋⠀⠀⠀⠘⠳⠶⠋⠀⠀⠀⠀⠀"
         echo "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠤⠤⠤⠴⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
         exit;;
-      c) 
-        function SercetCalendar() 
-        { 
-        dialog --calendar "calendar" 5 50 
+      c)
+        function SercetCalendar()
+        {
+        dialog --calendar "calendar" 5 50
         }
-        SercetCalendar 
+        SercetCalendar
         clear #another easter egg
         exit
         ;;
@@ -676,7 +676,7 @@ while getopts ":hdva:lbcrs" option; do
         echo "BLACK value is: ${BLACK}"
         echo "GRAY value is: ${GRAY}"
 
-        exit;;    
+        exit;;
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
@@ -692,7 +692,7 @@ Oh and btw the -v option displays the version of brokefetch EDGE.
 -r resets the config file to default
 -s shows config, color and other variable values
 -d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)
- 
+
 The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
 
 if $use_dialog; then
@@ -719,7 +719,7 @@ case "$DISTRO_TO_DISPLAY" in
     "adelie linux" | "adelie")
         ascii00="                                   "
         ascii01="                                   "
-        ascii02="                                   " 
+        ascii02="                                   "
         ascii03="                                   "
         ascii04="                                   "
         ascii05="${BOLD}I had issues with the adelie ascii "
@@ -781,7 +781,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii17="     /dddddddddddddddddddddddddddd/       "
         ascii18="      :dddddddddddddddddddddddddd:        "
         ascii19="       .hddddddddddddddddddddddh.          "
-        ;;    
+        ;;
     "almalinux")
         ascii00="           ${RED}ooooooooooooooooooooooooooooo                 "
         ascii01="         ${RED}oo${WHITE}...........................${RED}oo   "
@@ -796,9 +796,9 @@ case "$DISTRO_TO_DISPLAY" in
         ascii10="    ${RED}o${WHITE}. .      .    .    .        . .${RED}o      "
         ascii11="     ${RED}o${WHITE}. .    .    .    .         . .${RED}o      "
         ascii12="      ${RED}o${WHITE}. .  .    .    .          . .${RED}o      "
-        ascii13="       ${RED}o${WHITE}.  .   .    .           .  .${RED}o      " 
+        ascii13="       ${RED}o${WHITE}.  .   .    .           .  .${RED}o      "
         ascii14="        ${RED}o${WHITE}.   .                   .   .${RED}o    "
-        ascii15="         ${RED}oo${WHITE}...........................${RED}oo   " 
+        ascii15="         ${RED}oo${WHITE}...........................${RED}oo   "
         ascii16="          ${RED}ooooooooooooooooooooooooooooo                  "
         ascii17="         I still don't know what this is. "
         ascii18="                                          "
@@ -1025,20 +1025,20 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii19=""
         ;;
     "freebsd" | "paidbsd")
-        ascii00="${RESET}\`\`\`                        ${COLOR}\`       "
-	    ascii01="  ${RESET}\` \`.....---...${COLOR}....--.\`\`\`   -/    "
-	    ascii02="  ${RESET}+o   .--\`         ${COLOR}/y:\`      +.   "
-	    ascii03="   ${RESET}yo\`:.            ${COLOR}:o      \`+-    "
-	    ascii04="    ${RESET}y/               ${COLOR}-/\`   -o/     "
-	    ascii05="   ${RESET}.-                  ${COLOR}::/sy+:.    "
-	    ascii06="   ${RESET}/                     ${COLOR}\`--  /    "
-	    ascii07="  ${RESET}\`:                          ${COLOR}:\`   "
-	    ascii08="  ${RESET}\`:                          ${COLOR}:\`   "
-	    ascii09="   ${RESET}/                          ${COLOR}/    "
-	    ascii10="   ${RESET}.-                        ${COLOR}-.    "
-	    ascii11="    ${RESET}--                      ${COLOR}-.     "
-	    ascii12="     ${RESET}\`:\`                  ${COLOR}\`:\`      "
-    	ascii13="       ${COLOR}.--             ${COLOR}\`--.        "
+        ascii00="${RESET}\`\`\`                        ${BOLD_A}${COLOR}\`       "
+	    ascii01="  ${RESET}\` \`.....---...${BOLD_A}${COLOR}....--.\`\`\`   -/    "
+	    ascii02="  ${RESET}+o   .--\`         ${BOLD_A}${COLOR}/y:\`      +.   "
+	    ascii03="   ${RESET}yo\`:.            ${BOLD_A}${COLOR}:o      \`+-    "
+	    ascii04="    ${RESET}y/               ${BOLD_A}${COLOR}-/\`   -o/     "
+	    ascii05="   ${RESET}.-                  ${BOLD_A}${COLOR}::/sy+:.    "
+	    ascii06="   ${RESET}/                     ${BOLD_A}${COLOR}\`--  /    "
+	    ascii07="  ${RESET}\`:                          ${BOLD_A}${COLOR}:\`   "
+	    ascii08="  ${RESET}\`:                          ${BOLD_A}${COLOR}:\`   "
+	    ascii09="   ${RESET}/                          ${BOLD_A}${COLOR}/    "
+	    ascii10="   ${RESET}.-                        ${BOLD_A}${COLOR}-.    "
+	    ascii11="    ${RESET}--                      ${BOLD_A}${COLOR}-.     "
+	    ascii12="     ${RESET}\`:\`                  ${BOLD_A}${COLOR}\`:\`      "
+    	ascii13="       ${COLOR}.--             ${BOLD_A}${COLOR}\`--.        "
     	ascii14="          ${COLOR}.---.....----.           "
     	ascii15="                                   "
     	ascii16="Just tell me why not linux?"
@@ -1058,7 +1058,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii08=" ,888S                                     pd! "
         ascii09="8X88/                                       q  "
         ascii10="8X88/                                          "
-        ascii11="GBB.                                           "  
+        ascii11="GBB.                                           "
         ascii12=" x%88        d888@8@X@X@X88X@@XX@@X@8@X.       "
         ascii13="   dxXd    dB8b8b8B8B08bB88b998888b88x.        "
         ascii14="    dxx8o                      .@@;.           "
@@ -1067,7 +1067,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii17="          .d988999889889899dd.                "
         ascii18="Indian scammer who uses an arch-based disrto? "
         ascii19="damn"
-        ;; 
+        ;;
     "gentoo")
         ascii00="         ${PURPLE}-/oyddmdhs+:.                         "
         ascii01="     ${PURPLE}-oo2dN${COLOR}MMMMMMMMN${PURPLE}Nmhy+h1-s                  "
@@ -1100,7 +1100,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii06="  MMMMMM${WHITE}S20S1${COLOR}XMMMMMW.      "
         ascii07=" oMMMMM${WHITE}S2xS1${COLOR}MMMMMMM:       "
         ascii08=" WMMMMM${WHITE}S2xS1${COLOR}MMMMMMO        "
-        ascii09=":MMMMMM${WHITE}S2OS1${COLOR}XMMMMW         "   
+        ascii09=":MMMMMM${WHITE}S2OS1${COLOR}XMMMMW         "
         ascii10=".0MMMMM${WHITE}S2xS1${COLOR}MMMMM;         "
         ascii11=":;cKMMW${WHITE}S2xS1${COLOR}MMMMO          "
         ascii12="'MMWMMX${WHITE}S2OS1${COLOR}MMMMl          "
@@ -1288,7 +1288,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii17="           ==             "
         ascii18="                          "
         ascii19=""
-        ;;            
+        ;;
     "pop!_os" | "popos")
         ascii00="⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
         ascii01="⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿ "
@@ -1331,8 +1331,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="                                         ;l   .. "
         ascii17="                                          .o    "
         ascii18="                                            c   "
-        ascii19="                                            .'   " 
-        ;;    
+        ascii19="                                            .'   "
+        ;;
     "rhel")
         ascii00="           .MMM..:MMMMMMM                  "
         ascii01="          MMMMMMMMMMMMMMMMMM               "
@@ -1400,7 +1400,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii19="${COLOR}     BOOMER i bet your pc is from the 90s              "
         ;;
     "solus")
-        ascii00="         ...........           "       
+        ascii00="         ...........           "
 	    ascii01="⠀⠀⠀⠀⠀⠀⢀⣤⣾⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀⠀ ⠀⠀"
 	    ascii02="⠀⠀⠀⠀⣠⣾⣿⣿⣿⠃⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀ ⠀⠀"
 	    ascii03="⠀⠀⢀⣾⣿⣿⣿⣿⠏⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀ ⠀"
@@ -1507,7 +1507,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii09="                                           "
         ascii10="      .+oooooooooooooooooooooooo+'         "
         ascii11="       'osssssssssssssssssssssso'          "
-        ascii12="        'osssssssssssssssssssso'           "   
+        ascii12="        'osssssssssssssssssssso'           "
         ascii13="                                           "
         ascii14="                                           "
         ascii15="                                           "
@@ -1525,8 +1525,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii05="${WHITE}   | 88   | 88  | 88| 88| 88  | 88| 88_  88 | 88      /88__  88| 88  | 88 ${COLOR}"
         ascii06="${WHITE}   | 88   | 88  | 88| 88| 88  | 88| 88 \  88| 88     |  8888888|  8888888 ${COLOR}"
         ascii07="${WHITE}   |__/   |__/  |__/|__/|__/  |__/|__/  \__/|__/      \_______/ \_______/ ${COLOR}"
-        ascii08="${COLOR}                                                                          "                                                                         
-        ascii09="${COLOR}                                                                          "                                                                         
+        ascii08="${COLOR}                                                                          "
+        ascii09="${COLOR}                                                                          "
         ascii10="${COLOR}                                                                          "
         ascii11="${COLOR}                                                                          "
         ascii12="${COLOR}                                                                          "
@@ -1537,8 +1537,8 @@ case "$DISTRO_TO_DISPLAY" in
         ascii17="${COLOR}                                                                         "
         ascii18="${COLOR}                                                                         "
         ascii19="You found an easter egg!"
-        ;;    
-    "thinkpad2")                                                                                                                                
+        ;;
+    "thinkpad2")
         ascii00="                                                                                                                                      dddddddd "
         ascii01="${RED}TTTTTTTTTTTTTTTTTTTTTTThhhhhhh               ${RED}iiii                   kkkkkkkk           ${WHITE}PPPPPPPPPPPPPPPPP                              d::::::d "
         ascii02="${RED}T${WHITE}:::::::::::::::::::::Th${WHITE}:::::h              ${RED}i::::i                  ${WHITE}k::::::k           P::::::::::::::::P                             d::::::d "
@@ -1558,7 +1558,7 @@ case "$DISTRO_TO_DISPLAY" in
         ascii16="      ${RED}TTTTTTTTTTT       ${RED}hhhhhhh     hhhhhhhiiiiiiii nnnnnn    nnnnnnkkkkkkkk    kkkkkkkPPPPPPPPPP          aaaaaaaaaa  aaaa  ddddddddd   ddddd "
         ascii17=""
         ascii18=""
-        ascii19="" #finish later         
+        ascii19="" #finish later
         ;;
     *)
         # Default ASCII art for unknown distros
@@ -1605,7 +1605,7 @@ case "$INFOLINE00" in
     "mem" | "memory" | "ram") info00="Memory:${RESET} ${MEMORY_MB}MB (user-defined-sadness)";;
     "empty") info00="";;
     *) info00="$INFOLINE00";;
-esac    
+esac
 
 case "$INFOLINE01" in
     "user") info01="$(whoami)@brokelaptop";;
@@ -1949,7 +1949,7 @@ if [ "$DISPLAY_COLORS_ROW1" = true ]; then
     echo)"
 else [ "$DISPLAY_COLORS_ROW1" = false ];
     COLOR_BLOCKS_ROW_1=""
-fi    
+fi
 
 if [ "$DISPLAY_COLORS_ROW2" = true ]; then
 
@@ -1960,7 +1960,7 @@ if [ "$DISPLAY_COLORS_ROW2" = true ]; then
     echo)"
 else [ "$DISPLAY_COLORS_ROW1" = false ];
     COLOR_BLOCKS_ROW_2=""
-fi        
+fi
 
 # === OUTPUT ===
 line00="${BOLD_A}${COLOR}${ascii00}${RESET}$info00"
@@ -1986,11 +1986,11 @@ line19="${BOLD_A}${COLOR}${ascii19}"
 line20="${BOLD}BROKEFETCH 🥀 1.7${RESET}"
 
 # Loop 00-20 safely
-for i in $(seq 0 20); do    
+for i in $(seq 0 20); do
     num=$(printf "%02d" "$i")
     varname="line$num"
-    line="${!varname:-}"   
-    width="${COLUMNS:-105}" 
+    line="${!varname:-}"
+    width="${COLUMNS:-105}"
 
     echo -e "$line" | awk -v w="$width" '
     {
