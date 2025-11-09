@@ -386,7 +386,7 @@ case "$GPU_NAME" in
         GPU="Radeon 7000 (from 2001)"
     fi
     ;;
-    "Intel" | "intel" | "intel(r)" | "(intel(r)")GPU="Inetl (I can't afford a real one)";;
+    "Intel" | "intel" | "intel(r)" | "(intel(r)" | "WhiskeyLake-U" | "WhiskeyLake")GPU="Inetl (I can't afford a real one)";;
     IDK)GPU="Voodoo 3Dfx (I wish)";;
     WSL)GPU="Emulated (Like my life)";;
     Android)GPU="Adreno (from 2010)";;
