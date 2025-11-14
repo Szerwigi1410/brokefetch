@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # IMPORTANT NOTE: This script is called "brokefetch.sh" because it is ther most stable/recomended.
-# and brokefetch_beta.sh will replace this script
+# and brokefetch_beta.sh will replace this script 
 
 GREEN="\033[32m"
 RED="\033[31m"
@@ -44,7 +44,7 @@ function ConfigGenerator() {
 	echo -e "# Set RAM_MB to your desired memory size in MB" >> "$CONFIG_FILE"
 	echo -e "# Set UPTIME_OVERRIDE to your desired uptime in hours\n" >> "$CONFIG_FILE"
 	echo -e "RAM_MB=128\nUPTIME_OVERRIDE=16h\nCOLOR_NAME=DISTRO\n" >> "$CONFIG_FILE"
-    echo -e "# Bold ascii logo? (true/fasle)" >> "$CONFIG_FILE"
+    echo -e "# Bold ascii logo? (true/false)" >> "$CONFIG_FILE"
     echo -e "ASCII_BOLD=false\n" >> "$CONFIG_FILE"
     echo -e "# Cpu text (RANDOM for random funny text or whatever u like inside \"\")" >> "$CONFIG_FILE"
     echo -e "CPU_TEXT=RANDOM\n" >> "$CONFIG_FILE"
@@ -52,7 +52,7 @@ function ConfigGenerator() {
     echo -e "GPU_DETECTION=lspci\n" >> "$CONFIG_FILE"
     echo -e "# enter your preferred screen type (CRT, LCD, OLED etc)" >> "$CONFIG_FILE"
     echo -e "SCREEN_TYPE=CRT\n" >> "$CONFIG_FILE"
-    echo -e "# enter your preffered resolution (see the brokefetch wiki for supported resolutions)" >> "$CONFIG_FILE"
+    echo -e "# enter your preferred resolution (see the brokefetch wiki for supported resolutions)" >> "$CONFIG_FILE"
     echo -e "SCREEN_RES=VGA\n" >> "$CONFIG_FILE"
     echo -e "# Color blocks" >> "$CONFIG_FILE"
     echo -e "DISPLAY_COLORS_ROW1=true" >> "$CONFIG_FILE"
@@ -682,9 +682,8 @@ while getopts ":hdva:lbcrsp" option; do
          polish_flag=true
          ASCII_DISTRO="poland"
          ;;
-        exit;;
      \?) # Invalid option
-         echo "We don't type that here."
+         echo "We don't type that here"
          exit;;
    esac
 done
@@ -874,7 +873,7 @@ case "$DISTRO_TO_DISPLAY" in
 	    ascii16="  \`+sso+:-\`                 \`.-/+oso:    "
     	ascii17=" \`++:.                           \`-/+/   "
     	ascii18=" .\`                                 \`/   "
-    	ascii19="                                        "
+    	ascii19="             I use arch btw                "
         ;;
     "artix" | "artix linux")
         ascii00="                   '                           "
