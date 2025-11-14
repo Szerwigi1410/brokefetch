@@ -681,7 +681,6 @@ while getopts ":hdva:lbcrsp" option; do
       p) # Show polish flag
          polish_flag=true
          ASCII_DISTRO="poland"
-         ;;
      \?) # Invalid option
          echo "We don't type that here"
          exit;;
