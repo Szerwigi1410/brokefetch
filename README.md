@@ -41,15 +41,10 @@ cd brokefetch
 chmod +x install.sh
 ./install.sh
 ```
-### or use the installer "OS-wide"
+### or use the installer "OS-wide"(experemental)
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install.sh > install.sh ; chmod +x install.sh ; bash -c "./install.sh" ; rm -f install.sh
-```
-### OS-wide for FreeBSD users
-
-```bash
-sudo curl -sSL https://raw.githubusercontent.com/Szerwigi1410/brokefetch/refs/heads/main/install_UI.sh > install_UI.sh ; sudo chmod +x install_UI.sh ; sudo bash -c "bash install_UI.sh" ; sudo rm -f install_UI.sh
 ```
 
 ### AUR (yes it's back)
@@ -132,8 +127,6 @@ brew install brokefetch
 - `brokefetch_beta2.sh` - just a backup
 - `brokefetch_EDGE_legacy.sh` - just a backup of the old edge version (currently not present)
 - `brokefetch_mod.sh` - a version of EDGE that loads the logos from ~/.config/brokefetch/logos (mod stands for **mod**ular). Currently supports 485 ascii logos!
-
-- On FreeBSD, the default shell isn’t usually Bash, so you’ll need to run Brokefetch using bash brokefetch after installing.
 
 (brokefetch_EDGE got renamed to brokefetch_beta)
 

@@ -210,8 +210,9 @@ Please install 'curl' and re-run." 10 60
   choice=$(dialog --clear --title "Choose Brokefetch to download" --backtitle "$BACKTITLE" --menu "Select a version to download:" 15 60 6 \
     1 "Normal" \
     2 "Beta" \
-    3 "Modular" \
-    4 "Quit" 3>&1 1>&2 2>&3) || true
+    3 "Beta2" \
+    4 "Modular" \
+    5 "Quit" 3>&1 1>&2 2>&3) || true
   clear
 
   case "$choice" in
@@ -219,9 +220,9 @@ Please install 'curl' and re-run." 10 60
       url="$NORMAL_URL"; name="brokefetch.sh" ;;
     2)
       url="$EDGE_URL"; name="brokefetch_beta.sh" ;;
-    #3)
-    #  url="$BETA2_URL"; name="brokefetch_beta2.sh" ;;
     3)
+      url="$BETA2_URL"; name="brokefetch_beta2.sh" ;;
+    4)
       url="$MOD_URL"; name="brokefetch_mod.sh" ;;
     *)
       echo "Canceled."; exit 0 ;;

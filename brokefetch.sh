@@ -176,7 +176,7 @@ if [ -r /proc/uptime ]; then
 fi
 
 # Uptime - macOS
-if [ "$OS" = "macOS" ]; then
+if [ "$OS_NAME" = "macOS" ]; then
   BOOT_TIME=$(sysctl -n kern.boottime | awk -F'[ ,}]+' '{print $4}')
   NOW=$(date +%s)
   UPTIME_S=$((NOW - BOOT_TIME))
