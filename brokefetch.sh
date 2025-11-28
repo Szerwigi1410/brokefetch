@@ -680,7 +680,7 @@ while getopts ":hdva:lbcrse" option; do
 
         exit;;
        e)
-            $EDITOR ~/.config/brokefetch/config
+            $EDITOR $CONFIG_FILE
             exit;;
          
      \?) # Invalid option
