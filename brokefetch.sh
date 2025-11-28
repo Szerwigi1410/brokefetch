@@ -59,6 +59,8 @@ function ConfigGenerator() {
     echo -e "DISPLAY_COLORS_ROW2=true\n" >> "$CONFIG_FILE"
     echo -e "# Set the width of color blocks using spaces, example \"  \" " >> "$CONFIG_FILE"
     echo -e "COLOR_BLOCK_WIDTH=\"   \"\n" >> "$CONFIG_FILE"
+    echo -e "# Set your editor (like nano, vim, geany or anything u like)" >> "$CONFIG_FILE"
+    echo -e "EDITOR=nano\n" >> "$CONFIG_FILE"
     echo -e "# Set displayed system info lines" >> "$CONFIG_FILE"
     echo -e "# Available INFOLINE options: user, line, os, host, kernel, uptime, packs, shell, resolution|res, de, wm, ws, term|terminal, cpu, gpu, mem\n" >> "$CONFIG_FILE"
     echo -e "INFOLINE00=user\n" >> "$CONFIG_FILE"
@@ -586,7 +588,7 @@ show_help=false
 use_dialog=false
 
 # Get options
-while getopts ":hdva:lbcrs" option; do
+while getopts ":hdva:lbcrse" option; do
    case $option in
       h)
         show_help=true
@@ -677,6 +679,10 @@ while getopts ":hdva:lbcrs" option; do
         echo "GRAY value is: ${GRAY}"
 
         exit;;
+       e)
+            $EDITOR ~/.config/brokefetch/config
+            exit;;
+         
      \?) # Invalid option
          echo "We don't type that here."
          exit;;
@@ -692,6 +698,7 @@ Oh and btw the -v option displays the version of brokefetch EDGE.
 -r resets the config file to default
 -s shows config, color and other variable values
 -d (needs to be used like -h -d) uses dialog to show help (if dialog is installed)
+-e opens the config file in your default editor
 
 The config file is located at ${BOLD}~/.config/brokefetch/${RESET}"
 
