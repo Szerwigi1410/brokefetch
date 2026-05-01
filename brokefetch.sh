@@ -117,7 +117,7 @@ fi
 
 
 case "$OS_NAME" in
-    "Adelie Linux")        OS="Adelie Linux (Are you a Action Retro?)";; #
+    "Adelie Linux")        OS="Adelie Linux (Are you Action Retro?)";; #
     "Aeon")                OS="Aeon (Bro wth is that, just use something normal)";; #
     "AlmaLinux")           OS="AlmaLinux (I can't believe it's not CentOS)";; #
     "Alpine Linux")        OS="Alpine (because I can't afford a mountain)";; #
