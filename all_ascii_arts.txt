@@ -1,0 +1,748 @@
+===== adelie linux =====
+                                   
+                                   
+                                   
+                                   
+                                   
+${BOLD}I had issues with the adelie ascii 
+                                   
+                                   
+                                   
+                                   
+                                   
+                                   
+                                   
+                                   
+                                   
+                                   
+that's it
+                                  
+                                  
+
+
+===== aeon =====
+⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷   
+⣿⡇              ⢸⣿      
+⣿⡇   ⢀⣀    ⣀⡀   ⢸⣿     
+⣿⣇   ⠸⣿⣄  ⣠⣿⠇   ⣸⣿     
+⢹⣿⡄   ⠙⠻⠿⠿⠟⠋   ⢠⣿⡏     
+⠹⣿⣦⡀          ⢀⣴⣿⠏     
+  ⠈⠛⢿⣶⣤⣄  ⣠⣤⣶⡿⠛⠁       
+     ⣠⣴⡿⠿⠛⠛⠿⢿⣦⣄        
+  ⣠⣾⠟⠉        ⠉⠻⣷⣄     
+⢰⣿⠏   ⢀⣤⣶⣶⣤⡀    ⠹⣿⡆    
+⣿⡟   ⢰⣿⠏⠁⠈⠹⣿⡆    ⢿⣿    
+⣿⡇   ⠈⠋    ⠙⠁    ⢸⣿    
+⣿⡇               ⢸⣿    
+⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⣿     
+                       
+                       
+
+                      
+                      
+
+
+===== alpine linux =====
+       .hddddddddddddddddddddddh.          
+      :dddddddddddddddddddddddddd:         
+     /dddddddddddddddddddddddddddd/        
+    +dddddddddddddddddddddddddddddd+       
+  `sdddddddddddddddddddddddddddddddds`     
+ `ydddddddddddd++hdddddddddddddddddddy`    
+.hddddddddddd+`  `+ddddh:-sdddddddddddh.   
+hdddddddddd+`      `+y:    .sddddddddddh   
+ddddddddh+`   `//`   `.`     -sddddddddd   
+ddddddh+`   `/hddh/`   `:s-    -sddddddd   
+ddddh+`   `/+/dddddh/`   `+s-    -sddddd   
+ddd+`   `/o` :dddddddh/`   `oy-    .yddd   
+hdddyo+ohddyosdddddddddho+oydddy++ohdddh   
+.hddddddddddddddddddddddddddddddddddddh.   
+ `yddddddddddddddddddddddddddddddddddy`    
+  `sdddddddddddddddddddddddddddddddds`     
+    +dddddddddddddddddddddddddddddd+       
+     /dddddddddddddddddddddddddddd/       
+      :dddddddddddddddddddddddddd:        
+       .hddddddddddddddddddddddh.          
+
+===== almalinux =====
+           ${RED}ooooooooooooooooooooooooooooo                 
+         ${RED}oo${WHITE}...........................${RED}oo   
+        ${RED}o${WHITE}.                         .${RED}o      
+       ${RED}o${WHITE}.   .                     .   .${RED}o   
+      ${RED}o${WHITE}.  .                        .  .${RED}o   
+     ${RED}o${WHITE}. .           .    .          . .${RED}o   
+    ${RED}o${WHITE}. .           ..   ..         . .${RED}o    
+   ${RED}o${WHITE}. .          ...   ...        . .${RED}o     
+   ${RED}o${WHITE}. .         ....   ....       . .${RED}o     
+   ${RED}o${WHITE}. .        .    .    .       . .${RED}o      
+    ${RED}o${WHITE}. .      .    .    .        . .${RED}o      
+     ${RED}o${WHITE}. .    .    .    .         . .${RED}o      
+      ${RED}o${WHITE}. .  .    .    .          . .${RED}o      
+       ${RED}o${WHITE}.  .   .    .           .  .${RED}o      
+        ${RED}o${WHITE}.   .                   .   .${RED}o    
+         ${RED}oo${WHITE}...........................${RED}oo   
+          ${RED}ooooooooooooooooooooooooooooo                  
+         I still don't know what this is. 
+                                          
+
+
+===== amazon =====
+  ,     S2#_S1         
+  ~\_  S2####_S1       
+ ~~  \_S2#####_S1      
+ ~~     _S2###|S1      
+ ~~       _S2#/S1 ___  
+  ~~       V~' '->     
+   ~~~         /       
+     ~~._.   _/        
+        _/ _/          
+      _/m/'            
+                       
+ what is this?         
+                       
+                       
+                       
+                       
+                       
+                      
+                      
+                       
+
+===== android =====
+${GREEN} ⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⣀⡀       
+${GREEN}⠀⠀⠀⠀⠀⠙⢷⣤⣤⣴⣶⣶⣦⣤⣤⡾⠋       
+${GREEN}⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦       
+${GREEN}⠀⠀⠀⠀⣼⣿⣿⣉⣹⣿⣿⣿⣿⣏⣉⣿⣿⣧      
+${GREEN}⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇     
+${GREEN}⣠⣄⠀⢠⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⡄⠀⣠⣄  
+${GREEN}⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿  
+${GREEN}⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿  
+${GREEN}⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿  
+${GREEN}⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿  
+${GREEN}⠻⠟⠁⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠈⠻⠟  
+${GREEN}⠀⠀⠀⠀⠉⠉⣿⣿⣿⡏⠉⠉⢹⣿⣿⣿⠉⠉      
+${GREEN}⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿        
+${GREEN}⠀⠀⠀⠀⠀⠀⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿        
+${GREEN}⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠉⠉⠁        
+${GREEN}                        
+
+                       
+                       
+
+
+===== arch =====
+                   -`                     
+                  .o+`                    
+                 `ooo/                    
+                `+oooo:                   
+               `+oooooo:                  
+               -+oooooo+:                 
+             `/:-:++oooo+:                
+            `/++++/+++++++:               
+           `/++++++++++++++:              
+          `/+++ooooooooooooo/`            
+         ./ooosssso++osssssso+`           
+        .oossssso-````/ossssss+`          
+       -osssssso.      :ssssssso.         
+      :osssssss/        osssso+++.        
+     /ossssssss/        +ssssooo/-        
+   `/ossssso+/:-        -:/+osssso+-      
+  `+sso+:-`                 `.-/+oso:    
+ `++:.                           `-/+/   
+ .`                                 `/   
+                                        
+
+===== artix =====
+                   '                           
+                  'o'                          
+                 'ooo'                         
+                'ooxoo'                        
+               'ooxxxoo'                       
+              'oookkxxoo'                      
+             'oiioxkkxxoo'                     
+            ':;:iiiioxxxoo'                    
+               ''.;::ioxxoo'                   
+          '-.      '':;jiooo'                  
+         'oooio-..     ''i:io'                 
+        'ooooxxxxoio:,.   ''-;'                
+       'ooooxxxxxkkxoooIi:-.  ''               
+      'ooooxxxxxkkkkxoiiiiiji'                 
+     'ooooxxxxxkxxoiiii:''     .i'             
+    'ooooxxxxxoi:::'a       ''ioxo'            
+   aooooxooi::aa         .:iiixkxxo'           
+  aooooi:'a                a'';ioxxo'         
+ ai:'a                          '':io'        
+systemd isn't that bad bruh replace your heart 
+
+===== aserdev =====
+    _    ____  _____ ____       
+   / \  / ___|| ____|  _ \\     
+  / _ \ \___ \|  _| | |_) |     
+ / ___ \ ___) | |___|  _ <      
+/_/   \_\____/|_____|_| \_\\     
+                                
+ ____  _______     __           
+|  _ \| ____\ \   / /           
+| | | |  _|  \ \ / /            
+| |_| | |___  \ V /             
+|____/|_____|  \_/              
+                                
+                                
+ this distro doesn't even exist 
+                                
+                                
+                                
+                                
+                                
+                                
+
+===== centos =====
+           ${BLUE}c${RED}c${YELLOW}c${GREEN}c${CYAN}c${BLUE}o${RED}o${YELLOW}o${GREEN}o${CYAN}o${BLUE}s${RED}s${YELLOW}s${GREEN}s${CYAN}s${BLUE}o${RED}o${YELLOW}o${GREEN}o${CYAN}o${WHITE}o ${COLOR}                
+          ${BLUE}cl${RED}cc${YELLOW}cc${GREEN}coo${CYAN}oss${BLUE}os${RED}oo${YELLOW}sss${GREEN}oo${CYAN}l.. ${COLOR}               
+         ${BLUE}co${RED}cc${YELLOW}oc${GREEN}co${CYAN}s${BLUE}l.${RED}c${YELLOW}oss${GREEN}o${CYAN}ls${BLUE}s${RED}s${YELLOW}s.l ${COLOR}                
+        ${BLUE}cosc${RED}co${YELLOW}s${GREEN}lo${CYAN}s${BLUE}s.${RED}ol${YELLOW}..${GREEN}c${CYAN}so. ${COLOR}                  
+        ${BLUE}co${RED}co${YELLOW}s${GREEN}s${CYAN}os.${BLUE}l${RED}..${YELLOW}o${GREEN}s.${CYAN}l.${BLUE}..${RED}o${YELLOW}s ${COLOR}                   
+        ${BLUE}cos${RED}so${YELLOW}sl.${GREEN}ls${CYAN}ol${BLUE}..${RED}s${YELLOW}l..${GREEN}sl${CYAN}ol ${COLOR}                
+        ${BLUE}co${RED}s${YELLOW}so${GREEN}s${CYAN}l.o${BLUE}l..s${RED}o.${YELLOW}l.${GREEN}ol..o${CYAN}l..${BLUE}o ${COLOR}               
+       ${BLUE}coc${RED}o${YELLOW}s${GREEN}s${CYAN}ol.l${BLUE}s..l${RED}s.${YELLOW}l${GREEN}o. ${CYAN}s${BLUE}l.${RED}l${YELLOW}s${GREEN}s${CYAN}o..s${BLUE}l${RED}c.s${YELLOW}o ${COLOR}           
+       ${BLUE}coc${RED}o${YELLOW}s${GREEN}os${CYAN}o..s${BLUE}o.o${RED}l.o${YELLOW}s.l${GREEN}c.s${CYAN}o..s${BLUE}ol.l${RED}o..${YELLOW}s${GREEN}l ${COLOR}             
+       ${BLUE}co${RED}s${YELLOW}so${GREEN}s${CYAN}l.o${BLUE}s.o${RED}l.o${YELLOW}s.o${GREEN}l..o${CYAN}s.o${BLUE}l..o${RED}l.o${YELLOW}s${GREEN}..${CYAN}l ${COLOR}             
+       ${BLUE}co${RED}s${YELLOW}o${GREEN}osl${CYAN}s${BLUE}l.${RED}so${YELLOW}l.${GREEN}so${CYAN}l..${BLUE}os.${RED}os.${YELLOW}ol..${GREEN}sl ${COLOR}              
+       ${BLUE}co${RED}so${YELLOW}sl${GREEN}s${CYAN}o.${BLUE}s${RED}l.l${YELLOW}s.${GREEN}o${CYAN}s..l${BLUE}s.${RED}os.${YELLOW}ol..${GREEN}os ${COLOR}              
+      ${BLUE}co${RED}so${YELLOW}o${GREEN}so${CYAN}osl${BLUE}s.s${RED}o${YELLOW}l..${GREEN}so${CYAN}l.${BLUE}os.${RED}ol.s${YELLOW}l.l${GREEN}s.l${CYAN}s..${BLUE}ol..s${RED}o ${COLOR}        
+     ${BLUE}cos${RED}o${YELLOW}ol.${GREEN}os${CYAN}ol..${BLUE}s${RED}o.${YELLOW}os${GREEN}o.${CYAN}l..${BLUE}ol..${RED}s${YELLOW}l..${GREEN}sl.osl..${CYAN}os..s${BLUE}o ${COLOR}       
+    ${BLUE}co${RED}so${YELLOW}o${GREEN}sl.s${CYAN}osl.l${BLUE}os.${RED}o${YELLOW}o.o${GREEN}s${CYAN}o..s${BLUE}o.${RED}s${YELLOW}o.s${GREEN}o..l${CYAN}s.${BLUE}osl.o${RED}s${YELLOW}osl..${GREEN}osl ${COLOR}   
+     ${COLOR}We were promised stability, not this...        
+
+                                                                
+                                                               
+
+
+===== debian =====
+⣿⣿⡛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⠉⠿⣛⣻⣯⣭⣇⣙⠋⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⢯⢋⣵⣾⣿⡿⣫⣭⣽⣿⣿⣎⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⢣⣿⣿⣶⣶⣿⠿⣫⣭⣝⢿⣿⡀⢹⣿⣿⣿⣿⣿⣿⣿⣿ 
+⢨⢒⣮⢻⡿⣯⢸⣿⣋⣹⠁⡿⠅⣸⣿⣿⣿⣿⣿⣿⣿⣿ 
+⡈⣛⣁⣬⡤⣬⣄⠙⢟⣁⠼⠋⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣭⣄⠶⠀⠂⠀⠉⣿⡟⢁⠰⢀⡙⢿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⡏⠌⣤⣬⣬⠠⠛⠁⠠⠀⣿⣋⢠⠙⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣷⣾⣭⣭⡾⠀⡀⠂⣸⢷⣿⠀⣇⡘⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⡇⠀⢕⠁⠟⠃⠈⢤⡿⢷⡈⢿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⡀⡁⢂⠄⠀⣶⡎⢈⡻⡈⠩⠈⢛⣿⣿ 
+⣿⣿⣿⣿⣿⣿⡿⠐⡄⢁⠐⢸⣿⠇⢸⠀⠀⠀⢐⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⠇⠀⠐⠈⡃⠷⡶⠀⠘⣤⣷⣶⢹⣿⣿⣿ 
+⣿⣿⣿⣿⡟⠋⣾⠿⠧⠠⣸⣷⣶⠀⠀⠙⢿⡿⡸⣿⣿⣿ 
+⣿⣿⣿⣿⣷⢠⠅⡌⢎⡓⡼⢫⠣⠁⠀⣐⡀⢤⣁⣿⣿⣿ 
+                       
+How it feels having outdated packages?
+                      
+                      
+
+
+===== elementary =====
+         eeeeeeeeeeeeeeeee             
+      eeeeeeeeeeeeeeeeeeeeeee          
+    eeeee  eeeeeeeeeeee   eeeee        
+  eeee   eeeee       eee     eeee      
+ eeee   eeee          eee     eeee     
+eee    eee            eee       eee    
+eee   eee            eee        eee    
+ee    eee         eeeee      eeeeee    
+ee    eee       eeeee      eeeee ee    
+eee   eeee   eeeeee      eeeee  eee    
+eee    eeeeeeeeee     eeeeee    eee    
+ eeeeeeeeeeeeeeeeeeeeeeee    eeeee     
+  eeeeeeee eeeeeeeeeeee      eeee      
+    eeeee                 eeeee        
+      eeeeeee         eeeeeee          
+         eeeeeeeeeeeeeeeee             
+                                       
+                                      
+   can you even afford a macbook?     
+                                       
+
+===== endeavouros =====
+                     a2./a1oa3.                    
+                   a2./a1ssssoa3-                  
+                 a2asa1osssssss+a3-                
+               a2a:+a1ssssssssssoa3/.              
+             a2a-/oa1sssssssssssssoa3/.            
+           a2a-/+a1ssssssssssssssssoa3+:a          
+         a2a-:/+s1ssssssssssssssssssoa3+/.         
+       a2a.://oa1ssssssssssssssssssssoa3++-        
+      a2.://+a1sssssssssssssssssssssssoa3++:       
+    a2.:///oa1sssssssssssssssssssssssssoa3++:      
+  a2a:////a1sssssssssssssssssssssssssssoa3+++.     
+a2a-////+a1sssssssssssssssssssssssssssoa3++++-     
+ a2a..-+a1oossssssssssssssssssssssssoa3+++++/a     
+   a3./++++++++++++++++++++++++++++++/:.           
+  a:::::::::::::::::::::::::------aa               
+       go use arch bro,ru broke to see arch wiki   
+
+                                                  
+                                                  
+
+
+===== fedora =====
+          /:-------------:\          
+       :-------------------::        
+     :-----------${WHITE}/shhOHbmp${COLOR}---:\      
+   /-----------${WHITE}omMMMNNNMMD${COLOR}  ---:     
+  :-----------${WHITE}sMMMMNMNMP${COLOR}.    ---:    
+ :-----------${WHITE}:MMMdP${COLOR}-------    ---\   
+,------------${WHITE}:MMMd${COLOR}--------    ---:   
+:------------${WHITE}:MMMd${COLOR}-------    .---:   
+:----    ${WHITE}oNMMMMMMMMMNho${COLOR}     .----:   
+:--     .${WHITE}+shhhMMMmhhy++${COLOR}   .------/   
+:-    -------${WHITE}:MMMd${COLOR}--------------:    
+:-   --------${WHITE}/MMMd${COLOR}-------------;     
+:-    ------${WHITE}/hMMMy${COLOR}------------:      
+:-- ${WHITE}:dMNdhhdNMMNo${COLOR}------------;       
+:---${WHITE}:sdNMMMMNds:${COLOR}------------:        
+:------${WHITE}:://:${COLOR}-------------::          
+:---------------------://            
+                                    
+                                    
+
+
+===== freebsd =====
+${RESET}```                        ${BOLD_A}${COLOR}`       
+  ${RESET}` `.....---...${BOLD_A}${COLOR}....--.```   -/    
+  ${RESET}+o   .--`         ${BOLD_A}${COLOR}/y:`      +.   
+   ${RESET}yo`:.            ${BOLD_A}${COLOR}:o      `+-    
+    ${RESET}y/               ${BOLD_A}${COLOR}-/`   -o/     
+   ${RESET}.-                  ${BOLD_A}${COLOR}::/sy+:.    
+   ${RESET}/                     ${BOLD_A}${COLOR}`--  /    
+  ${RESET}`:                          ${BOLD_A}${COLOR}:`   
+  ${RESET}`:                          ${BOLD_A}${COLOR}:`   
+   ${RESET}/                          ${BOLD_A}${COLOR}/    
+   ${RESET}.-                        ${BOLD_A}${COLOR}-.    
+    ${RESET}--                      ${BOLD_A}${COLOR}-.     
+     ${RESET}`:`                  ${BOLD_A}${COLOR}`:`      
+       ${COLOR}.--             ${BOLD_A}${COLOR}`--.        
+          ${COLOR}.---.....----.           
+                                   
+Just tell me why not linux?
+I'm not hating, just asking       
+                                  
+
+
+===== garuda linux =====
+                   .%;888:8898898:            
+                 x;XxXB%89b8:b8%b88:           
+              .8Xxd                8X:.        
+            .8Xx;                    8x:.      
+          .tt8x          .d            x88;    
+       .@8x8;          .db:              xx@;  
+     ,tSXX°          .bbbbbbbbbbbbbbbbbbbB8x@; 
+   .SXxx            bBBBBBBBBBBBBBBBBBBBbSBX8; 
+ ,888S                                     pd! 
+8X88/                                       q  
+8X88/                                          
+GBB.                                           
+ x%88        d888@8@X@X@X88X@@XX@@X@8@X.       
+   dxXd    dB8b8b8B8B08bB88b998888b88x.        
+    dxx8o                      .@@;.           
+      dx88                   .t@x.             
+        d:SS@8ba89aa67a853Sxxad.               
+          .d988999889889899dd.                
+Indian scammer who uses an arch-based disrto? 
+damn
+
+===== gentoo =====
+         ${PURPLE}-/oyddmdhs+:.                         
+     ${PURPLE}-oo2dN${COLOR}MMMMMMMMN${PURPLE}Nmhy+h1-s                  
+   -${PURPLE}ys2${COLOR}NMMMMMMMMMMMNNNmmdhy${PURPLE}s1+-                
+ ${PURPLE}dos2${COLOR}mMMMMMMMMMMMM${PURPLE}NmdmmmmdD${COLOR}hhy${PURPLE}s1/s             
+ ${PURPLE}oms2${COLOR}MMMMMMMMMMM${PURPLE}Ns1hhyyyos2h${COLOR}mddd${PURPLE}hhhds1oc       
+${PURPLE}.ys2d${COLOR}MMMMMMMMMM${PURPLE}ds1hs++so/ss2${COLOR}mdddhh${PURPLE}hhdms1+d     
+ ${PURPLE}oys2hdm${COLOR}NMMMMMMMN${PURPLE}s1dyooys2${COLOR}dmddddhh${PURPLE}hhyhNs1d.    
+  ${PURPLE}:os2yhhd${COLOR}NNMMMMMMMNNNmmdddhhhhhyyms${PURPLE}1Mh        
+    ${PURPLE}.:s2+syd${COLOR}NMMMMMNNNmmmdddhhhhhhm${PURPLE}Ms1my        
+       ${PURPLE}/ms2${COLOR}MMMMMMNNNmmmdddhhhhhmM${PURPLE}Nhs1s:        
+    ${PURPLE}sos2N${COLOR}MMMMMMMNNNmmmddddhhdmM${PURPLE}Nhss1+s         
+  ${PURPLE}sss2${COLOR}NMMMMMMMMNNNmmmdddddmNM${PURPLE}mhss1/.           
+ ${PURPLE}/Ns2${COLOR}MMMMMMMMNNNNmmmdddmNM${PURPLE}Ndsos1:s             
+${PURPLE}+Ms2${COLOR}MMMMMMNNNNNmmmmdmNM${PURPLE}Ndsos1/-                
+${PURPLE}yMs2${COLOR}MNNNNNNNmmmmmNNM${PURPLE}mhs+/s1-s                  
+${PURPLE}/hs2${COLOR}MMNNNNNNNNMNdh${PURPLE}s++/s1-s                     
+${PURPLE}d/s2o${COLOR}hdmmdd${PURPLE}hys+++/:s1.s                        
+  ${PURPLE}s-//////:--.                                
+you spent 3 days compiling your kernel        
+
+
+===== linuxlite =====
+          ,xXc             
+      .l0MMMMMO            
+   .kNMMMMM${WHITE}S2WS1${COLOR}MMMN,      
+   KMMMMMM${WHITE}S2KS1${COLOR}MMMMMMo     
+  'MMMMMMN${WHITE}S2KS1${COLOR}MMMMMM:     
+  kMMMMMM${WHITE}S2OS1${COLOR}MMMMMMO      
+  MMMMMM${WHITE}S20S1${COLOR}XMMMMMW.      
+ oMMMMM${WHITE}S2xS1${COLOR}MMMMMMM:       
+ WMMMMM${WHITE}S2xS1${COLOR}MMMMMMO        
+:MMMMMM${WHITE}S2OS1${COLOR}XMMMMW         
+.0MMMMM${WHITE}S2xS1${COLOR}MMMMM;         
+:;cKMMW${WHITE}S2xS1${COLOR}MMMMO          
+'MMWMMX${WHITE}S2OS1${COLOR}MMMMl          
+ kMMMMK${WHITE}S2OS1${COLOR}MMMMMX:        
+ .WMMMMK${WHITE}S2OS1${COLOR}WMMM0c        
+  lMMMMMWS${WHITE}2OS1${COLOR}WMNd:'       
+   oollXMK${WHITE}S2o1${COLOR}Xxl;.       
+                          
+isn't 'linux' lite enough?
+                           
+
+===== macos =====
+                    'c.          
+                 ,xNMM.          
+               .OMMMMo           
+               OMMM0,            
+     .;loddo:' loolloddol;.      
+   cKMMMMMMMMMMNWMMMMMMMMMM0:    
+ .KMMMMMMMMMMMMMMMMMMMMMMMWd.    
+ XMMMMLMMMMMMMMMMMMMMMMMMX.      
+;MMMMMMIMMMMMMMMMMMMMMMMM:       
+:MMMMMMMNMMMMMMMMMMMMMMMM:       
+.MMMMMMMMUMMMMMMMMMMMMMMMX.      
+ kMMMMMMMMXMMMMMMMMMMMMMMMWd.    
+ .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   
+  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   
+    kMMMMMMMMMMMMMMMMMMMMMMd     
+     ;KMMMMMMMWXXWMMMMMMMk.      
+       .cooc,.    .,coo:.        
+                                
+How are your kidneys doing?     
+You still have both of them, right?
+
+===== manjaro =====
+██████████████████  ████████   
+██████████████████  ████████   
+██████████████████  ████████   
+██████████████████  ████████   
+████████            ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+████████  ████████  ████████   
+You cant say you use Arch btw  
+                               
+
+                              
+                              
+
+
+===== linexin =====
+⢀⣴⠿⠛⠛⠷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡾⠟⠛⠻⣦⡀ 
+⣼⠏⠀⠀⠀⠀⠈⠻⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠟⠁⠀⠀⠀⠀⠘⣧ 
+⣿⠀⠀⠀⠀⠀⠀⠀⠈⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⣿ 
+⣿⠀⠀⢀⡿⠛⠷⣦⡀⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠏⠁⠀⠀⣠⠾⠛⢻⡄⠀⠀⣿ 
+⣿⡀⠀⢸⡇⠀⠀⠘⢿⣄⠀⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠀⣠⡾⠃⠀⠀⢸⡇⠀⠀⣿ 
+⢸⡇⠀⠈⣧⠀⠀⠀⠀⠹⣧⡀⠀⠀⠀⠙⢷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡾⠋⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⣼⠇⠀⢰⡇ 
+⠈⣿⠀⠀⢻⡄⠀⠀⠀⠀⠘⣷⡀⠀⠀⠀⠀⠉⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡿⠋⠀⠀⠀⠀⢀⣾⠋⠀⠀⠀⠀⢠⡿⠀⠀⣾⠁ 
+⠀⢹⣇⠀⠈⣷⠀⠀⠀⠀⠀⠘⢿⡄⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⠀⢀⣴⠟⠋⠀⠀⠀⠀⠀⢀⡾⠃⠀⠀⠀⠀⠀⣾⠃⠀⢰⡏⠀ 
+⠀⠀⢿⡄⠀⠸⣧⠀⠀⠀⠀⠀⠈⢿⡄⠀⠀⠀⠀⠀⠀⠈⠻⣦⡀⢀⣴⠟⠁⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⣼⠏⠀⢀⡿⠀⠀ 
+⠀⠀⠘⣷⡀⠀⠹⣧⠀⠀⠀⠀⠀⠈⢿⡄⠀⠀⠀⠀⠀⠀⠀⠘⣧⣼⠇⠀⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⣼⠏⠀⠀⣼⠃⠀⠀ 
+⠀⠀⠀⠘⣷⠀⠀⠹⣧⠀⠀⠀⠀⠀⠈⢿⣄⠀⠀⠀⠀⠀⠀⠀⣿⣿⠇⠀⠀⠀⠀⠀⠀⢠⡾⠁⠀⠀⠀⠀⠀⣼⠏⠀⠀⣼⠇⠀⠀⠀ 
+⠀⠀⠀⠀⠙⣧⡀⠀⠘⢷⡀⠀⠀⠀⠀⠀⠻⣧⡀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⢀⣴⠟⠀⠀⠀⠀⠀⢀⣾⠋⠀⠀⣼⠏⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠘⢷⡄⠀⠈⢻⣄⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠀⢰⡏⢹⣇⠀⠀⢀⣤⠟⠁⠀⠀⠀⠀⠀⣠⡿⠁⠀⢀⡾⠃⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠙⣷⡀⠀⠀⠀⢀⣀⠈⠛⠷⠶⠛⠀⠀⠛⠷⠶⠛⠁⣀⡀⠀⠀⠀⢀⣾⠟⠀⢀⣴⠟⠁⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠷⣤⣬⣿⡆⠀⠀⢾⡟⠷⠶⣦⣄⠀⠀⠀⠀⣠⣴⠶⠾⠟⣿⠀⠀⢰⣿⣥⣤⡶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⢸⣇⠀⠀⠀⢻⣆⠀⠀⣰⡟⠁⠀⠀⣰⡇⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⣿⣿⣿⡶⢶⣽⣷⣤⣤⡾⣫⣶⢶⣝⢷⣤⣤⣶⣯⣶⢶⣟⣿⣿⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⣿⣿⣿⣿⣍⣸⣧⣤⡶⠟⠋⠀⠀⠙⠻⢶⣤⣸⣇⣻⡿⣿⣿⣿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡿⠿⠛⠛⢹⣿⣭⠥⠤⠤⠤⠤⠤⠤⠤⠤⠬⣭⣿⡏⠛⠛⠿⢿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠻⠶⢦⣤⣤⡴⠶⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+
+===== mint =====
+${GREEN}⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⢛⣛⣛⣛⣛⣛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   
+${GREEN}⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠉⠁⠀⣘⣋⣭⣭⣭⣭⣭⣭⣍⣓⠀⠈⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿   
+${GREEN}⣿⣿⣿⣿⣿⣿⠟⠁⠀⣀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠈⠻⣿⣿⣿⣿⣿⣿   
+${GREEN}⣿⣿⣿⣿⠏⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠹⣿⣿⣿⣿   
+${GREEN}⣿⣿⡟⠁⠀⣰⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠈⢻⣿⣿   
+${GREEN}⣿⡟⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⢻⣿   
+${GREEN}⡿⠀⠀⣼⣿⣿⣿⣿⣿⣿⡿⠋⠉⠙⢿⣿⣿⣿⣿⣿⣿⡿⠋⠉⠻⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⢿   
+${GREEN}⠃⢠⣼⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣧⠀⠘   
+${GREEN}⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⡀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣆⡀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣾⡄   
+${GREEN}⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇   
+${GREEN}⢸⣿⣿⣿⣿⣿⣿⠿⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠿⣿⣿⣿⣿⣿⣿⡇   
+${GREEN}⡜⣿⣿⣿⣿⣿⠃⣠⣾⢨⣿⣿⣿⡇⣿⣿⣿⣧⢸⣿⣿⣿⠀⣿⣿⣿⡇⣷⣆⠘⣿⣿⣿⣿⣿⢁   
+${GREEN}⣧⢹⣿⣿⣿⡇⠀⣋⣙⢈⣉⣛⣉⡁⣉⣙⣛⣉⢈⣛⣛⣛⡀⣙⣛⣉⡃⣙⣙⠀⢹⣿⣿⣿⡟⣼   
+${GREEN}⣿⣇⢻⣿⣿⣿⡀⠻⣿⣠⣿⣿⣿⡇⣿⣿⣿⣏⢸⣿⣿⣿⠀⣿⣿⣿⡇⣿⠟⢀⣿⣿⣿⡿⣱⣿   
+${GREEN}⣿⣿⡆⠙⣿⣿⣿⡆⠖⢰⣶⣶⢊⣅⢭⣭⣭⣅⡨⢭⣭⡤⣴⣴⣶⡦⡰⣶⢢⣿⣿⣿⠟⣵⣿⣿   
+${GREEN}⣿⣿⣿⠀⠌⢻⣿⣿⣾⠸⣿⡇⣿⣿⣾⣿⣿⣿⣿⣆⢻⡇⣨⣉⠸⡿⣠⠏⣿⣿⡿⡋⣼⣿⣿⣿   
+${GREEN}⣿⣿⣿⡇⡟⣠⡙⠻⣿⡌⣿⢣⣿⣿⣿⣿⣿⣿⣿⣿⡸⢼⣿⣿⡐⡇⣿⣤⠿⠋⢴⢰⣿⣿⣿⣿   
+${GREEN}⣿⣿⣿⡇⡇⣿⡇⠇⣬⣅⠻⠸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⠇⠇⣫⣵⣾⣦⢸⢸⣿⣿⣿⣿  
+${GREEN}⣿⣿⣿⣷⠁⣿⣧⣸⣿⣿⠉⣿⣶⣯⡉⣩⣟⣛⣛⣛⠉⡉⢍⣴⣆⠀⣿⣿⣿⣿⠀⢸⣿⣿⣿⣿  
+${GREEN}⣿⣿⣿⣿⢼⣿⣿⣿⣿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣾⣿⣿⣶⣿⣿⣿⣿⣤⣾⣿⣿⣿⣿   
+
+===== nixos =====
+$1  ▗▄   $2▗▄ ▄▖                
+$1 ▄▄🬸█▄▄▄$2🬸█▛ $1▃             
+$2   ▟▛    ▜$1▃▟🬕             
+$2🬋🬋🬫█      $1█🬛🬋🬋            
+$2 🬷▛🮃$1▙    ▟▛               
+$2 🮃 $1▟█🬴$2▀▀▀█🬴▀▀             
+$1  ▝▀ ▀▘   $2▀▘              
+                          
+                          
+                          
+                          
+keep waisting your time   
+                          
+                          
+                          
+                          
+                          
+                         
+                         
+                          
+
+===== nobara =====
+⢀⣤⣴⣶⣶⣶⣦⣤⡀⠀⣀⣠⣤⣴⣶⣶⣶⣶⣶⣶⣶⣶⣤⣤⣀⡀
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡀
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠉⠁⠀⠀⠉⠉⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⢠⣾⣿⣿⣿⣿⣷⡄⠀⠀⠀⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⣀⣀⣬⣽⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠈⠻⢿⣿⣿⡿⠟⠁⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠉⠉⠛⠛⢿⣿⣿⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿
+⠘⢿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⠟⠁
+  ⠈⠙⠛⠛⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠛⠉⠁
+                                     
+So ur a gamer huh?                   
+
+
+===== opensuse tumbleweed =====
+           ${WHITE}.;ldkO0000Okdl;.${COLOR}             
+       ${WHITE}.;d00xl:^''''''^:ok00d;.${COLOR}         
+     ${WHITE}.d00l'                'o00d.${COLOR}       
+   ${WHITE}.d0Kd'  ${COLOR}Okxol:;,.${COLOR}          ${WHITE}:O0d${COLOR}      
+  ${WHITE}.OK${COLOR}KKK0kOKKKKKKKKKKOxo:,      ${WHITE}lKO.${COLOR}    
+ ${WHITE},0K${COLOR}KKKKKKKKKKKKKKK0P^${WHITE},,,${COLOR}^dx:    ${WHITE};00,${COLOR}   
+${WHITE}.OK${COLOR}KKKKKKKKKKKKKKKk'${WHITE}.oOPPb.${COLOR}'0k.   ${WHITE}cKO.${COLOR}  
+${WHITE}:KK${COLOR}KKKKKKKKKKKKKKK: ${WHITE}kKx..dd${COLOR} lKd   ${WHITE}'OK:${COLOR}  
+${WHITE}dKK${COLOR}KKKKKKKKKOx0KKKd ${WHITE}^0KKKO'${COLOR} kKKc   ${WHITE}dKd${COLOR}  
+${WHITE}dKK${COLOR}KKKKKKKKKK;.;oOKx,..${WHITE}^${COLOR}..;kKKK0.  ${WHITE}dKd${COLOR}  
+${WHITE}:KK${COLOR}KKKKKKKKKK0o;...^cdxxOK0O/^^'  ${WHITE}.0K:${COLOR}  
+${WHITE}kKK${COLOR}KKKKKKKKKKKKK0x;,,......,;od   ${WHITE}lKk${COLOR}   
+${WHITE}'0K${COLOR}KKKKKKKKKKKKKKKKKKKK00KKOo^   ${WHITE}c00'${COLOR}   
+  ${WHITE}'kK${COLOR}KKOxddxkOO00000Okxoc;''   ${WHITE}.dKk'${COLOR}    
+    ${WHITE}l0Ko.                    .c00l'${COLOR}     
+     ${WHITE}'l0Kk:.              .;xK0l'  ${COLOR}     
+        ${WHITE}'lkK0xl:;,,,,;:ldO0kl' 
+            ${WHITE}'^:ldxkkkkxdl:^'           
+                                       
+
+
+===== opensuse leap =====
+          ====             
+         ======            
+       ==== ====+          
+     +====    +====        
+   +===+        ====       
+  ====            ====     
++===               +====   
+====               +====   
+ =====            ====     
+   +===+        =====      
+==+  =====    +===+  ===   
+====   ==== =====  =====   
+  ====  =======   ====     
+    ====  ===   ====       
+     ====+    ====         
+       ==== =====          
+         ======            
+           ==             
+                          
+
+
+===== pop!_os =====
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣥⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀Coca-cola ⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⢛⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+                               
+
+                              
+                              
+
+
+===== kali linux =====
+..............                                   
+            ..,;:ccc,.                           
+          ......''';lxO.                         
+.....''''..........,:ld;                         
+           .';;;:::;,,.x,                        
+      ..'''.            0Xxoc:,.  ...            
+  ....                ,ONkc;,;cokOdc',.          
+ .                   OMo           ':${GRAY}dd${COLOR}o.        
+                    dMc               :OO;       
+                    0M.                 .:o.     
+                    ;Wd                          
+                     ;XO,                        
+                       ,d0Odlc;,..               
+                           ..',;:cdOOd::,.       
+                                    .:d;.':;.    
+                                       'd,  .'   
+                                         ;l   .. 
+                                          .o    
+                                            c   
+                                            .'   
+
+===== rhel =====
+           .MMM..:MMMMMMM                  
+          MMMMMMMMMMMMMMMMMM               
+          MMMMMMMMMMMMMMMMMMMM.            
+        MMMMMMMMMMMMMMMMMMMMMMMM           
+  .MMMM'  MMMMMMMMMMMMMMMMMMMMMM           
+ MMMMMM    'MMMMMMMMMMMMMMMMMMMM.          
+MMMMMMMM      MMMMMMMMMMMMMMMMMM .         
+MMMMMMMMM.       'MMMMMMMMMMMMM' MM.       
+MMMMMMMMMMM.                     MMMM      
+'MMMMMMMMMMMMM.                 ,MMMMM.    
+ 'MMMMMMMMMMMMMMMMM.          ,MMMMMMMM.   
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM   
+         MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM    
+            'MMMMMMMMMMMMMMMMMMMMMMMM:     
+               ''MMMMMMMMMMMMMMMMM'        
+      this is a scam go buy a mac          
+                                           
+                                          
+                                          
+                                           
+
+===== rockylinux =====
+       _     _       _         _    _             
+      | |   | |     | |       | |  | |            
+      | | __| | __ _| | __   _| |_ | |__  _   _   
+  _   | |/ _` |/ _` | |/ /  | '_ \| '_ \| | | | 
+ | |__| | (_| | (_| |   <   | |_) | |_) | |_| |   
+  \____/ \__,_|\__,_|_|\_\   |_.__/|_.__/ \__, |  
+                                          __/ |   
+                                         |___/    
+                                                  
+           Rocky is my bank account.              
+                 Very rocky.                      
+                                                  
+                                                  
+                                                  
+                                                  
+                                                  
+                                                  
+                                                 
+                                                 
+                                                  
+
+===== slackware =====
+                  :::::::                      
+            :::::::::::::::::::                
+         ::::::::::::::::::::::::::            
+       ::::::::${WHITE}cllcccccllllllll${COLOR}::::::          
+    :::::::::${WHITE}lc               dc${COLOR}:::::::        
+   ::::::::${WHITE}cl   clllccllll    oc${COLOR}:::::::::      
+  :::::::::${WHITE}o   lc${COLOR}::::::::${WHITE}co   oc${COLOR}::::::::::     
+ ::::::::::${WHITE}o    cccclc${COLOR}:::::${WHITE}clcc${COLOR}::::::::::::    
+ :::::::::::${WHITE}lc        cclccclc${COLOR}:::::::::::::    
+::::::::::::::${WHITE}lcclcc          lc${COLOR}::::::::::::   
+::::::::::${WHITE}cclcc${COLOR}:::::${WHITE}lccclc     oc${COLOR}:::::::::::   
+::::::::::${WHITE}o    l${COLOR}::::::::::${WHITE}l    lc${COLOR}:::::::::::   
+ :::::${WHITE}cll${COLOR}:${WHITE}o     clcllcccll     o${COLOR}:::::::::::    
+ :::::${WHITE}occ${COLOR}:${WHITE}o                  clc${COLOR}:::::::::::    
+  ::::${WHITE}ocl${COLOR}:${WHITE}ccslclccclclccclclc${COLOR}:::::::::::::     
+   :::${WHITE}oclcccccccccccccllllllllllllll${COLOR}:::::      
+      ::::::::::::::::::::::::::::::::        
+         ::::::::::::::::::::::::::::         
+           ::::::::::::::::::::::             
+${COLOR}     BOOMER i bet your pc is from the 90s              
+
+===== solus =====
+         ...........           
+⠀⠀⠀⠀⠀⠀⢀⣤⣾⡿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠀⠀ ⠀⠀
+⠀⠀⠀⠀⣠⣾⣿⣿⣿⠃⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀ ⠀⠀
+⠀⠀⢀⣾⣿⣿⣿⣿⠏⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀ ⠀
+⠀⢠⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀ ⠀
+⠀⣾⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⢸⣿⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀ 
+⢸⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠙⢿⣿⡻⠿⣿⣿⣿⣿⣿⣧⠀ 
+⣸⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⠀⠀⠀⠻⣿⣶⡄⠈⠙⠻⢿⣿⠀ 
+⢸⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠈⢿⣿⣆⠀⠀⢀⣿⠇ 
+⠘⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⢻⣿⢀⣴⠟⡇⠀ 
+⠘⠿⣿⣶⣶⣦⣤⣤⣤⣤⣀⣀⣀⣀⣀⣿⡟⠀⠀⣀⣀⣀⣤⣴⠿⢛⠡⡚⠁ ⠀
+⠀⠀⠹⡿⠿⠿⠿⠿⠿⠿⣿⡿⠿⠿⠿⠿⠿⠿⠟⠛⣛⠉⠅⠐⠈⠀⡔⠀⠀ ⠀
+⠀⠀⠀⠑⢄⠀⠀⠀⠐⠒⠒⠒⠒⠂⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⡠⠊⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠁⠠⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠄⠊⠀⠀⠀⠀⠀ ⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⠠⠤⢀⢀⣀⡀⠀⠤⠄⠒⠈⠀⠀⠀⠀⠀⠀⠀ ⠀⠀
+                               
+I'm all alone on this distro.  
+
+                              
+                              
+
+
+===== ubuntu =====
+            .-/+oossssoo+/-.               
+        `:+ssssssssssssssssss+:`           
+      -+ssssssssssssssssssyyssss+-         
+    .ossssssssssssssssss${WHITE}dMMMNy${COLOR}sssso.       
+   /sssssssssss${WHITE}hdmmNNmmyNMMMMh${COLOR}ssssss/      
+  +sssssssss${WHITE}hm${COLOR}yd${WHITE}MMMMMMMNddddy${COLOR}ssssssss+     
+ /ssssssss${WHITE}hNMMM${COLOR}yh${WHITE}hyyyyhmNMMMNh${COLOR}ssssssss/    
+.ssssssss${WHITE}dMMMNh${COLOR}ssssssssss${WHITE}hNMMMd${COLOR}ssssssss.   
++ssss${WHITE}hhhyNMMNy${COLOR}ssssssssssss${WHITE}yNMMMy${COLOR}sssssss+   
+oss${WHITE}yNMMMNyMMh${COLOR}ssssssssssssss${WHITE}hmmmh${COLOR}ssssssso   
+oss${WHITE}yNMMMNyMMh${COLOR}sssssssssssssshmmmhssssssso   
++ssss${WHITE}hhhyNMMNy${COLOR}ssssssssssss${WHITE}yNMMMy${COLOR}sssssss+   
+.ssssssss${WHITE}dMMMNh${COLOR}ssssssssss${WHITE}hNMMMd${COLOR}ssssssss.   
+ /ssssssss${WHITE}hNMMM${COLOR}yh${WHITE}hyyyyhdNMMMNh${COLOR}ssssssss/    
+  +sssssssss${WHITE}dm${COLOR}yd${WHITE}MMMMMMMMddddy${COLOR}ssssssss+     
+   /sssssssssss${WHITE}hdmNNNNmyNMMMMh${COLOR}ssssss/      
+    .ossssssssssssssssss${WHITE}dMMMNy${COLOR}sssso.       
+      -+sssssssssssssssss${WHITE}yyy${COLOR}ssss+-        
+        `:+ssssssssssssssssss+:`          
+            .-/+oossssoo+/-.               
+
+===== void linux =====
+               __.;=====;.__                    
+            _.=+==++=++=+=+===;.                 
+             -=+++=+===+=+=+++++=_               
+        .     -=:``      `==+=++==.                
+       _vi,    `            --+=++++:            
+      .uvnvi.       _._       -==+==+.           
+     .vvnvnI%    ;==|==;.     :|=||=|.           
+${GRAY}+QmQQm${COLOR}pvvnv; ${GRAY}_yYsyQQWUUQQQm #QmQ#:QQQWUV\$QQm.${COLOR}    
+ ${GRAY}-QQWQWpvvo${GRAY}wZ?.wQQQE${COLOR}==<${GRAY}QWWQ/QWQW.QQWW${COLOR}(: ${GRAY}jQWQE${COLOR}    
+  ${GRAY}-\$QQQQmmU'  jQQQ${COLOR}@+=<${GRAY}QWQQ)mQQQ.mQQQC${COLOR}+;${GRAY}jWQQ@'${COLOR}    
+   ${GRAY}-\$WQYnI:   ${GRAY}QWQQwgQQWV`${GRAY}mWQQ.jWQQQgyyWW#m${COLOR}       
+     -1vvnvv.     `~+++`         ++|+++          
+      +vnvnnv,                 `-|===            
+       +vnvnvns.           .      :=-            
+        -Invnvvnsi..___..=sv=.     .             
+          +Invnvnvnnnnnnnnvvnn.                  
+           ~|Invnvnvvnvvvnnv}+                  
+               -~|{*l}*|~%                      
+                                                
+
